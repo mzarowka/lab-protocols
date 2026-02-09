@@ -1,0 +1,168 @@
+---
+title: "Bathymetric Survey Data Processing"
+subtitle: "Humminbird 385ci echo sounder"
+
+author:
+  - name: "Maurycy Żarczyński"
+    role: "Responsible person"
+contributors:
+  - "Maurycy Żarczyński (initial version, 2022)"
+
+version: "1.0"
+date: last-modified
+date-format: "YYYY-MM-DD"
+---
+
+{{< include ../_includes/header-en.qmd >}}
+
+# Bathymetric Survey Data Processing
+
+Collection of bathymetric data using the Humminbird 385ci echo sounder, followed by data export and formatting for further analysis. This protocol covers the full workflow from field acquisition to a clean spreadsheet stored on the department server.
+
+## Equipment
+
+-   Humminbird 385ci echo sounder with GPS.
+-   SD memory card — SanDisk 16 GB, **SDHC** standard, **FAT32** file system.
+-   Computer with SD card reader (built-in, external USB, or via a camera such as the department Nikon).
+-   *HumminbirdPC* software (installer: `Public\Software\Humminbird`).
+-   Microsoft Excel or compatible spreadsheet application.
+
+::: callout-tip
+## SD card location
+
+The SD card is stored in the desk drawer of the technical staff member.
+:::
+
+## Procedure
+
+### Field work: echo sounder operation
+
+1.  Insert the SD card into the echo sounder.
+
+2.  Power on the echo sounder.
+
+3.  Wait for a GPS position fix. GPS diagnostic information is available in the map view (`View` button).
+
+::: callout-important
+## Track recording
+
+The echo sounder records a track continuously while powered on, but does **not** save it permanently by default. The track must be saved manually before powering off — otherwise all data will be lost.
+:::
+
+4.  Before powering off (or restarting), open `Menu` in the map view (`View` button) and save the current track.
+
+5.  After saving, export all navigation data to the SD card via `Menu` in the map view.
+
+6.  Remove the SD card from the echo sounder.
+
+### Data import
+
+#### From SD card
+
+-   Connect the SD card to a computer using an available reader.
+
+-   Open *HumminbirdPC*.
+
+-   In the software settings, configure the following units:
+
+    -   Depth: **metres**.
+    -   Coordinates: **decimal degrees**.
+
+-   Set the `.gpx` export directory in the software settings.
+
+-   Click the arrow icon next to the card icon labelled `download data`.
+
+#### From disk
+
+-   `File` → `Open` — navigate to the appropriate `.gpx` file.
+
+### Data extraction in HumminbirdPC
+
+-   Expand the `.gpx` file tree.
+
+-   Expand `Tracks`.
+
+-   Select the relevant track.
+
+-   Click the first row, then:
+
+    -   `Ctrl+A` — select all.
+    -   `Ctrl+C` — copy to clipboard.
+
+### Data formatting in Excel
+
+1.  Open a new spreadsheet.
+
+2.  Select three columns and set the cell format to **Text**.
+
+3.  Set the column headers in the first row:
+
+    -   Column **A**: `latitude`
+    -   Column **B**: `longitude`
+    -   Column **C**: `depth`
+
+4.  Paste using `Keep destination formatting` (or equivalent paste option).
+
+5.  Clean the coordinate columns (**A** and **B**) using `Find and Replace`:
+
+    | Step                             | Find  | Replace with | Scope         |
+    |----------------------------------|-------|--------------|---------------|
+    | Remove degree symbol             | `°`   | *(empty)*    | Columns A, B  |
+    | Remove latitude hemisphere       | `N`   | *(empty)*    | Columns A, B  |
+    | Remove longitude hemisphere      | `E`   | *(empty)*    | Columns A, B  |
+    | Remove leading zero in longitude | `014` | `14`         | Column B only |
+
+::: callout-note
+## Leading zero
+
+The leading zero depends on the longitude range. Adjust the `Find` value accordingly (e.g., `018` → `18`).
+:::
+
+6.  For all three columns (**A**, **B**, **C**), replace the decimal point with a comma:
+
+    | Find | Replace with | Scope           |
+    |------|--------------|-----------------|
+    | `.`  | `,`          | Columns A, B, C |
+
+::: callout-note
+## Decimal separator
+
+This step is required for Polish locale systems where the decimal separator is a comma. Skip if your system uses a decimal point.
+:::
+
+7.  Create a **META** worksheet in the same file. Record the following metadata:
+    -   Echo sounder model and settings.
+    -   Survey date(s).
+    -   Personnel involved.
+    -   Lake name and any other relevant field notes.
+
+### File naming and storage
+
+Save the spreadsheet and the raw `.gpx` file using the following naming convention:
+
+`YYYY-MM-DD_bathymetry-LLL-humminbird.xlsx`\
+`YYYY-MM-DD_bathymetry-LLL-humminbird.gpx`
+
+| Code   | Meaning                     |
+|--------|-----------------------------|
+| `YYYY` | Year                        |
+| `MM`   | Month                       |
+| `DD`   | Day                         |
+| `LLL`  | Lake code (variable length) |
+
+::: callout-important
+## Lake codes
+
+The lake code must be identical to the codes used for sediment core labelling. Verify against existing records before creating a new code.
+:::
+
+Copy both files to the department server:
+
+`ECRLab\Data\lake_bathymetry\LLL\`
+
+## Changelog
+
+| Date       | Author | Change                                         |
+|------------|--------|------------------------------------------------|
+| 2026-02-09 | MZ     | Migrated to new framework; English translation |
+| 2022-12-01 | MZ     | Initial Quarto version                         |

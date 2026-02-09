@@ -1,0 +1,377 @@
+---
+title: "Style Guide"
+subtitle: "Formatting rules and conventions for laboratory protocols"
+author:
+  - name: "Maurycy Żarczyński"
+date: last-modified
+date-format: "YYYY-MM-DD"
+toc-title: "Contents"
+---
+
+# Style Guide {.unnumbered}
+
+This document defines the formatting rules, unit conventions, and writing standards for all laboratory protocols in this collection. Every person editing or creating protocols should read this guide first. The rules follow current recommendations from the Bureau International des Poids et Mesures (BIPM), the International Union of Pure and Applied Chemistry (IUPAC), and the International System of Units (SI).
+
+## Creating a new protocol
+
+### Step-by-step
+
+1.  Copy the appropriate template from the `_templates/` folder into the correct language folder:
+    -   English: copy `_templates/protocol-en.qmd` → `en/your-protocol-name.qmd`
+    -   Polish: copy `_templates/protocol-pl.qmd` → `pl/your-protocol-name.qmd`
+2.  The filename must be identical in both `en/` and `pl/` (e.g., `en/loss-on-ignition.qmd` and `pl/loss-on-ignition.qmd`).
+3.  Fill in the YAML front matter: title, author, contributors, version.
+4.  Delete any template sections that do not apply to your protocol. Keep sections you do use in the standard order.
+5.  Render locally to check both HTML and PDF output: `quarto render en/your-protocol-name.qmd`.
+6.  Add the protocol to the navigation in `en/index.qmd` (and `pl/index.qmd` when the translation is ready).
+7.  Commit and push to GitHub.
+
+### Filenames
+
+-   Use lowercase, hyphen-separated names: `pigment-bulk-extraction.qmd`, not `Pigment_Bulk_Extraction.qmd`.
+-   The filename should be a short, descriptive English slug even for Polish protocols — the folder (`en/` or `pl/`) identifies the language, not the filename.
+-   No language suffixes in filenames — ~~`loss-on-ignition_en.qmd`~~ → `loss-on-ignition.qmd`.
+
+### Section order
+
+When present, sections must always appear in this order:
+
+| Order | Section (EN) | Section (PL) | Required? |
+|---------------:|:-------------------|:-------------------|:---------------|
+| 1 | *(header via include)* | *(nagłówek via include)* | Always |
+| 2 | Title (H1) | Tytuł (H1) | Always |
+| 3 | Description | Opis | Always |
+| 4 | Safety | Bezpieczeństwo | If hazards present |
+| 5 | Consumables and equipment | Materiały eksploatacyjne i urządzenia | If applicable |
+| 6 | Preparation | Przygotowanie | If applicable |
+| 7 | Procedure | Procedura | Always |
+| 8 | Calculations | Obliczenia | If applicable |
+| 9 | Appendices | Załączniki | If applicable |
+| 10 | Changelog | Rejestr zmian | Always |
+
+Delete sections that do not apply — do not leave empty sections in the rendered document.
+
+------------------------------------------------------------------------
+
+## Units of measurement
+
+### General principles
+
+All unit formatting follows the BIPM *SI Brochure* (9th edition, 2019) and IUPAC *Green Book* (3rd edition).
+
+The overarching rules:
+
+1.  **A space separates the numerical value from the unit symbol.** Always. No exceptions.
+    -   ✅ `550 °C`, `0.5 g`, `100 µm`, `15 min`
+    -   ❌ `550°C`, `0.5g`, `100µm`
+    -   This includes the degree symbol for Celsius: 25 °C (a space before the degree sign).
+2.  **Unit symbols are never pluralised.**
+    -   ✅ 5 mL, 10 mg, 3 h
+    -   ❌ 5 mLs, 10 mgs, 3 hrs
+3.  **Unit symbols are not followed by a full stop** unless at the end of a sentence.
+4.  **Use upright (roman) type for unit symbols**, even in italic running text.
+
+### Space before units in Quarto
+
+In Quarto markdown, use a regular non-breaking space (`\`) between the number and the unit to prevent line-breaking:
+
+``` markdown
+Weigh **0.5\ g** of sediment.
+Programme the furnace to **550\ °C**.
+```
+
+This renders as `0.5 g` and `550 °C` with the number and unit kept on the same line.
+
+### Volume
+
+Use **mL** (millilitre with capital L) consistently throughout all protocols.
+
+**Rationale:** IUPAC and BIPM both accept `l` and `L` as symbols for litre. We use the capital `L` because lowercase `l` is easily confused with the digit `1` in many typefaces. This applies to all derived units: mL, µL, L.
+
+-   ✅ `5 mL`, `250 mL`, `1000 µL`, `2 L`
+-   ❌ `5 ml`, `5 cm³`, `5 cm^3^`, `5 cc`
+
+If a protocol refers to an instrument with a scale graduated in cm³ (e.g., Scheibler calcimeter burette), note this once at the beginning of the relevant section:
+
+> The burette scale is graduated in cm³. All volume readings in this section are reported in mL (1 mL = 1 cm³).
+
+After this note, use mL throughout.
+
+### Mass
+
+| Symbol | Name      | Use for                                |
+|--------|-----------|----------------------------------------|
+| mg     | milligram | Small sample masses, reagent additions |
+| g      | gram      | Typical sample masses, crucible masses |
+| kg     | kilogram  | Bulk materials, equipment              |
+
+-   ✅ `0.5 g`, `20 mg`, `200 µL`
+-   ❌ `0.5 gr`, `0.5 grams`
+
+### Temperature
+
+Use **°C** (degree Celsius) with a space before the degree symbol.
+
+-   ✅ `550 °C`, `−20 °C`, `105 °C`
+-   ❌ `550°C`, `550 C`, `550 deg C`
+
+Use a proper minus sign (−) for negative temperatures, not a hyphen (-).
+
+### Time
+
+| Symbol | Name   | When to use                            |
+|--------|--------|----------------------------------------|
+| s      | second | Short durations in instrument settings |
+| min    | minute | Procedural steps                       |
+| h      | hour   | Longer procedures                      |
+
+-   ✅ `4 h`, `15 min`, `70 s`
+-   ❌ `4 hrs`, `15 minutes`, `70 sec`
+
+For durations written as ranges: `4 to 6 h` or `4–6 h` (en dash, no spaces around the dash when between numbers with a unit at the end).
+
+### Concentration
+
+Use the **slash notation** `mol/L` for molar concentration, written with the substance name or formula:
+
+-   ✅ `0.5 mol/L HCl`, `6 mol/L NaOH`, `0.11 mol/L CH₃COOH`
+-   ❌ `0.5 M HCl`, `0.5 mol HCl`, `0.5 mol·dm⁻³ HCl`
+
+**Rationale:** The symbol `M` (for "molar") is widely used in laboratory practice but is deprecated by IUPAC. The slash notation `mol/L` is unambiguous and accessible to students who may not yet be fluent with SI prefixes and negative exponents.
+
+**Percentage concentrations** are written after the compound name in parentheses:
+
+-   ✅ `HCl (10 %)`, `acetone (100 %, HPLC grade)`, `H₂O₂ (30 %)`
+-   ❌ `10 % HCl`, `HCl 10%`, `100% acetone`
+
+Note the **space before the percent sign**: `10 %`, not `10%`. This follows BIPM recommendations (the percent sign is treated as a unit symbol).
+
+### Rotational speed
+
+Use **rpm** (revolutions per minute) in lowercase:
+
+-   ✅ `5000 rpm`
+-   ❌ `5000 RPM`, `5000 obr/min`
+
+### Pressure
+
+Use **bar** or **mbar** for instrument gauge pressure. Use **hPa** for atmospheric pressure:
+
+-   ✅ `2 bar`, `1200 mbar`, `1013 hPa`
+-   ❌ `2 Bar`, `760 mm Hg` (acceptable only in historical tables with a note)
+
+### Length
+
+| Symbol | Use for                             |
+|--------|-------------------------------------|
+| mm     | Instrument scales, small dimensions |
+| cm     | Core lengths, slab dimensions       |
+| m      | Field measurements                  |
+| µm     | Sieve mesh, particle size           |
+
+### Wavelength and spectral units
+
+-   ✅ `663 nm`, `350 to 900 nm`, `350–900 nm`
+-   ❌ `663nm`
+
+### Resolution (imaging)
+
+-   ✅ `2400 DPI` (this is a conventional abbreviation, not an SI unit — keep uppercase)
+
+------------------------------------------------------------------------
+
+## Chemical formulae
+
+### In running text
+
+Use Quarto subscript and superscript syntax for chemical formulae in running text:
+
+``` markdown
+The reaction produces CO~2~ and H~2~O.
+Add 3 mL of HNO~3~ (65 %).
+The ^209^Po spike solution.
+```
+
+This renders as: CO₂, H₂O, HNO₃, ²⁰⁹Po.
+
+### In equations
+
+Use LaTeX math mode with `\text{}` for chemical names and proper subscripts:
+
+``` markdown
+$$
+\text{CaCO}_3 = \frac{V_t \times \mu}{a \times 10}
+$$
+```
+
+### Naming conventions
+
+-   Write the **full compound name** on first use, followed by the formula: "hydrochloric acid, HCl (37 %)".
+-   After first use, the formula alone is sufficient: "add HCl (10 %)".
+-   Use IUPAC-recommended names where practical.
+
+------------------------------------------------------------------------
+
+## Callout blocks
+
+Use Quarto callout blocks instead of pipe syntax (`|`), blockquotes (`>`), or inline bold for notes and warnings.
+
+### Four callout types
+
+**Warning** — safety hazards, risk of personal injury or equipment damage:
+
+``` markdown
+:::{.callout-warning}
+## Hazardous materials
+HF (40 %) causes severe burns. Work under a fume hood. Wear nitrile gloves and safety goggles.
+:::
+```
+
+**Important** — critical steps that must not be skipped or altered:
+
+``` markdown
+:::{.callout-important}
+## Critical step
+Do not open the furnace during the heating programme.
+:::
+```
+
+**Tip** — practical advice, best practices, shortcuts:
+
+``` markdown
+:::{.callout-tip}
+## Practical advice
+A porcelain marker is available in the laboratory for labelling crucibles.
+:::
+```
+
+**Note** — background context, explanations, methodological remarks:
+
+``` markdown
+:::{.callout-note}
+## Background
+The sample mass of 20 mg is optimised for lake gyttja. For other sediment types, run test measurements on representative samples first.
+:::
+```
+
+### Rules for callouts
+
+-   Always include a `## Title` line inside the callout — it becomes the collapsible header.
+-   Keep callout text concise: 1–3 sentences.
+-   Do not nest callouts inside callouts.
+-   Place the callout **immediately after** the step it refers to.
+
+------------------------------------------------------------------------
+
+## Writing conventions
+
+### Language and tone
+
+-   Write in the **imperative mood**: "Weigh the sample", not "The sample should be weighed" or "We weigh the sample".
+-   Be specific: "Weigh **0.5 g**", not "Weigh an appropriate amount" (unless variability is genuinely intended, in which case explain the range and rationale).
+-   One action per bullet point. If a step has sub-steps, use nested bullets.
+
+### Numbers
+
+-   Use a **decimal point** (`.`) in English protocols: `0.5 g`.
+-   Use a **decimal comma** (`,`) in Polish protocols: `0,5 g`.
+-   Do not start a sentence with a numeral — rewrite the sentence or spell out the number.
+-   Use **en dashes** for ranges: `350–900 nm`, `4–6 h`.
+-   Use the **multiplication sign** (`×`) in formulae, not the letter `x`.
+
+### Formatting emphasis
+
+-   Use **bold** for: values and quantities within steps (`**0.5 g**`, `**550 °C**`), reagent grades (`**HPLC**`), and critical terms on first use.
+-   Use *italics* for: software names (*UVProbe*, *Lumo Scanner*), foreign terms (*in situ*), and genus/species names.
+-   Use `code formatting` for: software buttons and commands (`Start`, `File > Save as`), file paths, and file extensions (`.qmd`, `.xlsx`).
+
+### Cross-references between protocols
+
+In HTML output, link to the other protocol:
+
+``` markdown
+See the [Freeze Drying](freeze-drying.qmd) protocol.
+```
+
+This creates a relative link that works within the same language folder. Do not link across `en/` and `pl/` folders — always link within the same language.
+
+### Images
+
+-   Store images in the shared `images/` folder at the project root.
+-   Reference with relative paths: `![Caption](../images/filename.png){width=50%}`.
+-   Use descriptive filenames: `specim-lens-18.5mm.png`, not `IMG_4521.png`.
+-   Add `fig-alt` for accessibility: `![Caption](../images/file.png){fig-alt="Description"}`.
+
+------------------------------------------------------------------------
+
+## Version control and translation tracking
+
+### Version numbering
+
+Use simple decimal versioning in the YAML `version` field:
+
+-   `1.0` — first complete version.
+-   `1.1` — minor corrections (typos, clarifications).
+-   `2.0` — significant changes (new steps, changed method parameters).
+
+### Translation tracking
+
+Polish protocols include a `source-version` field in YAML:
+
+``` yaml
+source-version: "en/loss-on-ignition.qmd@v1.0"
+```
+
+When the English version is updated to `v1.1`, the Polish file's `source-version` still reads `v1.0` — this signals that the translation needs updating.
+
+### Git workflow
+
+-   One commit per logical change (not per file).
+-   Commit messages in English, prefixed with the protocol name: `loss-on-ignition: fix furnace temperature typo`.
+-   Use branches for large rewrites; merge via pull request.
+
+------------------------------------------------------------------------
+
+## Changelog format
+
+Every protocol ends with a changelog table:
+
+``` markdown
+## Changelog
+
+| Date | Author | Change |
+|------|--------|--------|
+| 2025-06-15 | MZ | Added safety callout for HF handling |
+| 2025-01-10 | KM | Corrected furnace temperature from 500 to 550 °C |
+| 2024-12-01 | MZ | Initial Quarto version |
+```
+
+-   Dates in **ISO 8601**: `YYYY-MM-DD`.
+-   Most recent entry first.
+-   Author as initials.
+-   Brief, specific descriptions of what changed.
+-   Detailed diffs are in Git — the changelog is for at-a-glance reference.
+
+------------------------------------------------------------------------
+
+## Quick reference card
+
+| Element               | Correct                 | Incorrect               |
+|-----------------------|-------------------------|-------------------------|
+| Volume                | 5 mL                    | 5 ml, 5 cm³             |
+| Mass                  | 0.5 g                   | 0.5 gr, .5 g            |
+| Temperature           | 550 °C                  | 550°C, 550 C            |
+| Time                  | 4 h, 15 min             | 4 hrs, 15 minutes       |
+| Concentration (molar) | 0.5 mol/L HCl           | 0.5 M HCl, 0.5 mol HCl  |
+| Concentration (%)     | HCl (10 %)              | 10% HCl, HCl 10%        |
+| Speed                 | 5000 rpm                | 5000 RPM                |
+| Pressure              | 1200 mbar               | 1200 Mbar               |
+| Wavelength            | 663 nm                  | 663nm                   |
+| Chemical formula      | CO~2~                   | CO2                     |
+| Ranges                | 350–900 nm              | 350-900 nm              |
+| Callout (safety)      | `:::{.callout-warning}` | `> Warning:`, bold text |
+| Callout (tip)         | `:::{.callout-tip}`     | `\| Note:`              |
+| Emphasis on values    | **0.5 g**               | 0.5 g (no bold)         |
+| Software commands     | `File > Save as`        | File \> Save as         |
+| Decimal (EN)          | 0.5                     | 0,5                     |
+| Decimal (PL)          | 0,5                     | 0.5                     |

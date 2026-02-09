@@ -1,0 +1,49 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Laboratory Protocols"
+  navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "English"
+        href: en/index.qmd
+      - text: "Polski"
+        href: pl/index.qmd
+      - text: "Style Guide"
+        href: style-guide.qmd
+    right:
+      - icon: github
+        href: https://github.com/mzarowka/lab-protocols
+  search: true
+  page-footer:
+    center: "Department of Geomorphology and Quaternary Geology — University of Gdańsk"
+
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    toc: true
+    toc-depth: 4
+    embed-resources: false
+    css: assets/styles.css
+    number-sections: false
+    link-external-newwindow: true
+
+  typst:
+    toc: true
+    toc-depth: 3
+    number-sections: false
+    margin:
+      top: 30mm
+      bottom: 25mm
+      left: 20mm
+      right: 20mm
+    mainfont: "Noto Sans"
+    fontsize: 10pt
+    include-in-header: assets/typst-header.typ
+
+editor: visual

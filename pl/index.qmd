@@ -1,0 +1,45 @@
+---
+title: "Procedury — Polski"
+toc: false
+---
+
+### Chemia mokra
+
+- [Strata na prażeniu](loss-on-ignition.qmd)
+- [Zawartość materii mineralnej](mineral-matter.qmd)
+- [TIC: kalcymetr Scheiblera](tic-inorganic-carbon-scheibler.qmd)
+- [Ekstrakcja sekwencyjna](sequential-extraction.qmd)
+- [Ekstrakcja krzemionki biogenicznej](biogenic-silica-bulk-extraction.qmd)
+- [Azot i fosfor całkowity](n-total-p-total.qmd)
+
+### Analizy instrumentalne
+
+- [TIC: analizator SoliTIC](cns-tic-inorganic-carbon-solitic.qmd)
+- [CNS: przygotowanie próbek](cns-sample-preparation.qmd)
+- [CNS: procedura pomiarowa](cns-procedure-extended.qmd)
+- [CNS: wzorce glebowe](cns-standard-samples.qmd)
+
+### Biogeochemia
+
+- [Ekstrakcja pigmentów z osadów jeziornych](pigment-bulk-extraction.qmd)
+- [Pomiar koncentracji pigmentów](pigment-bulk-measure.qmd)
+
+### Datowania radiometryczne
+
+- [^210^Pb spektrometria alfa](pb210-alpha.qmd)
+- [Spektrometr gamma: wymiana próbki i ciekły N~2~](gamma-nitrogen-sample.qmd)
+- [Spektrometr gamma: raportowanie](gamma-report.qmd)
+
+### Obrazowanie i skanowanie
+
+- [Skanowanie hiperspektralne](hyperspectral-scanning.qmd)
+- [Skanowanie cienkich szlifów](thin-section-scanning.qmd)
+
+### Przygotowanie próbek
+
+- [Liofilizacja](freeze-drying.qmd)
+- [Sztabki do cienkich szlifów](thin-section-slabs.qmd)
+
+### Dane terenowe
+
+- [Batymetria](bathymetry.qmd)

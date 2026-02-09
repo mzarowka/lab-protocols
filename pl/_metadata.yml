@@ -1,0 +1,18 @@
+# ──────────────────────────────────────────────────────────────────
+# Shared metadata for all Polish protocols
+# Inherited automatically by every .qmd in pl/
+# ──────────────────────────────────────────────────────────────────
+
+lang: pl
+
+format:
+  html:
+    toc-title: "Spis treści"
+  typst:
+    toc-title: "Spis treści"
+
+crossref:
+  fig-title: "Ryc."
+  tbl-title: "Tab."
+  fig-prefix: "Rycina"
+  tbl-prefix: "Tabela"

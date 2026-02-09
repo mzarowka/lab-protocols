@@ -1,0 +1,20 @@
+# ──────────────────────────────────────────────────────────────────
+# Shared metadata for all English protocols
+# Inherited automatically by every .qmd in en/
+# ──────────────────────────────────────────────────────────────────
+
+lang: en
+
+format:
+  html:
+    toc-title: "Contents"
+  typst:
+    toc-title: "Contents"
+
+# These fields are available in protocol YAML front matter
+# and can be overridden per protocol
+crossref:
+  fig-title: "Fig."
+  tbl-title: "Tab."
+  fig-prefix: "Figure"
+  tbl-prefix: "Table"

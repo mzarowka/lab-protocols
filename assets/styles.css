@@ -1,0 +1,55 @@
+/* ──────────────────────────────────────────────────────────────── */
+/* Laboratory Protocols — Custom styles                           */
+/* ──────────────────────────────────────────────────────────────── */
+
+/* Department header block */
+.protocol-header {
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.protocol-header .department-link {
+  text-decoration: none;
+  color: #555;
+}
+
+.protocol-header .department-link:hover {
+  text-decoration: underline;
+  color: #333;
+}
+
+/* Tighten spacing after the header rule */
+.protocol-header + hr {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Callout titles — slightly smaller */
+.callout .callout-title-container {
+  font-size: 0.95rem;
+}
+
+/* Tables — cleaner appearance */
+table {
+  font-size: 0.92rem;
+}
+
+/* Changelog table — compact */
+.changelog table {
+  font-size: 0.85rem;
+}
+
+/* Print styles for PDF fallback */
+@media print {
+  .protocol-header {
+    border-bottom: 1px solid #333;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .callout {
+    break-inside: avoid;
+  }
+}

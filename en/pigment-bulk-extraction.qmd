@@ -1,0 +1,268 @@
+---
+title: "Bulk Pigment Extraction from Lake Sediments"
+subtitle: "Acetone extraction, after University of Bern"
+
+author:
+  - name: "Maurycy Żarczyński"
+    role: "Responsible person"
+contributors:
+  - "Andrea Sanchini (original method, University of Bern)"
+  - "Giulia Wienhues (original method, University of Bern)"
+  - "Paul Zander (original method, University of Bern)"
+
+version: "1.0"
+date: last-modified
+date-format: "YYYY-MM-DD"
+
+related-protocols:
+  - title: "Pigment Concentration Measurement"
+    href: "pigment-bulk-measure.qmd"
+  - title: "Loss on Ignition"
+    href: "loss-on-ignition.qmd"
+  - title: "Freeze Drying"
+    href: "freeze-drying.qmd"
+---
+
+{{< include ../_includes/header-en.qmd >}}
+
+# Bulk Pigment Extraction from Lake Sediments
+
+Extraction of sedimentary pigments (chlorophylls, carotenoids, and their degradation products) from freeze-dried lake sediments using acetone as a solvent. The method follows the protocol of Andrea Sanchini and Giulia Wienhues (University of Bern). Extracted pigments are subsequently measured by spectrophotometry (see [Pigment Concentration Measurement](pigment-bulk-measure.qmd)).
+
+## Safety
+
+::: callout-warning
+## Organic solvent — fume hood required
+
+Acetone (C~3~H~6~O) is highly **flammable** and an **irritant**. All work with acetone must be performed under a **running fume hood**. Keep away from ignition sources. Refer to the acetone Safety Data Sheet (SDS) stored in the laboratory.
+:::
+
+## Consumables and equipment
+
+### Chemical reagents
+
+-   Acetone (100 %, HPLC grade) — extraction solvent.
+-   Acetone (technical grade) — cleaning.
+-   Redistilled water (MilliQ).
+-   Technical nitrogen (N~2~) — for evaporation.
+-   Liquid, highly alkaline cleaning and dispersing agent.
+
+### Equipment
+
+-   Laboratory fume hood.
+-   Ultrasound bath.
+-   Centrifuge (capable of 5000 rpm).
+-   Vortex shaker.
+-   Laboratory furnace for glassware baking.
+-   Laboratory drying oven.
+-   Freeze drier.
+-   Glass beakers for acetone dispensing.
+-   Pipette **1000 µL** with compatible tips.
+-   Heating plate.
+-   Nitrogen evaporator with needles and metal rack for amber vials.
+-   Racks for centrifuge tubes and amber vials.
+-   Analytical balance.
+-   Antistatic device and stainless steel spatula.
+-   Ice bath — plastic tray with cooling packs.
+
+### Other materials
+
+-   Polypropylene (PP) centrifuge tubes **25 mL** or **50 mL**.
+
+::: callout-warning
+## Material compatibility
+
+Other plastics will dissolve in contact with acetone. Use only polypropylene (PP) tubes. Single use — do not reuse.
+:::
+
+-   Amber glass vials with caps, **25 mL** or **50 mL**.
+
+::: callout-tip
+## Labelling
+
+Tape the labels to amber vials — marker ink dissolves in acetone.
+:::
+
+-   Aluminium foil.
+-   Glass Pasteur pipettes — single use.
+-   Silicone bulbs for Pasteur pipettes.
+
+## Preparation
+
+### Cleaning: amber vials
+
+1.  Soak vials in Neodisher LaboClean solution for several hours.
+2.  Wash manually.
+3.  Dry in the drying oven.
+4.  Cover openings with aluminium foil cleaned with technical acetone.
+5.  Bake in the furnace at **550 °C** for a minimum of **12 h**.
+
+### Cleaning: amber vial caps
+
+1.  Rinse with tap water.
+2.  Place in a beaker filled with a **1:1** mixture of technical acetone and redistilled water (MilliQ). Sonicate for **10 min**.
+3.  Transfer to a beaker filled with technical acetone. Sonicate for **10 min**.
+4.  Dry in the drying oven.
+
+::: callout-tip
+## Solvent reuse
+
+Washing solvents (technical acetone, acetone–MilliQ mixture) can be reused. Store in labelled glass bottles between sessions.
+:::
+
+### Cleaning: evaporator needles {#sec-evaporator-needles}
+
+1.  Place needles in a beaker filled with technical acetone.
+2.  Sonicate **3 × 10 min**, replacing the acetone between cycles.
+
+### Sediment preparation
+
+-   Freeze-dry wet sediment samples (see [Freeze Drying](freeze-drying.qmd) protocol).
+
+::: callout-note
+## Why freeze-dry?
+
+High-temperature drying accelerates pigment degradation. Freeze drying preserves pigment integrity.
+:::
+
+-   Determine organic matter content via [Loss on Ignition](loss-on-ignition.qmd) at **550 °C**.
+
+::: callout-note
+## Alternative for Paleoenvironmental Research Laboratory
+
+Calculate organic matter content from CNS measurements instead of LOI.
+:::
+
+-   Weigh **0.5 g** of homogenised sediment into a polypropylene tube (**25 mL**).
+
+::: callout-tip
+## Sample mass
+
+If insufficient material is available, use no less than **0.25 g**. For clastic, mineral sediment more than **1.00 g** might be needed. Clean all tools with technical acetone and use the antistatic device before weighing.
+:::
+
+-   Label the tube and cap with the sample name.
+
+## Procedure
+
+### Workspace preparation
+
+-   Cover surfaces under the fume hood with aluminium foil cleaned with technical acetone.
+-   Switch off overhead lights whenever possible — light accelerates pigment degradation.
+-   Fill a glass beaker with acetone (100 %, HPLC grade) for pipetting.
+
+::: callout-important
+## Do not pipette from the bottle
+
+Always transfer acetone to a glass beaker first, then pipette from the beaker.
+:::
+
+### Extraction cycle
+
+-   Rinse the pipette with acetone, dispensing into the waste beaker.
+
+-   Add **5 mL** of acetone (100 %, HPLC grade) to the tube containing sediment.
+
+::: callout-tip
+## Pipetting
+
+Pipette carefully — there should be no air bubbles in the tip.
+:::
+
+-   Shake on the vortex for **1 min**.
+
+-   Sonicate for **1 min**.
+
+-   Centrifuge at **5000 rpm** for **10 min**.
+
+::: callout-note
+## Centrifuge adjustment
+
+These settings are instrument-specific. If a lower rotational speed is used, increase the centrifugation time proportionally.
+:::
+
+-   Check whether the supernatant is clear after centrifugation.
+
+::: callout-important
+## Turbid supernatant
+
+If the supernatant is not clear, centrifuge again before proceeding.
+:::
+
+-   Transfer the supernatant into the labelled amber vial using a glass Pasteur pipette. Ensure that all supernatant is collected.
+
+-   **Repeat the extraction cycle two more times** using **5 mL** of acetone (100 %, HPLC grade) each time (three cycles total).
+
+::: callout-tip
+## Between extraction steps
+
+-   Keep each Pasteur pipette in a glass beaker — every amber vial and tube pair has its own dedicated Pasteur pipette.
+-   Cover amber vials to protect from light and store in the ice bath between cycles.
+:::
+
+::: callout-important
+## Consistency
+
+All samples in a batch must be processed identically — same number of extraction cycles, same volumes, same centrifuge settings. If the supernatant still shows strong colour after three cycles, continue with additional extraction steps, but apply the same total number of cycles to every sample in the batch.
+:::
+
+::: callout-note
+## Short-term storage
+
+Extracts can be stored at **−20 °C** for a few days before evaporation if necessary.
+:::
+
+### Evaporation
+
+-   Verify that the evaporator needles are clean (see [Cleaning: evaporator needles](#sec-evaporator-needles)).
+
+-   Set up the heating plate and nitrogen evaporator.
+
+-   Place amber vials in the metal rack on the heating plate set to **35 °C**.
+
+-   Open the nitrogen flow.
+
+::: callout-tip
+## Flow rate
+
+Adjust the N~2~ flow so that a gentle deflection of the liquid surface is visible — do not blow the solvent out of the vial.
+:::
+
+-   Evaporate to a dry residue. This takes approximately **4–6 h** depending on the extract volume.
+
+### Reconstitution
+
+-   Add **2 mL** or **5 mL** of acetone (100 %, HPLC grade) to the amber vial using the **1000 µL** pipette.
+
+::: callout-important
+## Precision
+
+This volume defines the final concentration. Pipette precisely and check for air bubbles in the tip before dispensing.
+:::
+
+-   Homogenise the solution by drawing up and dispensing with a glass Pasteur pipette, rinsing the vial walls.
+
+-   Shake briefly on the vortex.
+
+::: callout-important
+## Complete dissolution
+
+All dried pigment residue must fully redissolve in the acetone. Inspect the vial walls and bottom for any remaining residue.
+:::
+
+### Disposal
+
+::: callout-warning
+## Waste disposal
+
+-   Dispose of all acetone waste in the designated organic solvent container under the fume hood.
+-   Used PP centrifuge tubes and glass Pasteur pipettes must be rinsed and recycled according to laboratory waste procedures.
+:::
+
+## Changelog
+
+| Date | Author | Change |
+|--------------------|--------------------------|--------------------------|
+| 2026-01-09 | MZ | Migrated to new framework; standardised units and formatting |
+| 2023-02-09 | MZ | Full version |
+| 2022-12-09 | MZ | Initial Quarto version, following University of Bern SOP. |

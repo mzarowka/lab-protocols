@@ -1,0 +1,21 @@
+# ──────────────────────────────────────────────────────────────────
+# Shared variables for all protocols
+# Edit here to update across all documents
+# ──────────────────────────────────────────────────────────────────
+
+department:
+  en: "Department of Geomorphology and Quaternary Geology"
+  pl: "Katedra Geomorfologii i Geologii Czwartorzędu"
+
+university:
+  en: "University of Gdańsk"
+  pl: "Uniwersytet Gdański"
+
+document-type:
+  en: "LABORATORY PROTOCOL"
+  pl: "PROCEDURA LABORATORYJNA"
+
+website-url: "https://geomorfologia.ug.edu.pl"
+
+# Default responsible person (can be overridden per protocol)
+default-author: "Maurycy Żarczyński"

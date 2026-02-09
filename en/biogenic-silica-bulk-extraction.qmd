@@ -1,0 +1,473 @@
+---
+title: "Biogenic Silica Extraction and Measurement"
+subtitle: "Alkaline extraction after Mortlock and Froelich (1989)"
+
+author:
+  - name: "Maurycy Żarczyński"
+    role: "Responsible person"
+contributors:
+  - "Sedimentary Records of Environmental Change Laboratory, Northern Arizona University (source protocol, updated 2019 by JB)"
+  - "R.A. Mortlock and P.N. Froelich (original method, 1989)"
+
+version: "1.0"
+date: last-modified
+date-format: "YYYY-MM-DD"
+
+related-protocols:
+  - title: "Freeze Drying"
+    href: "freeze-drying.qmd"
+---
+
+{{< include ../_includes/header-en.qmd >}}
+
+# Biogenic Silica Extraction and Measurement
+
+Wet-chemistry alkaline extraction of biogenic silica (BSi, biogenic opal) from lake sediments, followed by colorimetric determination of dissolved silicon via the molybdate blue method. The protocol follows Mortlock and Froelich (1989)[^1], adapted by the Sedimentary Records of Environmental Change Laboratory, Northern Arizona University.
+
+[^1]: Mortlock, R.A., Froelich, P.N., **1989**, A simple method for the rapid determination of biogenic opal in pelagic marine sediments. *Deep-Sea Research. Part A: Oceanographic Research Papers* 36: 1415–1426.
+
+The procedure consists of three stages: (1) organic matter removal, carbonate removal, and alkaline extraction with Na~2~CO~3~ (10 %); (2) colorimetric reaction with molybdate and metol reducing reagents; (3) absorbance measurement at 812 nm.
+
+::: callout-important
+## Batch composition
+
+Work in complete analytical batches. The recommended set consists of:
+
+-   32 samples,
+-   2 internal standards (homogenised reference sediment),
+-   5 silica calibration standards,
+-   1 blank (Na~2~CO~3~ only).
+
+Total: 40 vessels per batch. Prepare all reagents before starting.
+:::
+
+::: callout-important
+## No glassware
+
+Do not use laboratory glassware except during acid mixing. Dissolved silica leaches from glass and will contaminate the analysis. Use polyethylene (PE), polypropylene (PP), or Teflon (PTFE) labware throughout.
+:::
+
+## Safety
+
+::: callout-warning
+## Corrosive and toxic reagents
+
+This protocol uses:
+
+-   **H~2~O~2~ (30 %)** — strong oxidiser, causes burns. Reacts vigorously with organic-rich sediments.
+-   **Concentrated H~2~SO~4~ (95–97 %)** — strongly corrosive, exothermic when mixed with water.
+-   **Concentrated HCl (37 %)** — corrosive, releases irritating fumes.
+-   **Na~2~CO~3~ (10 %)** — irritant at elevated temperature.
+
+Work under a **running fume hood** when handling H~2~O~2~, acids, and hot Na~2~CO~3~ solutions. Wear laboratory coat, nitrile gloves, and safety goggles at all times. Refer to the relevant Safety Data Sheets (SDS) stored in the laboratory.
+:::
+
+## Consumables and equipment
+
+### Chemical reagents
+
+Pre-treatment:
+
+-   Hydrogen peroxide, H~2~O~2~ (30 %) — organic matter removal.
+-   Hydrochloric acid, HCl (37 %, concentrated) — for carbonate removal and for the HCl reagent stock.
+
+Extraction:
+
+-   Sodium carbonate, Na~2~CO~3~ — for the 10 % extraction solution.
+
+Colorimetric reagents (stock solutions):
+
+-   Ammonium heptamolybdate tetrahydrate, (NH~4~)~6~Mo~7~O~24~ · 4H~2~O.
+-   Sodium sulfite, Na~2~SO~3~.
+-   Metol (*N*-methyl-*p*-aminophenol sulfate), C~14~H~20~N~2~O~6~S.
+-   Oxalic acid dihydrate, H~2~C~2~O~4~ · 2H~2~O.
+-   Concentrated sulfuric acid, H~2~SO~4~ (95–97 %).
+
+Calibration:
+
+-   Silica standard solution, 1000 ppm Si (e.g., VWR cat. no. 101223-644).
+
+Other:
+
+-   Redistilled water (MilliQ) — for all solutions and rinsing.
+-   Micro-90 cleaning concentrate (or equivalent, silicate-free).
+
+### Equipment
+
+-   Nalgene beakers, **2000 mL** and **1000 mL**.
+-   Magnetic stirrer and stir bars.
+-   Laboratory centrifuge (capable of **3400 rpm**).
+-   Vortex shaker.
+-   Shaker table.
+-   Laboratory oven (capable of **80 °C**).
+-   Hot water bath (capable of **50 °C**).
+-   Spectrophotometer (visible range, **812 nm**).
+-   Analytical balance (readability 0.1 mg).
+-   Fume hood.
+
+### Other materials
+
+-   Polypropylene (PP) centrifuge tubes, **50 mL** — for extraction.
+-   Scintillation vials, **20 mL** — for sample aliquots after extraction.
+-   Reaction bottles, **30 mL** — for colorimetric reaction.
+-   Polyethylene (PE) bottles for reagent storage.
+-   Brown glass bottles — for light-sensitive reagents (metol-sulfite).
+-   Whatman No. 1 filter paper — for filtering metol-sulfite stock.
+-   Adjustable pipettes: **20–200 µL**, **100–1000 µL**, **1–10 mL**.
+-   Pipette tips (compatible with above).
+-   Cuvettes compatible with the spectrophotometer.
+-   Styrofoam racks for centrifuge tubes.
+-   Metal racks for oven.
+-   Kimwipes or equivalent lint-free wipes.
+-   Timer.
+
+## Reagent preparation
+
+Prepare all stock solutions under the fume hood. Use redistilled water (MilliQ) throughout.
+
+### Extraction solution: Na~2~CO~3~ (10 %)
+
+-   Dissolve Na~2~CO~3~ so that the dissolved mass equals 10 % of the final solution volume. For **1000 mL**: dissolve **100.0 g** Na~2~CO~3~ in **1000 mL** redistilled water (MilliQ) using a **2000 mL** Nalgene beaker on the magnetic stirrer.
+-   Store in a PE bottle.
+
+::: callout-note
+## Volume needed
+
+Each sample requires **40 mL**. For a full batch of 40 vessels, prepare at least **2000 mL** (200.0 g Na~2~CO~3~ in 2000 mL).
+:::
+
+### HCl reagent (\~1 mol/L)
+
+-   Add **83 mL** concentrated HCl (37 %) to **917 mL** redistilled water (MilliQ).
+
+::: callout-warning
+## Acid dilution
+
+Always add acid to water, never the reverse.
+:::
+
+### Molybdate reagent (stock)
+
+-   Dissolve **16.0 g** (NH~4~)~6~Mo~7~O~24~ · 4H~2~O in **1000 mL** redistilled water (MilliQ) using a **2000 mL** Nalgene beaker on the magnetic stirrer.
+-   Store in a tightly capped PE bottle, out of direct sunlight.
+
+::: callout-note
+## Shelf life
+
+Stable indefinitely. Discard if a white precipitate forms or the solution turns faintly blue.
+:::
+
+### Metol-sulfite reagent (stock)
+
+1.  Dissolve **6.0 g** Na~2~SO~3~ in **500 mL** redistilled water (MilliQ) using a **1000 mL** Nalgene beaker on the magnetic stirrer.
+2.  Add **10.0 g** metol (C~14~H~20~N~2~O~6~S). Stir until fully dissolved.
+3.  Filter through Whatman No. 1 filter paper (fold paper into a cone in a funnel).
+4.  Store in a brown glass bottle.
+
+::: callout-note
+## Shelf life
+
+Stable for 1–2 months. Prepare fresh if the solution darkens.
+:::
+
+### Oxalic acid reagent (stock)
+
+-   Dissolve **60.0 g** oxalic acid dihydrate (H~2~C~2~O~4~ · 2H~2~O) in **1000 mL** redistilled water (MilliQ) using a **2000 mL** Nalgene beaker on the magnetic stirrer.
+-   Store in a PE bottle. Stable indefinitely.
+
+### Sulfuric acid reagent (stock)
+
+-   Very slowly add **280 mL** concentrated H~2~SO~4~ (95–97 %) to **720 mL** redistilled water (MilliQ) while stirring.
+
+::: callout-warning
+## Strongly exothermic
+
+Add the acid slowly while stirring continuously. Work under a fume hood. The solution becomes very hot — allow to cool before storing.
+:::
+
+### Molybdate working solution
+
+Mix immediately before use in the following proportions:
+
+| Component                  | Proportion |
+|----------------------------|:----------:|
+| Molybdate reagent (stock)  |     1      |
+| HCl reagent                |     1      |
+| Redistilled water (MilliQ) |     5      |
+
+::: callout-note
+## Stability and volume planning
+
+Stable for 6–12 h. Store in PE, out of direct sunlight. Each reaction vessel requires **17.5 mL** of molybdate working solution; for a full batch of 40 vessels prepare at least **750 mL** (approximately 107 mL molybdate stock + 107 mL HCl reagent + 536 mL MilliQ). Use the calculation worksheet in `bsi_protocol.xls` to determine exact volumes.
+:::
+
+### Metol reducing working solution
+
+Mix equal volumes of the three components, adding sulfuric acid reagent **last**:
+
+| Component                     | Proportion |
+|-------------------------------|:----------:|
+| Metol-sulfite reagent (stock) |     1      |
+| Oxalic acid reagent (stock)   |     1      |
+| Sulfuric acid reagent (stock) |     1      |
+
+::: callout-important
+## Prepare immediately before use
+
+Stable for 4–6 h only. Each reaction vessel requires **7.5 mL**; for 40 vessels prepare at least **320 mL** (approximately 107 mL of each component).
+:::
+
+### Silica calibration standards
+
+Prepare from the 1000 ppm Si standard solution, matrix-matched with 20 % Na~2~CO~3~:
+
+| Standard (ppm) | 20 % Na~2~CO~3~ (mL) | MilliQ (mL) | 1000 ppm Si (mL) | Total (mL) |
+|--------------:|--------------:|--------------:|--------------:|--------------:|
+|            100 |                   10 |           8 |                2 |         20 |
+|            200 |                   10 |           6 |                4 |         20 |
+|            300 |                   10 |           4 |                6 |         20 |
+|            400 |                   10 |           2 |                8 |         20 |
+|            500 |                   10 |           0 |               10 |         20 |
+|            750 |                    5 |           0 |               15 |         20 |
+
+::: callout-important
+## Run with every batch
+
+The calibration standards must be run with **every** batch of 32 samples. This is critical to account for spectrophotometer drift.
+:::
+
+## Preparation
+
+### Labware cleaning
+
+1.  Rinse all bottles (30 mL reaction bottles, 20 mL scintillation vials) with redistilled water (MilliQ). First rinses go into the corresponding waste containers.
+2.  Soak bottles and lids in Micro-90 solution (one capful per ¾-full tub of redistilled water) for **24 h**. Ensure every bottle is filled with cleaning solution.
+3.  Rinse thoroughly with tap water. Place in a tub of redistilled water (MilliQ), ensuring all bottles are filled. Soak for **24 h**.
+4.  Drain. Refill the tub with fresh redistilled water (MilliQ), ensure bottles are filled, and soak for another **24 h**.
+5.  Repeat for a third rinse — **3 × 24 h** redistilled water soaks total.
+6.  Shake all liquid out. Place bottles and lids upside-down on paper towels in a plastic tray. Dry for **24 h**.
+7.  Cap dried bottles and store in labelled cardboard boxes in sequential order.
+
+::: callout-note
+## Why Micro-90?
+
+Conventional detergents may contain silicates. Micro-90 is silicate-free and designed for trace-level analytical work.
+:::
+
+### Sediment preparation
+
+-   Place sediment samples in Teflon (PTFE) containers and freeze for at least **4 h** in the standing freezer.
+-   Freeze-dry overnight to break up sediment into powder (see [Freeze Drying](freeze-drying.qmd) protocol).
+
+## Procedure
+
+### Stage 1: Sample weighing and BSi extraction
+
+#### Weighing
+
+-   Weigh dry sediment into clean PP centrifuge tubes (**50 mL**). Record the mass to **0.1 mg**. Try to retain some sample for a repeat analysis if necessary.
+
+::: callout-tip
+## Sample mass by expected BSi content
+
+| Expected BSi       | Sample mass |
+|:-------------------|:------------|
+| \< 5 %             | 80–100 mg   |
+| 5–20 %             | 60–80 mg    |
+| \> 20 %            | 40–60 mg    |
+| Internal standards | 45–50 mg    |
+
+Keep masses consistent within **± 5 mg** across the batch.
+:::
+
+#### Organic matter removal
+
+::: callout-warning
+## Vigorous reaction possible
+
+H~2~O~2~ (30 %) reacts violently with organic-rich sediments. Start by adding **1 mL** at a time and observe the reaction (bubbling, heat) before adding more.
+:::
+
+1.  Under the fume hood, add **5 mL** of H~2~O~2~ (30 %) to each tube using a pipette. For samples with little or no organic matter, the full volume can be added at once.
+
+2.  Loosely cap the tubes to allow gas to escape. Let the reaction proceed until bubbling stops.
+
+::: callout-tip
+## Stubborn organics
+
+If bubbling continues after **1 h**, allow the reaction to proceed overnight at room temperature, or place tubes in a hot water bath at **50 °C** overnight to complete oxidation.
+:::
+
+3.  Once the reaction is complete, tighten caps. Place tubes on their sides in Styrofoam racks and shake on the shaker table at high speed for at least **1 h**.
+
+4.  Add redistilled water (MilliQ) to the **30 mL** mark on each tube. Mix on the vortex. Ensure the volumes are similar across tubes so that the centrifuge is balanced.
+
+5.  Centrifuge at **3400 rpm** for **10 min**. The supernatant should be clear and the sediment settled at the bottom.
+
+6.  Carefully decant the supernatant into a labelled waste beaker. Do not lose any sediment or filmy material — leave a little solution in the tube if necessary.
+
+::: callout-warning
+## Waste
+
+H~2~O~2~ waste is hazardous. Dispose in the designated H~2~O~2~ waste container.
+:::
+
+#### Carbonate removal
+
+7.  Add **5 mL** of HCl reagent (\~1 mol/L) to each tube using a pipette.
+
+8.  Place on the shaker table for **1 h**.
+
+9.  Add redistilled water (MilliQ) to the **30 mL** mark. Mix on the vortex. Balance volumes across tubes.
+
+10. Centrifuge at **3400 rpm** for **10 min**.
+
+11. Carefully decant the supernatant into a labelled waste beaker.
+
+::: callout-warning
+## Waste
+
+HCl waste is hazardous. Dispose in the designated HCl waste container.
+:::
+
+::: callout-tip
+## Stopping point
+
+If you must pause here, add **20 mL** redistilled water (MilliQ) to each tube and store. Before continuing, centrifuge and decant the water. **Do not allow samples to dry** — dried sediment coagulates and BSi extraction efficiency decreases.
+:::
+
+#### Alkaline extraction
+
+12. Add exactly **40 mL** of Na~2~CO~3~ (10 %) to each centrifuge tube using a pipette or large syringe. Cap and mix thoroughly — ensure no solution leaks.
+
+13. Prepare one blank: pour **40 mL** Na~2~CO~3~ (10 %) into an empty centrifuge tube.
+
+14. Place all tubes in metal racks. **Loosen caps slightly** to allow pressure to equalise. Place in the oven at **80 °C** for a total of **5 h**.
+
+::: callout-important
+## Mixing during extraction
+
+At the **2nd** and **4th hour**: tighten caps, vigorously shake to resuspend all sediment, then loosen caps and return to the oven. Monitor and record the oven temperature — note any drift from 80 °C.
+:::
+
+15. After **5 h**, tighten caps and mix one final time.
+
+16. Centrifuge at **3400 rpm** for **20 min**.
+
+17. Quickly transfer approximately **20 mL** of clear supernatant to pre-labelled **20 mL** scintillation vials. Ensure that **no sediment** is transferred.
+
+### Stage 2: Colorimetric reaction
+
+Prepare the molybdate and metol reducing working solutions (see [Reagent preparation]) for the number of vessels in the batch. Prepare a datasheet to record bottle numbers and absorbance readings.
+
+::: callout-important
+## Timing is critical
+
+The molybdate reaction is time-sensitive. All 40 sample transfers (step 3) must be completed within **20 min** to ensure uniform reaction times across the batch.
+:::
+
+1.  Set up **40 sample bottles** (20 mL scintillation vials with extracts) in 4 rows of 10. Set up **40 reaction bottles** (30 mL) with matching numbers on the counter next to them. Get out 40 caps for the reaction bottles.
+
+2.  Dispense **17.5 mL** of molybdate working solution into each pre-labelled 30 mL reaction bottle.
+
+::: callout-tip
+## Pipetting aid
+
+Place a small piece of laboratory tape just below the 17.5 mL mark on the pipette for rapid visual reference.
+:::
+
+3.  **Start the timer (20 min).** Using a **20–200 µL** pipette, transfer **125 µL** of sample from each scintillation vial into the corresponding reaction bottle. Use a **fresh pipette tip** for every transfer.
+
+::: callout-important
+## Precision
+
+Draw up and dispense the sample slowly. Check every transfer for air bubbles in the tip — bubbles alter the volume and compromise the result. Move each completed pair (sample bottle + reaction bottle) forward on the bench to track progress.
+:::
+
+-   Work row by row. Each row (10 transfers) should take less than **5 min**.
+-   After completing each row, cap and mix the reaction bottles.
+-   Complete all 40 transfers within **20 min**.
+
+4.  After the timer reaches **20 min**, add **7.5 mL** of metol reducing working solution to each reaction bottle. Proceed at the same pace as step 3, so that each bottle reacts with molybdate for exactly **20 min** before reduction begins.
+
+::: callout-tip
+## Pacing
+
+Check your time at the end of each row and adjust speed. Mark the 7.5 mL level on the pipette with tape. Cap and mix after each row.
+:::
+
+5.  Allow the colour to develop for at least **12 h**. Keep all samples out of direct sunlight.
+
+### Stage 3: Absorbance measurement
+
+1.  Turn on the spectrophotometer and let the self-test complete.
+
+2.  Set wavelength to **812 nm**.
+
+3.  Set analysis mode to **absorbance (ABS)**.
+
+::: callout-note
+## Mode switching
+
+On some instruments: press `Shift` + `5` to switch from mg/L SiO~2~ to ABS mode. Consult the instrument manual.
+:::
+
+4.  Fill a clean, dry cuvette with the **blank** reaction solution. Press `Zero`.
+
+5.  Measure the **5 (or 6) calibration standards**, starting with the lowest concentration. Shake each standard vigorously before pouring into the cuvette. Rinse the cuvette **3 ×** with redistilled water (MilliQ) and dry the outside with Kimwipes between each measurement. Record all absorbance values.
+
+6.  Measure the **2 internal standards** and **32 samples**. Process from the lightest to the darkest blue solutions.
+
+::: callout-important
+## Re-zero frequently
+
+Measure the blank and re-zero after every **5 samples** to correct for instrument drift. Record all blank readings.
+:::
+
+::: callout-important
+## High absorbance flag
+
+Any sample with absorbance higher than the 500 ppm calibration standard must be flagged. Re-extract with a smaller sample mass (e.g., 50 % of the original mass) and re-analyse.
+:::
+
+::: callout-note
+## Microscopy check
+
+Samples yielding BSi contents above **50 %** should be checked under a microscope for remaining diatom frustules. If diatoms are still present, re-process with a smaller aliquot of the raw sediment.
+:::
+
+## Calculations
+
+-   Plot a calibration curve (absorbance vs. Si concentration in ppm) using the 5–6 calibration standards.
+-   Determine sample concentrations from the calibration curve.
+-   Convert dissolved Si to BSi weight percent following Mortlock and Froelich (1989), accounting for sample mass, extraction volume, dilution, and the Si-to-opal conversion factor.
+-   Use the calculation worksheet in `bsi_protocol.xls`.
+-   Report the chemical batch ID (date of reagent preparation) with all results.
+
+::: callout-note
+## Quality control
+
+Internal standards (homogenised reference sediment) must fall within the accepted range for the batch to be valid. Samples processed as duplicates (every 5th core horizon) should be analysed in different batches to assess reproducibility.
+:::
+
+## Disposal
+
+::: callout-warning
+## Waste disposal
+
+All waste solutions are hazardous. Dispose in the designated labelled containers:
+
+-   **H~2~O~2~ waste** — from the organic matter removal step.
+-   **HCl waste** — from the carbonate removal step.
+-   **Na~2~CO~3~ waste** — from the 20 mL scintillation vials.
+-   **Metol/Molybdate waste** — from the 30 mL reaction bottles.
+
+First rinses of all bottles go into the corresponding waste container, not down the drain.
+:::
+
+## Changelog
+
+| Date | Author | Change |
+|--------------------|--------------------------|--------------------------|
+| 2025-XX-XX | MZ | Migrated to new framework; English translation; fully expanded from incomplete draft using NAU source protocol (2019) |
+| 2023-01-15 | MZ | Initial Quarto version, after NAU Sedimentary Records Laboratory |

@@ -1,0 +1,32 @@
+---
+title: "Laboratory Protocols"
+subtitle: "Department of Geomorphology and Quaternary Geology · University of Gdańsk"
+toc: false
+---
+
+Welcome to the laboratory protocol collection. Each protocol is available in English and Polish. For formatting rules and conventions, see the [Style Guide](style-guide.qmd).
+
+## Protocol registry
+
+| Protocol | English | Polski | Category |
+|:------------------|:----------------:|:----------------:|:------------------|
+| Loss on ignition | [EN](en/loss-on-ignition.qmd) | [PL](pl/loss-on-ignition.qmd) | Wet chemistry |
+| Mineral matter content | [EN](en/mineral-matter.qmd) | [PL](pl/mineral-matter.qmd) | Wet chemistry |
+| TIC: Scheibler calcimeter | [EN](en/tic-inorganic-carbon-scheibler.qmd) | [PL](pl/tic-inorganic-carbon-scheibler.qmd) | Wet chemistry |
+| TIC: SoliTIC analyser | [EN](en/cns-tic-inorganic-carbon-solitic.qmd) | [PL](pl/cns-tic-inorganic-carbon-solitic.qmd) | Instrumental |
+| CNS: sample preparation | [EN](en/cns-sample-preparation.qmd) | [PL](pl/cns-sample-preparation.qmd) | Instrumental |
+| CNS: measurement procedure | [EN](en/cns-procedure-extended.qmd) | [PL](pl/cns-procedure-extended.qmd) | Instrumental |
+| CNS: soil standard samples | [EN](en/cns-standard-samples.qmd) | [PL](pl/cns-standard-samples.qmd) | Reference |
+| Sequential extraction | [EN](en/sequential-extraction.qmd) | [PL](pl/sequential-extraction.qmd) | Wet chemistry |
+| Biogenic silica extraction | [EN](en/biogenic-silica-bulk-extraction.qmd) | [PL](pl/biogenic-silica-bulk-extraction.qmd) | Wet chemistry |
+| Total N and total P | [EN](en/n-total-p-total.qmd) | [PL](pl/n-total-p-total.qmd) | Wet chemistry |
+| ^210^Pb alpha spectrometry | [EN](en/pb210-alpha.qmd) | [PL](pl/pb210-alpha.qmd) | Radiometric |
+| Gamma spectrometer: sample & N~2~ | [EN](en/gamma-nitrogen-sample.qmd) | [PL](pl/gamma-nitrogen-sample.qmd) | Radiometric |
+| Gamma spectrometer: reporting | [EN](en/gamma-report.qmd) | [PL](pl/gamma-report.qmd) | Radiometric |
+| Pigment extraction | [EN](en/pigment-bulk-extraction.qmd) | [PL](pl/pigment-bulk-extraction.qmd) | Biogeochemistry |
+| Pigment measurement | [EN](en/pigment-bulk-measure.qmd) | [PL](pl/pigment-bulk-measure.qmd) | Biogeochemistry |
+| Freeze drying | [EN](en/freeze-drying.qmd) | [PL](pl/freeze-drying.qmd) | Sample preparation |
+| Hyperspectral scanning | [EN](en/hyperspectral-scanning.qmd) | [PL](pl/hyperspectral-scanning.qmd) | Imaging |
+| Thin section slabs | [EN](en/thin-section-slabs.qmd) | [PL](pl/thin-section-slabs.qmd) | Sample preparation |
+| Thin section scanning | [EN](en/thin-section-scanning.qmd) | [PL](pl/thin-section-scanning.qmd) | Imaging |
+| Bathymetry | [EN](en/bathymetry.qmd) | [PL](pl/bathymetry.qmd) | Field data |

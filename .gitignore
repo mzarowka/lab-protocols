@@ -1,0 +1,20 @@
+# Quarto
+_site/
+_freeze/
+.quarto/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.Rproj.user/
+.Rhistory
+.RData
+*.Rproj
+
+# Rendered PDFs (optional — uncomment if you want to track them)
+# *.pdf
+
+/.quarto/
+**/*.quarto_ipynb
