@@ -1,0 +1,352 @@
+---
+# ──────────────────────────────────────────────────────────────────
+# Metadane procedury — uzupełnić dla każdej nowej procedury
+# ──────────────────────────────────────────────────────────────────
+title: "Analiza elementarna CNS: procedura pomiarowa"
+subtitle: "Vario EL Cube, Elementar Analysensysteme"
+
+author:
+  - name: "Maurycy Żarczyński"
+    role: "Osoba odpowiedzialna"
+contributors:
+  - "Maurycy Żarczyński (metoda oryginalna, 2022)"
+  - "Maurycy Żarczyński (adaptacja Quarto, 2022)"
+
+version: "1.0"
+date: last-modified
+date-format: "YYYY-MM-DD"
+
+source-version: "en/cns-procedure-extended.qmd@v1.0"
+
+related-protocols:
+  - title: "CNS: przygotowanie próbek"
+    href: "cns-sample-preparation.qmd"
+  - title: "CNS: wzorce glebowe"
+    href: "cns-standard-samples.qmd"
+  - title: "TIC: analizator SoliTIC"
+    href: "cns-tic-inorganic-carbon-solitic.qmd"
+---
+
+{{< include ../_includes/header-pl.qmd >}}
+
+# Analiza elementarna CNS: procedura pomiarowa
+
+Pełna procedura obsługi analizatora elementarnego Vario EL Cube CNS (Elementar Analysensysteme), obejmująca rozruch, pomiar, wyłączenie, tryb uśpienia, diagnostykę oraz rutynowe czynności konserwacyjne.
+
+## Bezpieczeństwo
+
+::: callout-warning
+## Wysokie temperatury i gazy techniczne
+
+-   Rura spalań pracuje w temperaturze **1150 °C**, a rura redukcyjna w **850 °C**. Nie dotykać obudowy pieca ani złączek rur w trakcie pracy. Przed wyłączeniem urządzenia odczekać, aż temperatura spadnie poniżej **150 °C**.
+-   Procedura wymaga stosowania sprężonego tlenu (O~2~) i helu (He). Upewnić się, że reduktory butli są poprawnie ustawione i że wszystkie połączenia przeszły test szczelności.
+:::
+
+## Materiały eksploatacyjne i urządzenia
+
+### Urządzenia
+
+-   Analizator elementarny Vario EL Cube CNS (Elementar Analysensysteme).
+-   Dedykowany komputer z oprogramowaniem Vario EL Cube.
+
+### Gazy techniczne
+
+-   Tlen (O~2~), ciśnienie robocze **2 bar**.
+-   Hel (He), ciśnienie robocze **1,2 bar** (1200 mbar).
+
+### Części eksploatacyjne
+
+-   Osuszki (komplet wymienny).
+-   Wypełnienie rury spalań (lub kompletna rura).
+-   Miedź i wełna mosiężna lub srebrna do rury redukcyjnej.
+-   Tygiel popiołów.
+-   Lanca tlenowa (zapasowa).
+
+### Pozostałe materiały
+
+-   Kapsułki cynowe (patrz [CNS: przygotowanie próbek](cns-sample-preparation.qmd)).
+-   Materiał referencyjny (patrz [CNS: wzorce glebowe](cns-standard-samples.qmd)).
+
+## Przygotowanie
+
+### Przegląd urządzenia
+
+Przed uruchomieniem analizatora wykonać następujące czynności kontrolne:
+
+-   Wymienić osuszki, jeśli są wyczerpane.
+
+-   Wymienić wypełnienie rury spalań (lub całą rurę), jeśli to konieczne.
+
+-   Wymienić miedź i wełnę mosiężną lub srebrną w rurze redukcyjnej, jeśli to konieczne.
+
+-   Wymienić tygiel popiołów, jeśli jest pełny.
+
+-   Sprawdzić lancę tlenową — musi być widoczny prześwit.
+
+::: callout-important
+## Zatkana lanca tlenowa
+
+Przyczyną zatkania jest zwykle przepełniony tygiel popiołów. Wymienić tygiel przed próbą udrożnienia lancy.
+:::
+
+-   Sprawdzić wszystkie połączenia między elementami aparatu.
+
+-   Sprawdzić wszystkie pozostałe niezbędne elementy urządzenia i ich stan.
+
+## Procedura
+
+### Rozruch
+
+1.  Założyć owiewkę wyprowadzającą gorące powietrze z tyłu Vario EL Cube.
+
+2.  Włączyć Vario EL Cube zielonym przyciskiem z prawej strony urządzenia.
+
+3.  Uruchomić oprogramowanie Vario EL Cube.
+
+::: callout-tip
+## Skrót do oprogramowania
+
+Skrót znajduje się na pasku zadań.
+:::
+
+4.  Wykonać ruch referencyjny.
+
+::: callout-important
+## Wymagana pusta karuzela
+
+Ruch referencyjny wykonywać wyłącznie na **pustej karuzeli**. Potwierdzić, że wszystkie pozycje są opróżnione.
+:::
+
+5.  Poczekać na nawiązanie komunikacji — pasek stanu powinien zmienić się z *Busy* na *Standby*.
+
+6.  Odkręcić zawory gazów technicznych (O~2~ i He).
+
+7.  Ustawić temperatury spalania i redukcji: `Options > Settings > Parameters`:
+
+    -   **Combustion** tube: **1150 °C**.
+    -   **Reduction** tube: **850 °C**.
+
+::: callout-important
+## Gazy w trakcie rozgrzewania
+
+Podczas rozgrzewania urządzenia gazy techniczne muszą pozostać **zakręcone**. Odkręcić je dopiero po osiągnięciu temperatury docelowej.
+:::
+
+8.  Poczekać, aż detektor TCD (detektor przewodności cieplnej) osiągnie temperaturę roboczą.
+
+::: callout-note
+## Gotowość detektora TCD
+
+Pole TCD powinno przestać migać i wskazywać stabilną wartość około **60 °C**.
+:::
+
+9.  Ustawić ciśnienia robocze gazów:
+
+    -   **O~2~**: **2 bar**.
+    -   **He**: **1,2 bar** (1200 mbar).
+
+10. Po odkręceniu gazów pozwolić urządzeniu na kilka minut swobodnej pracy w celu przedmuchania układu.
+
+### Przygotowanie do pomiaru
+
+-   W nowym pliku pomiarowym przygotować następującą sekwencję:
+
+    -   **1** × próbka ślepa **z O~2~**.
+    -   **2–3** × próbka ślepa **bez O~2~**.
+
+::: callout-note
+## Próbki ślepe
+
+Kluczowym parametrem dla próbek ślepych jest pole piku. Pustą kapsułkę cynową zwinąć szczelnie, usuwając powietrze.
+:::
+
+```         
+- **2–3** × próbki stabilizujące (**RunIn**).
+```
+
+::: callout-tip
+## Dobór próbek RunIn
+
+Wybrać próbki RunIn możliwie bliskie spodziewanemu zakresowi analitycznemu partii.
+:::
+
+```         
+- **2–3** × materiał referencyjny jako **day factor**.
+```
+
+-   Wybrać metodę dozowania O~2~:
+
+    -   **2 mg 70 s** (domyślna, preferowana).
+    -   2 mg 80 s.
+    -   5 mg 90 s.
+    -   10 mg 120 s.
+
+::: callout-note
+## Wybór metody dozowania
+
+Stosować najniższe dozowanie O~2~ zapewniające pełne spalenie próbki. Wyższa naważka lub spodziewana wyższa zawartość węgla wymagają dłuższego czasu dozowania tlenu.
+:::
+
+-   Na początku serii załadować maksymalnie **79** próbek do karuzeli.
+
+::: callout-tip
+## Doładowywanie próbek w trakcie pomiaru
+
+Pozycja **80** i kolejne można dołożyć w trakcie analizy — autosampler doliczy je automatycznie. Przy dużych seriach kontrolować poziom wypełnienia tygla popiołów.
+:::
+
+### Pomiar
+
+-   Uruchomić analizę w trybie `Auto` lub `Single` (patrz [Załącznik 2](#sec-oprogramowanie)).
+
+::: callout-note
+## Korekcja wyników
+
+Zmierzone wartości blank i day factor służą do korekty wyników. Day factor to stosunek zmierzonej wartości wzorca do wartości teoretycznej — kompensuje bieżące odchylenia aparatury.
+:::
+
+### Wyłączenie
+
+1.  Ustawić temperatury obu rur na **0 °C**: `Options > Settings > Parameters`:
+
+    -   **Combustion** tube: **0 °C**.
+    -   **Reduction** tube: **0 °C**.
+
+2.  Zakręcić zawory gazów technicznych — przekręcić do oporu.
+
+3.  Poczekać, aż temperatura spadnie poniżej **150 °C**.
+
+::: callout-note
+## Czas studzenia
+
+Studzenie z temperatury roboczej do **150 °C** trwa około **3 h**.
+:::
+
+4.  Zamknąć oprogramowanie Vario EL Cube.
+
+5.  Wyłączyć Vario EL Cube zielonym przyciskiem z prawej strony urządzenia.
+
+### Tryb uśpienia
+
+Przy krótkiej przerwie między seriami pomiarowymi zamiast pełnego wyłączenia zastosować tryb uśpienia.
+
+-   Aktywować tryb uśpienia: kliknąć `Sleep` (ikona księżyca) w oprogramowaniu.
+
+-   Skonfigurować temperatury uśpienia: `Options > Settings > Sleep/Wake Up`:
+
+    -   **Combustion** tube: **900 °C**.
+    -   **Reduction** tube: **700 °C**.
+
+::: callout-important
+## Wybudzanie urządzenia
+
+Wybudzać urządzenie ręcznie, bez stosowania automatycznego timera. Nie pozostawiać urządzenia bez nadzoru w trakcie wybudzania.
+:::
+
+## Załączniki
+
+### Załącznik 1: Test szczelności {#sec-test-szczelnosci}
+
+::: callout-important
+## Wymagania temperaturowe
+
+Urządzenie **musi** mieć stabilną temperaturę — w pełni rozgrzane lub w pełni wystudzone. Nie wykonywać testów szczelności podczas grzania lub schładzania. Preferowane jest testowanie na zimnym urządzeniu.
+:::
+
+**Objawy nieszczelności:**
+
+-   Przepływ TCD bardzo niski.
+-   Przepływ He bardzo wysoki.
+-   Ciśnienie spada.
+
+**Objawy zatkania układu:**
+
+-   Oba przepływy niskie.
+-   Ciśnienie wysokie.
+
+**Ogólny test szczelności (raw leak test):**
+
+1.  Uruchomić oprogramowanie Vario EL Cube i wykonać ruch referencyjny (wyłącznie na pustej karuzeli).
+
+2.  Sprawdzić, czy odczyty przepływów są stabilne. Duże nieregularności wskazują na poważną nieszczelność lub zatkanie.
+
+3.  Przejść do `Options > Diagnostic > Raw leak test` i potwierdzić klikając `Ok`.
+
+4.  Oprogramowanie wyświetli schemat urządzenia i instrukcje krok po kroku, w tym informacje o elementach zestawu testowego. Zakręcić zawór O~2~, gdy pojawi się monit.
+
+5.  Kliknąć `Start`. Oprogramowanie raportuje postęp testu i bieżące wartości ciśnienia.
+
+6.  Po zakończeniu odkręcić zawory gazów technicznych.
+
+**Szczegółowy test szczelności (fine leak test):**
+
+-   Szczegółowe testy dostępne są w tym samym menu diagnostycznym. Test **0** (zerowy) jest tożsamy z ogólnym testem szczelności (raw leak test).
+
+### Załącznik 2: Informator oprogramowania {#sec-oprogramowanie}
+
+**Świeżo zasypane kolumny** skutkują podwyższonymi wartościami próbek ślepych. Przed rozpoczęciem właściwych pomiarów wykonać **3–4** × blank, aby kolumny się przepaliły.
+
+**Masa próbki ślepej:** dla wszystkich próbek ślepych wprowadzić wartość **1,000**.
+
+**Metody dozowania O~2~** są predefiniowane w `Options > Settings > Methods`.
+
+**Typy próbek ślepych:**
+
+-   **With O~2~** — próbka spalana z tlenem.
+-   **Without O~2~** — próbka spalana bez tlenu.
+
+::: callout-note
+## Kiedy stosować próbki ślepe z O~2~
+
+W większości przypadków stosować próbki ślepe **bez O~2~**. Wykonać **1–2** × próbka ślepa **z O~2~** po świeżym zasypaniu kolumn lub po zmianach w urządzeniu.
+:::
+
+**Optymalizacja metody dozowania O~2~:** przygotować próbkę i kilka identycznych naważek z różnymi czasami dozowania (im krótszy czas, tym lepiej). Zoptymalizować dla danego rodzaju osadu w określonych warunkach.
+
+**Operacje na liście próbek:**
+
+-   Wstawienie wiersza: `Insert line`.
+-   Zamiana próbek: `Swap`.
+-   Wstawienie znacznika stopu: `Stop tag`.
+-   Zaznaczenie aktualnie analizowanej próbki: `Current sample` (zielone cieniowanie).
+-   Zaznaczenie wiersza do wpisania masy: `Current weight` (żółte cieniowanie).
+
+**Zatrzymanie analizy przed końcem:** zielony pasek postępu nie przeskoczy. Autosampler czeka gotowy do następnej próbki — przesunąć `Current sample` o **jedno** miejsce ręcznie.
+
+**Przesunięcie autosamplera (karuzeli):** `System > Carousel position`. Wcześniej usunąć wszystkie próbki.
+
+::: callout-tip
+## Pozycjonowanie karuzeli
+
+Aby przeanalizować próbkę na pozycji **N**, ustawić karuzelę na pozycję **N − 1** (jedną wstecz), a `Current sample` na **N**.
+:::
+
+**Tryby analizy:**
+
+-   `Auto` — przetwarza próbki kolejno aż do ostatniej próbki lub znacznika stop. W zależności od ustawień, po zakończeniu urządzenie może przejść w tryb uśpienia.
+-   `Single` — przetwarza jedną próbkę naraz, po każdej wracając do trybu oczekiwania (*standby*).
+
+**Tryb uśpienia:** `Sleep` (ikona księżyca). Urządzenie realizuje skonfigurowane temperatury uśpienia.
+
+**Funkcje konserwacyjne:**
+
+-   Interwały zużycia: `Intervals`.
+-   Wymiana elementów (otwiera układ gazowy — czekać na spadek ciśnienia): `Replace part`. Po zamknięciu układu kliknąć `Finished`.
+-   Regulacja zaworu kulowego: `Adjust ball valve`.
+-   Regulacja autosamplera: `Adjust carousel`.
+
+**Wygrzewanie kolumn adsorpcyjnych CO~2~ i SO~2~:**
+
+-   Wymagane po wymianie kolumny lub przy podejrzeniu zanieczyszczenia.
+-   Przejść do `Column heatout`. Czynność trwa około **30 min**.
+
+**Sterowanie poszczególnymi elementami urządzenia:** `System test`.
+
+**Dziennik błędów:** `Error buffer`.
+
+## Rejestr zmian
+
+| Data | Autor | Zmiana |
+|---------------------|------------------------|---------------------------|
+| 2026-02-09 | MZ | Migracja do nowego frameworku; standaryzacja jednostek i formatowania |
+| 2022-12-04 | MZ | Inicjalna wersja Quarto |

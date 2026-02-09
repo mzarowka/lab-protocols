@@ -1,0 +1,352 @@
+---
+# ──────────────────────────────────────────────────────────────────
+# Protocol metadata — edit these fields for each new protocol
+# ──────────────────────────────────────────────────────────────────
+title: "CNS Elemental Analysis: Measurement Procedure"
+subtitle: "Vario EL Cube, Elementar Analysensysteme"
+
+author:
+  - name: "Maurycy Żarczyński"
+    role: "Responsible person"
+contributors:
+  - "Maurycy Żarczyński (original method, 2022)"
+  - "Maurycy Żarczyński (Quarto adaptation, 2022)"
+
+version: "1.0"
+date: last-modified
+date-format: "YYYY-MM-DD"
+
+source-version: ~
+
+related-protocols:
+  - title: "CNS: Sample Preparation"
+    href: "cns-sample-preparation.qmd"
+  - title: "CNS: Soil Standard Samples"
+    href: "cns-standard-samples.qmd"
+  - title: "TIC: SoliTIC Analyser"
+    href: "cns-tic-inorganic-carbon-solitic.qmd"
+---
+
+{{< include ../_includes/header-en.qmd >}}
+
+# CNS Elemental Analysis: Measurement Procedure
+
+Complete operating procedure for the Vario EL Cube CNS elemental analyser (Elementar Analysensysteme), covering startup, measurement, shutdown, sleep mode, diagnostics, and routine maintenance operations.
+
+## Safety
+
+::: callout-warning
+## High temperatures and compressed gases
+
+-   The combustion tube operates at **1150 °C** and the reduction tube at **850 °C**. Do not touch the furnace housing or tube fittings during operation. Allow tubes to cool below **150 °C** before switching off the instrument.
+-   This procedure uses compressed oxygen (O~2~) and helium (He). Ensure that gas cylinder regulators are correctly set and that all fittings are leak-tested before use.
+:::
+
+## Consumables and equipment
+
+### Equipment
+
+-   Vario EL Cube CNS analyser (Elementar Analysensysteme).
+-   Dedicated PC with Vario EL Cube software.
+
+### Gases
+
+-   Oxygen (O~2~), working pressure **2 bar**.
+-   Helium (He), working pressure **1.2 bar** (1200 mbar).
+
+### Consumable parts
+
+-   Desiccants (replacement set).
+-   Combustion tube packing (or complete tube).
+-   Copper and brass or silver wool for the reduction tube.
+-   Ash crucible.
+-   Oxygen lance (spare).
+
+### Other materials
+
+-   Tin capsules (see [CNS: Sample Preparation](cns-sample-preparation.qmd)).
+-   Standard reference material (see [CNS: Soil Standard Samples](cns-standard-samples.qmd)).
+
+## Preparation
+
+### Instrument inspection
+
+Perform the following checks before starting the analyser:
+
+-   Replace desiccants if exhausted.
+
+-   Replace the combustion tube packing (or the entire tube) if necessary.
+
+-   Replace copper and brass or silver wool in the reduction tube if necessary.
+
+-   Replace the ash crucible if full.
+
+-   Inspect the oxygen lance — a clear passage must be visible.
+
+::: callout-important
+## Blocked oxygen lance
+
+If the lance is blocked, the cause is usually an overfilled ash crucible. Replace the ash crucible before attempting to clear the lance.
+:::
+
+-   Check all connections between instrument components.
+
+-   Verify all other essential instrument parts and their condition.
+
+## Procedure
+
+### Startup
+
+1.  Attach the hot-air deflector cowl to the rear of the Vario EL Cube.
+
+2.  Switch on the Vario EL Cube using the green button on the right side of the instrument.
+
+3.  Launch the Vario EL Cube software.
+
+::: callout-tip
+## Software shortcut
+
+The shortcut is located on the taskbar.
+:::
+
+4.  Perform the reference movement.
+
+::: callout-important
+## Empty carousel required
+
+Execute the reference movement only on an **empty carousel**. Confirm that all positions are empty before proceeding.
+:::
+
+5.  Wait for the software to establish communication — the status bar should change from *Busy* to *Standby*.
+
+6.  Open the technical gas valves (O~2~ and He).
+
+7.  Set combustion and reduction temperatures via `Options > Settings > Parameters`:
+
+    -   **Combustion** tube: **1150 °C**.
+    -   **Reduction** tube: **850 °C**.
+
+::: callout-important
+## Gases during warm-up
+
+Keep technical gas valves **closed** while the instrument is heating up. Open them only after the tubes have reached their target temperatures.
+:::
+
+8.  Wait for the TCD (thermal conductivity detector) to reach operating temperature.
+
+::: callout-note
+## TCD readiness
+
+The TCD field should stop flashing and display a stable value of approximately **60 °C**.
+:::
+
+9.  Set working pressures:
+
+    -   **O~2~**: **2 bar**.
+    -   **He**: **1.2 bar** (1200 mbar).
+
+10. Allow the instrument to run freely for several minutes after opening the gases to purge the system.
+
+### Measurement preparation
+
+-   Create a new sample file with the following sequence:
+
+    -   **1** × blank **with O~2~**.
+    -   **2–3** × blank **without O~2~**.
+
+::: callout-note
+## Blank samples
+
+The critical parameter for blanks is the peak area. Fold an empty tin capsule tightly, expelling all air.
+:::
+
+```         
+- **2–3** × stabilisation samples (**RunIn**).
+```
+
+::: callout-tip
+## RunIn sample choice
+
+Choose RunIn samples that are as close as possible to the expected analytical range of the batch.
+:::
+
+```         
+- **2–3** × standard reference material as **day factor**.
+```
+
+-   Select the O~2~ dosing method:
+
+    -   **2 mg 70 s** (default, preferred).
+    -   2 mg 80 s.
+    -   5 mg 90 s.
+    -   10 mg 120 s.
+
+::: callout-note
+## Choosing the dosing method
+
+Always use the lowest O~2~ dosing that achieves complete combustion. Higher sample masses or expected carbon content require longer dosing times.
+:::
+
+-   Load up to **79** samples into the carousel at the start of a run.
+
+::: callout-tip
+## Adding samples during a run
+
+Position **80** and above can be added during analysis — the autosampler will count them automatically. Monitor the ash crucible fill level when running large batches.
+:::
+
+### Measurement
+
+-   Start the analysis in `Auto` or `Single` mode (see [Appendix 2](#sec-software-reference)).
+
+::: callout-note
+## Blank and day factor corrections
+
+Use the measured blank and day factor values to correct results. The day factor is the ratio of the measured value to the theoretical value of the standard, and it accounts for day-to-day instrument drift.
+:::
+
+### Shutdown
+
+1.  Set both tube temperatures to **0 °C** via `Options > Settings > Parameters`:
+
+    -   **Combustion** tube: **0 °C**.
+    -   **Reduction** tube: **0 °C**.
+
+2.  Close the technical gas valves — turn them fully shut.
+
+3.  Wait for the instrument to cool below **150 °C** before switching off.
+
+::: callout-note
+## Cooling time
+
+Cooling from operating temperature to **150 °C** takes approximately **3 h**.
+:::
+
+4.  Close the Vario EL Cube software.
+
+5.  Switch off the Vario EL Cube using the green button on the right side of the instrument.
+
+### Sleep mode
+
+For short breaks between analytical runs, use sleep mode instead of a full shutdown.
+
+-   Activate sleep mode: click `Sleep` (moon icon) in the software.
+
+-   Configure sleep temperatures via `Options > Settings > Sleep/Wake Up`:
+
+    -   **Combustion** tube: **900 °C**.
+    -   **Reduction** tube: **700 °C**.
+
+::: callout-important
+## Unattended wake-up
+
+Wake the instrument manually rather than using the automatic wake-up timer. Do not leave the instrument running unattended during the wake-up sequence.
+:::
+
+## Appendices
+
+### Appendix 1: Leak testing {#sec-leak-testing}
+
+::: callout-important
+## Temperature requirement
+
+The instrument **must** be at a stable temperature — either fully heated or fully cooled. Do not perform leak tests while the instrument is heating up or cooling down. Testing on a cold instrument is preferred.
+:::
+
+**Symptoms of a leak:**
+
+-   TCD flow very low.
+-   He flow very high.
+-   Pressure dropping.
+
+**Symptoms of a blockage:**
+
+-   Both flows low.
+-   Pressure high.
+
+**Raw leak test:**
+
+1.  Launch the Vario EL Cube software and perform the reference movement (empty carousel only).
+
+2.  Verify that flow readings are stable. Large irregularities indicate a severe leak or blockage.
+
+3.  Navigate to `Options > Diagnostic > Raw leak test` and confirm with `Ok`.
+
+4.  The software displays an instrument schematic and step-by-step instructions, including which elements from the leak-test kit to use. Close the O~2~ valve when prompted.
+
+5.  Click `Start`. The software reports the test progress and current pressure readings.
+
+6.  After completion, reopen the technical gas valves.
+
+**Fine leak test:**
+
+-   Fine leak tests are available in the same diagnostic menu. Test **0** (zero) is equivalent to the raw leak test.
+
+### Appendix 2: Software reference {#sec-software-reference}
+
+**Freshly packed columns** will produce elevated blank values for the first few samples. Run **3–4** × blank to burn them in before proceeding with samples.
+
+**Blank sample mass:** enter **1.000** for all blank samples.
+
+**O~2~ dosing methods** are predefined in `Options > Settings > Methods`.
+
+**Blank types:**
+
+-   **With O~2~** — sample combusted with oxygen.
+-   **Without O~2~** — sample combusted without oxygen.
+
+::: callout-note
+## When to use blanks with O~2~
+
+In most cases, use blanks **without O~2~**. Run **1–2** × blank **with O~2~** after freshly packed columns or after instrument modifications.
+:::
+
+**Optimising the O~2~ dosing method:** take a sample and run several identical masses with different dosing times (lower is better). Optimise for a given sediment type under specific conditions.
+
+**Sample list operations:**
+
+-   Insert a row: `Insert line`.
+-   Swap samples: `Swap`.
+-   Insert a stop marker: `Stop tag`.
+-   Highlight the currently analysed sample: `Current sample` (green shading).
+-   Highlight the row for entering sample mass: `Current weight` (yellow shading).
+
+**Stopping an analysis early:** the green progress bar will not advance. The autosampler waits ready for the next sample — advance `Current sample` by **one** position manually.
+
+**Moving the autosampler (carousel):** `System > Carousel position`. Remove all samples first.
+
+::: callout-tip
+## Carousel positioning
+
+To analyse sample at position **N**, set the carousel to position **N − 1** (one back) and set `Current sample` to **N**.
+:::
+
+**Analysis modes:**
+
+-   `Auto` — processes samples sequentially until the last sample or a stop tag. Depending on settings, the instrument may enter sleep mode after completion.
+-   `Single` — processes one sample at a time, returning to standby after each.
+
+**Sleep mode:** `Sleep` (moon icon). The instrument applies the configured sleep temperatures.
+
+**Maintenance functions:**
+
+-   Usage intervals: `Intervals`.
+-   Replace parts (opens the gas system — wait for pressure to drop): `Replace part`. After closing the system, click `Finished`.
+-   Adjust the ball valve: `Adjust ball valve`.
+-   Adjust the autosampler: `Adjust carousel`.
+
+**CO~2~ and SO~2~ adsorption column bake-out:**
+
+-   Required after column replacement or suspected contamination.
+-   Navigate to `Column heatout`. The process takes approximately **30 min**.
+
+**Individual component control:** `System test`.
+
+**Error log:** `Error buffer`.
+
+## Changelog
+
+| Date | Author | Change |
+|--------------------|--------------------------|--------------------------|
+| 2026-02-09 | MZ | Migrated to new framework; translated to English; standardised units and formatting |
+| 2022-12-04 | MZ | Initial Quarto version |
