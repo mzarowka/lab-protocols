@@ -1,0 +1,204 @@
+---
+title: "Przygotowanie próbek do oznaczania aktywności ²¹⁰Pb metodą spektrometrii alfa"
+subtitle: "Mineralizacja kwasowa w mikrofalówce i spontaniczna depozycja na blaszkach srebrnych"
+
+author:
+  - name: "Maurycy Żarczyński"
+    role: "Osoba odpowiedzialna"
+contributors:
+  - "Wojciech Tylmann (metoda oryginalna)"
+  - "Karolina Molisak (metoda oryginalna)"
+  - "Joanna Piłczyńska (metoda oryginalna)"
+  - "Maurycy Żarczyński (adaptacja Quarto, 2022)"
+
+version: "1.0"
+date: last-modified
+date-format: "YYYY-MM-DD"
+
+source-version: "en/pb210-alpha.qmd@v1.0"
+
+related-protocols:
+  - title: "Spektrometr gamma: wymiana próbki i ciekły N₂"
+    href: "gamma-nitrogen-sample.qmd"
+  - title: "Spektrometr gamma: raportowanie"
+    href: "gamma-report.qmd"
+  - title: "Liofilizacja"
+    href: "freeze-drying.qmd"
+---
+
+{{< include ../_includes/header-pl.qmd >}}
+
+# Przygotowanie próbek do oznaczania aktywności ²¹⁰Pb metodą spektrometrii alfa
+
+Przygotowanie zliofilizowanych próbek osadów jeziornych do oznaczania aktywności ²¹⁰Pb metodą spektrometrii alfa. Procedura obejmuje trzyetapową mineralizację kwasową w mineralizatorze mikrofalowym (HNO~3~, HClO~4~, HF) z dodatkiem znacznika wydajności ²⁰⁹Po, odparowanie oraz spontaniczną depozycję izotopów polonu na blaszkach srebrnych z gorącego roztworu kwasowego zawierającego kwas askorbinowy i hydroksyloaminę jako reduktory.
+
+## Bezpieczeństwo
+
+::: callout-warning
+## Substancje żrące i toksyczne
+
+Procedura wymaga użycia następujących kwasów stężonych — **wszystkie etapy wykonywać pod czynnym digestorium**:
+
+-   **HNO~3~ (65 %)** — silnie żrący, wydziela toksyczne opary.
+-   **HClO~4~ (70 %)** — silny utleniacz, żrący. Reaguje gwałtownie z materią organiczną.
+-   **HF (40 %)** — powoduje ciężkie, potencjalnie śmiertelne oparzenia; szybko przenika przez skórę. Wymaga specjalistycznych środków ochrony indywidualnej (podwójne rękawice nitrylowe, osłona twarzy).
+
+Przez cały czas nosić fartuch laboratoryjny, rękawice nitrylowe i okulary ochronne. Karty charakterystyki (SDS) dostępne są w laboratorium.
+:::
+
+::: callout-warning
+## Mineralizacja mikrofalowa
+
+Pojemniki teflonowe (PTFE) CEM znajdują się pod podwyższonym ciśnieniem w trakcie mineralizacji. Otwierać pojemniki **wyłącznie pod digestorium**, odkręcając powoli w celu stopniowego uwolnienia ciśnienia.
+:::
+
+## Materiały eksploatacyjne i urządzenia
+
+### Odczynniki chemiczne
+
+Mineralizacja:
+
+-   Kwas azotowy, HNO~3~ (65 %, stężony).
+-   Kwas nadchlorowy, HClO~4~ (70 %, stężony).
+-   Kwas fluorowodorowy, HF (40 %).
+-   Kwas solny, HCl (6 mol/L).
+-   Kwas solny, HCl (0,5 mol/L).
+
+Znacznik wydajności:
+
+-   Roztwór wzorcowy ²⁰⁹Po.
+
+Depozycja:
+
+-   Kwas askorbinowy (C~6~H~8~O~6~).
+-   Chlorowodorek hydroksyloaminy (NH~2~OH · HCl).
+
+Pozostałe:
+
+-   Woda redestylowana (MilliQ).
+-   Metanol lub etanol — do czyszczenia blaszek srebrnych.
+
+### Urządzenia
+
+-   Mineralizator mikrofalowy MARS-6 (CEM) z pojemnikami teflonowymi (PTFE).
+-   Parowniczki teflonowe (PTFE) z pokrywkami.
+-   Płyta grzejna (maks. **200 °C**).
+-   Mieszadło magnetyczne z funkcją grzania.
+-   Naczynia do depozycji z uchwytami na blaszki srebrne.
+-   Magnesy pokryte PTFE.
+-   Waga analityczna (dokładność odczytu 0,1 mg).
+-   Digestorium laboratoryjne.
+
+### Pozostałe materiały
+
+-   Pojemniki plastikowe do odważania.
+-   Blaszki srebrne, wstępnie oczyszczone.
+-   Folia aluminiowa — do zabezpieczenia płyty grzejnej.
+-   Pipeta nastawna **100–1000 µL** z końcówkami.
+-   Pipety miarowe lub dyspensery do odmierzania kwasów.
+-   Marker laboratoryjny do opisywania blaszek srebrnych.
+
+## Przygotowanie
+
+### Przygotowanie próbek
+
+-   Zliofilizować mokre próbki osadów (patrz procedura [Liofilizacja](freeze-drying.qmd)).
+
+### Przygotowanie naczyń
+
+-   Wymyć wszystkie pojemniki plastikowe do odważania oraz pojemniki teflonowe (PTFE) do mineralizacji. Wypłukać i wysuszyć przed użyciem.
+
+## Procedura
+
+### Etap 1: Mineralizacja kwasowa w mineralizatorze mikrofalowym
+
+#### Odważanie i mineralizacja HNO~3~
+
+1.  Umieścić czysty pojemnik plastikowy do odważania na wadze analitycznej i wytarować.
+
+2.  Odważyć około **0,2 g** suchego osadu. Zapisać masę z dokładnością do **0,1 mg**.
+
+3.  Przesypać osad do pojemnika teflonowego (PTFE) CEM do mineralizacji.
+
+4.  Dodać **3 mL** stężonego HNO~3~ (65 %) do pojemnika, jednocześnie spłukując osad ze ścianek.
+
+5.  Za pomocą pipety nastawnej dodać **200 µL** roztworu wzorcowego ²⁰⁹Po do pojemnika teflonowego.
+
+::: callout-important
+## Znacznik wydajności
+
+Dodatek ²⁰⁹Po jest niezbędny do określenia odzysku chemicznego. Pipetować starannie — precyzja odmierzonej objętości bezpośrednio wpływa na dokładność końcowego obliczenia aktywności ²¹⁰Pb.
+:::
+
+6.  Nałożyć korki na pojemniki teflonowe i szczelnie zakręcić. Delikatnie wymieszać.
+
+7.  Wstawić pojemniki do mineralizatora MARS-6. Wybrać `Classical Methods` i uruchomić program `Pb-210 HNO3` (**100 °C**, **2 h**).
+
+#### Mineralizacja HClO~4~
+
+8.  Wyjąć pojemniki z mineralizatora. Ostrożnie otworzyć pod digestorium — odkręcać powoli.
+
+9.  Dodać **3 mL** stężonego HClO~4~ (70 %).
+
+10. Zakręcić szczelnie pojemniki, delikatnie wymieszać. Wstawić do mineralizatora i uruchomić program `Pb-210 HClO4` (**100 °C**, **2 h**).
+
+#### Mineralizacja HF
+
+11. Wyjąć pojemniki z mineralizatora. Ostrożnie otworzyć pod digestorium.
+
+12. Dodać **3 mL** HF (40 %).
+
+::: callout-warning
+## Kwas fluorowodorowy
+
+HF powoduje głębokie, niezwykle bolesne oparzenia, które mogą nie być natychmiast odczuwalne. Stosować podwójne rękawice nitrylowe i osłonę twarzy. Pracować wyłącznie pod digestorium. W przypadku kontaktu ze skórą natychmiast spłukać i nałożyć żel z glukonianu wapnia.
+:::
+
+13. Zakręcić szczelnie pojemniki, delikatnie wymieszać. Wstawić do mineralizatora i uruchomić program `Pb-210 HF` (**100 °C**, **4 h**).
+
+### Etap 2: Odparowanie i depozycja
+
+#### Przeniesienie i odparowanie
+
+14. Wyjąć pojemniki teflonowe z mineralizatora.
+
+15. Przenieść ilościowo roztwór i pozostałość osadu do parowniczek teflonowych, używając **5 mL** HCl (6 mol/L) do wypłukania. Upewnić się, że cały materiał został przeniesiony: wymieszać pozostałość w pojemniku teflonowym, przelać do parowniczki, wypłukać ścianki pojemnika HCl (6 mol/L) i dodać popłuczyny do parowniczki.
+
+16. Umieścić parowniczki na płycie grzejnej ustawionej na **200 °C** (płytę zabezpieczyć folią aluminiową). Ogrzewać **bez pokrywki** do pojawienia się wyraźnie białych dymów.
+
+17. Przykryć parowniczki pokrywkami teflonowymi i ogrzewać dalej przez minimum **30 min**, aż do sklarowania roztworu. Nie przekraczać **1 h** łącznego czasu ogrzewania pod pokrywką.
+
+18. Odkryć parowniczki. Dodać **3 mL** HCl (6 mol/L) i odparować do suchej pozostałości.
+
+::: callout-important
+## Nie prażyć
+
+Odparowywać delikatnie wyłącznie do suchej pozostałości. Nie dopuścić do wzrostu temperatury powodującego prażenie — spowodowałoby to zniszczenie izotopów polonu.
+:::
+
+#### Rozpuszczanie i depozycja
+
+19. Rozpuścić suchą pozostałość w **27 mL** HCl (0,5 mol/L).
+
+20. Dodać około **0,1 g** kwasu askorbinowego i **0,1 g** chlorowodorku hydroksyloaminy.
+
+21. Podgrzać roztwór do **90 °C**. W międzyczasie opisać blaszki srebrne symbolami próbek oraz datą depozycji. Zamontować blaszki w uchwytach czystą, wypolerowaną stroną do góry.
+
+22. Wrzucić magnesy pokryte PTFE do naczyń depozycyjnych i zamknąć. Ustawić naczynia na mieszadle magnetycznym. Ustawić podgrzewanie na wartość **10** (maksimum) i obroty na wartość **1** (minimum).
+
+::: callout-note
+## Warunki depozycji
+
+Obroty mieszadła ustawić ręcznie na najniższą stabilną prędkość. Zbyt intensywne mieszanie obniża wydajność depozycji. Temperatura roztworu powinna utrzymywać się na poziomie około **90 °C** przez cały czas trwania procesu.
+:::
+
+23. Prowadzić depozycję przez minimum **4 h**.
+
+24. Wyjąć blaszki srebrne z naczyń depozycyjnych. Spłukać wodą redestylowaną (MilliQ). Przetrzeć metanolem lub etanolem. Sprawdzić opisy i zabezpieczyć do pomiaru.
+
+## Rejestr zmian
+
+| Data | Autor | Zmiana |
+|---------------------|------------------------|---------------------------|
+| 2026-02-10 | MZ | Migracja do nowego frameworku; standaryzacja jednostek i formatowania |
+| 2022-12-01 | MZ | Inicjalna wersja Quarto |

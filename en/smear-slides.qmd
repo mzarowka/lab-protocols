@@ -1,0 +1,146 @@
+---
+# ──────────────────────────────────────────────────────────────────
+# Protocol metadata — edit these fields for each new protocol
+# ──────────────────────────────────────────────────────────────────
+title: "Smear Slide Preparation"
+subtitle: "Sediment smear slides with UV-cured adhesive"
+
+author:
+  - name: "Maurycy Żarczyński"
+    role: "Responsible person"
+contributors:
+  - "Karolina Molisak (original method)"
+  - "Maurycy Żarczyński (Quarto adaptation, 2022)"
+
+version: "1.0"
+date: last-modified
+date-format: "YYYY-MM-DD"
+
+source-version: ~
+
+related-protocols:
+  - title: "Thin Section Slabs"
+    href: "thin-section-slabs.qmd"
+  - title: "Thin Section Scanning"
+    href: "thin-section-scanning.qmd"
+---
+
+{{< include ../_includes/header-en.qmd >}}
+
+# Smear Slide Preparation
+
+Preparation of sediment smear slides for transmitted-light and polarised-light microscopy. A small amount of sediment is spread on a glass slide, dried on a hot plate, and permanently mounted with a UV-cured adhesive. The method is suitable for lake-sediment cores and sediment-trap material.
+
+## Safety
+
+::: callout-warning
+## UV radiation and adhesive
+
+-   **UV lamp** — do not look directly into the UV light source. Curing takes place inside a shielded UV box.
+-   **Drei Bond adhesive** (6020 / 6023) — avoid skin contact. Wear nitrile gloves. Wash hands thoroughly after work. Refer to the relevant Safety Data Sheets (SDS) stored in the laboratory.
+:::
+
+## Consumables and equipment
+
+### Chemical reagents
+
+-   Deionised water (or redistilled water, MilliQ).
+-   Ethanol (technical grade) — for slide cleaning and, optionally, as a dispersing medium.
+
+### Equipment
+
+-   Hot plate (capable of **60–70 °C**).
+-   UV curing box (enclosed UV lamp).
+
+### Other materials
+
+-   Glass microscope slides (plain, 76 × 26 mm).
+-   Cover slips.
+-   UV-cured adhesive: **Drei Bond 6020** (higher viscosity) and **Drei Bond 6023** (lower viscosity).
+-   Stainless-steel spatula.
+-   Tweezers (fine-tip).
+-   Pasteur pipette or disposable dropper.
+-   Pre-printed slide labels or a diamond-tip pen.
+-   Cardboard slide cases or slide storage boxes.
+
+## Preparation
+
+### Sampling plan
+
+-   Define regular sampling intervals along the core, typically every **8–10 cm**, depending on core length and research objectives.
+-   Plan additional samples at characteristic horizons (e.g., light and dark laminae, visible tephra layers, colour changes).
+
+### Workspace preparation
+
+-   Clean glass slides with deionised water or ethanol and wipe dry with a lint-free cloth.
+
+-   Label each slide according to the labelling scheme below.
+
+::: callout-note
+## Labelling scheme
+
+**Sediment cores:** `SSS-YY/C–S XX`
+
+| Code  | Meaning                                   |
+|-------|-------------------------------------------|
+| `SSS` | Site code                                 |
+| `YY`  | Year of core recovery                     |
+| `C`   | Core number                               |
+| `S`   | Section number                            |
+| `XX`  | Distance from the top of the section (cm) |
+
+**Sediment-trap material:** `SSS YYYY-MM-DD TYPE`
+
+| Code   | Meaning                                    |
+|--------|--------------------------------------------|
+| `SSS`  | Site code                                  |
+| `YYYY` | Year                                       |
+| `MM`   | Month                                      |
+| `DD`   | Day                                        |
+| `TYPE` | **H** (hypolimnion) or **M** (metalimnion) |
+:::
+
+::: callout-tip
+## Combined laminae on one slide
+
+If a light and a dark lamina are placed on the same slide, record additional notes in the laboratory documentation (e.g., tephra, colour, prior HCl treatment).
+:::
+
+## Procedure
+
+### Slide preparation
+
+1.  Using a spatula, place a small amount of sediment on the glass slide.
+
+::: callout-important
+## Even distribution
+
+Spread the material as evenly and thinly as possible. Overly thick areas will be opaque under the microscope and cannot be analysed.
+:::
+
+2.  Add one drop of deionised water (or ethanol) with a Pasteur pipette. Spread the sediment evenly using the spatula or a wooden toothpick.
+
+3.  Place the slide on the hot plate set to **60–70 °C**. Leave until the water has evaporated completely and the sediment is fully dry — approximately **2–5 min**.
+
+4.  Remove the slide from the hot plate. Apply one drop of **Drei Bond** adhesive onto the dried sediment. Using tweezers, gently lower a cover slip onto the adhesive.
+
+::: callout-tip
+## Adhesive choice
+
+Use **Drei Bond 6020** (thicker) for coarser or mineral-rich sediment, and **Drei Bond 6023** (thinner) for fine-grained, organic sediment. The thinner adhesive flows more easily under the cover slip.
+:::
+
+5.  Place the slide in a cardboard slide case (or on a cardboard support) and expose to **UV radiation** for approximately **1–2 min** inside the UV curing box.
+
+6.  After curing, verify that the cover slip is firmly bonded. Press gently at the edges — the slip should not move.
+
+### Storage
+
+-   Store finished slides in dedicated slide storage boxes, sorted by core and depth.
+
+## Changelog
+
+| Date | Author | Change |
+|--------------|--------------|--------------------------------------------|
+| 2026-02-10 | MZ | Migrated to new framework; English translation; standardised formatting |
+| 2022-12-03 | MZ | Initial Quarto version |

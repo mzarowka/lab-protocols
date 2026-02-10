@@ -1,0 +1,105 @@
+---
+title: "MilliQ Water Purification System: Maintenance"
+subtitle: "Filter replacement and routine upkeep"
+
+author:
+  - name: "Maurycy Żarczyński"
+    role: "Responsible person"
+contributors:
+  - "Maurycy Żarczyński (Quarto adaptation, 2026)"
+
+version: "1.0"
+date: last-modified
+date-format: "YYYY-MM-DD"
+
+source-version: ~
+
+related-protocols: ~
+---
+
+{{< include ../_includes/header-en.qmd >}}
+
+# MilliQ Water Purification System: Maintenance
+
+Routine maintenance of the Milli-Q water purification system, including scheduled filter replacements, UV lamp replacement, and weekly upkeep procedures. Following these intervals ensures a continuous supply of ultrapure water for laboratory use.
+
+## Consumables and equipment
+
+### Replacement parts
+
+-   Under-sink pre-filter cartridge (`JAPLPK001`) — replacement every 12 months or when clogged.
+-   Air vent filter (rear of the unit) — replacement every 12–24 months. Spare stored in the drawer.
+-   SmartPak purification cartridge (`SPR00SIA1`) — replacement every 12 months or after any period with the unit switched off.
+-   UV lamp — replacement every 24 months.
+
+### Tools and materials
+
+-   Blue plastic wrench (large ring) — for under-sink filter only.
+-   Sanitisation kit — stored in the drawer; required if algae appear in the reservoir.
+
+## Procedure
+
+### Filter 1: Under-sink pre-filter
+
+Replace the under-sink pre-filter (`JAPLPK001`) once a year or when flow stops due to clogging.
+
+1.  Close the water tap next to the filter.
+
+2.  Open the bench-top tap (next to the unit's water supply connection) to release residual pressure.
+
+3.  Unscrew the filter housing using the blue plastic wrench while holding the mounting bracket.
+
+4.  Remove the old cartridge and insert the new one.
+
+5.  Screw the housing back on **by hand** — do not use the wrench for tightening.
+
+:::{.callout-important}
+## O-ring seal
+Check that the O-ring seal is seated correctly before tightening. A misaligned seal will cause leaks.
+:::
+
+6.  Open the water tap and check for leaks.
+
+### Filter 2: Air vent filter
+
+Replace the air vent filter (rear panel) every 12–24 months.
+
+-   Pull the old filter out — it is a press-fit connection.
+-   Press the new filter into place.
+
+### Filter 3: SmartPak cartridge
+
+Replace the SmartPak cartridge (`SPR00SIA1`) every 12 months (the unit displays a reminder) or after any period during which the unit was switched off.
+
+1.  Open the cartridge bay and slide the old SmartPak out along its rails.
+
+2.  Slide the new SmartPak in until it clicks.
+
+3.  Run a full first-pass filtration cycle and drain the water through the flexible hose into the sink.
+
+4.  After the first-pass drain, dispense approximately **2 L** of ultrapure water and discard it.
+
+:::{.callout-important}
+## Post-replacement flush
+The flush removes preservatives and loose particles from the new cartridge. Do not use water produced before the flush is complete.
+:::
+
+### UV lamp
+
+Replace the UV lamp every 24 months. The unit displays a reminder when replacement is due. Follow the manufacturer's instructions for lamp access and installation.
+
+### Routine weekly upkeep
+
+Perform the following tasks once a week:
+
+-   **Drain the reservoir.** Stagnant water promotes microbial growth. If algae are visible in the reservoir, install the sanitisation kit (stored in the drawer) and replace the SmartPak cartridge before restarting the unit.
+
+-   **Wipe the unit** with a dry or lightly damp lint-free cloth to remove dust.
+
+-   **Run the recirculation cycle.** Press `+` and `−` simultaneously to flush the internal loop and maintain water quality between uses.
+
+## Changelog
+
+| Date | Author | Change |
+|------|--------|--------|
+| 2026-02-10 | MZ | Initial Quarto version; English translation from Polish source |

@@ -1,0 +1,193 @@
+---
+# ──────────────────────────────────────────────────────────────────
+# Metadane procedury — uzupełnić dla każdej nowej procedury
+# ──────────────────────────────────────────────────────────────────
+title: "Spektrometr gamma: obsługa i raportowanie"
+subtitle: "Uzupełnianie ciekłego azotu, wymiana próbki i analiza widma"
+
+author:
+  - name: "Maurycy Żarczyński"
+    role: "Osoba odpowiedzialna"
+contributors:
+  - "Wojciech Tylmann (metoda oryginalna)"
+  - "Karolina Molisak (metoda oryginalna)"
+  - "Maurycy Żarczyński (adaptacja Quarto, 2022)"
+
+version: "1.0"
+date: last-modified
+date-format: "YYYY-MM-DD"
+
+source-version: "en/gamma-spectrometer.qmd@v1.0"
+
+related-protocols:
+  - title: "^210^Pb spektrometria alfa"
+    href: "pb210-alpha.qmd"
+---
+
+{{< include ../_includes/header-pl.qmd >}}
+
+# Spektrometr gamma: obsługa i raportowanie
+
+Rutynowe procedury obsługi spektrometru gamma z detektorem germanowym wysokiej czystości (HPGe), obejmujące uzupełnianie ciekłego azotu w dewarze detektora, wymianę próbki oraz raportowanie widm w oprogramowaniu *Genie 2000* (Mirion Technologies / Canberra). Detektor wymaga okresowego uzupełniania ciekłego azotu w celu utrzymania chłodzenia kriogenicznego kryształu HPGe.
+
+## Bezpieczeństwo
+
+:::{.callout-warning}
+## Zagrożenie kriogeniczne — ciekły azot
+
+- **Ciekły azot (N~2~, −196 °C)** powoduje ciężkie oparzenia kriogeniczne w kontakcie ze skórą. Podczas pracy z dewarem i osprzętem transferowym stosować rękawice kriogeniczne i okulary ochronne.
+- Dewar jest ciężki. Stosować prawidłową technikę podnoszenia.
+- Kran dewara ma **ostre metalowe krawędzie** — zachować ostrożność podczas montażu i demontażu.
+- Zapewnić odpowiednią wentylację pomieszczenia. Ciekły azot wypiera tlen w słabo wentylowanych przestrzeniach.
+:::
+
+## Materiały eksploatacyjne i urządzenia
+
+### Urządzenia
+
+-   Spektrometr gamma HPGe z osłoną detektora.
+-   Dedykowany komputer z oprogramowaniem *Genie 2000* (Mirion Technologies / Canberra).
+-   Dewar z ciekłym azotem z kranem transferowym, zaworem bocznym i linką zabezpieczającą.
+
+### Pozostałe materiały
+
+-   Rękawice kriogeniczne.
+-   Okulary ochronne.
+-   Próbki osadów w zamkniętych pojemnikach pomiarowych.
+
+## Procedura
+
+### Uzupełnianie ciekłego azotu
+
+Dewar detektora wymaga okresowego uzupełniania. Procedura obejmuje dwa dni, ponieważ dewar potrzebuje kilku godzin na osiągnięcie wystarczającego ciśnienia transferowego po zamontowaniu kranu.
+
+#### Dzień 1: wzrost ciśnienia i częściowy transfer
+
+1.  Zamontować kran na dewarze. Dokręcić zawór boczny i zabezpieczyć kran stalową linką.
+
+2.  Poczekać kilka godzin na wzrost ciśnienia wewnątrz dewara.
+
+3.  Włączyć komputer i otworzyć detektor w oprogramowaniu *Genie 2000*.
+
+4.  Na zapytanie: *„Trwa pomiar, czy chcesz mimo to otworzyć?"* — kliknąć `Tak`.
+
+5.  Na zapytanie: *„Czy przerwać pomiar?"* — kliknąć `Nie`.
+
+6.  Zatrzymać pomiar ręcznie: kliknąć `Stop` w lewym górnym rogu.
+
+7.  Odkręcić górny zawór (czarny).
+
+8.  Przelać część azotu do dewara detektora.
+
+9.  Zamknąć górny zawór (czarny).
+
+10. Odczekać **15–20 min** na restabilizację detektora, następnie wznowić pomiar próbki.
+
+:::{.callout-important}
+## Stabilizacja detektora
+
+Po każdym przelewaniu azotu temperatura detektora jest zaburzona. Zawsze odczekać **15–20 min** przed wznowieniem akwizycji, aby kryształ HPGe powrócił do temperatury roboczej.
+:::
+
+#### Dzień 2: pełny transfer i przechowywanie dewara
+
+1.  Włączyć komputer i otworzyć detektor w oprogramowaniu *Genie 2000*.
+
+2.  Zatrzymać pomiar zgodnie z powyższą instrukcją (kroki 4–6).
+
+3.  Odkręcić górny zawór (czarny).
+
+4.  Przelewać azot do momentu wyraźnego wycieku cieczy z węża odprowadzającego — potwierdza to pełne napełnienie dewara detektora.
+
+5.  Zamknąć górny zawór (czarny).
+
+6.  Odczekać **15–20 min**, następnie wznowić pomiar próbki.
+
+7.  Po upływie około **1 h**, gdy temperatura dewara wzrośnie, zdemontować kran:
+
+    -   Odkręcić zawór boczny w celu wyrównania ciśnienia.
+    -   Ostrożnie odłączyć kran — metalowe krawędzie są ostre.
+
+8.  Zamknąć dewar i umieścić w chłodni.
+
+9.  Jeżeli w dewarze pozostał azot, przelać resztę przed kolejną dostawą.
+
+:::{.callout-important}
+## Dokumentacja
+
+Zapisać datę pobrania azotu oraz masę dewara w pliku śledzenia (`.xlsx`) na serwerze. Odnotować datę przelewania azotu w kalendarzu laboratoryjnym (Pokój 109).
+:::
+
+### Wymiana próbki
+
+1.  Włączyć komputer i otworzyć detektor w oprogramowaniu *Genie 2000*.
+
+2.  Po zakończonym pomiarze zapisać widmo: `File > Save as` — wybrać próbkę z listy.
+
+3.  Wyczyścić bieżące widmo: kliknąć `Clear`.
+
+4.  Wymienić próbkę w detektorze.
+
+5.  Uruchomić nowy pomiar: kliknąć `Start`.
+
+6.  Zapisać nowe widmo: `File > Save as`.
+
+7.  Zamknąć oprogramowanie *Genie 2000*.
+
+8.  Wykonać kopię zapasową danych z wykorzystaniem programu *DSynchronize*.
+
+9.  Wyłączyć komputer.
+
+### Raportowanie widm
+
+#### Kalibracja
+
+1.  Otworzyć plik z widmem próbki do raportowania.
+
+2.  Załadować kalibrację energetyczną: `Calibrate > Load`.
+
+    -   Zaznaczyć **Energy**, odznaczyć **Efficiency**.
+    -   Wybrać plik z rozszerzeniem `*.energy` i kliknąć dwukrotnie.
+
+3.  Załadować kalibrację wydajności: `Calibrate > Load`.
+
+    -   Zaznaczyć **Efficiency**.
+    -   Wybrać plik z rozszerzeniem `*.efficiency` i kliknąć dwukrotnie.
+
+#### Analiza i generowanie raportu
+
+4.  Uruchomić sekwencję analityczną: `Analyze > Execute Sequence > ECR_lab…`.
+
+5.  Wypełnić wymagane pola w oknie dialogowym:
+
+    -   **Nazwa próbki i ID** — w formacie: trzyliterowy kod jeziora (bez polskich znaków diakrytycznych), rok poboru rdzenia, numer rdzenia i numer próbki uzupełniony zerami wiodącymi. Przykład: `JJJ_18-2_01`.
+    -   **Masa próbki** — wprowadzić wartość z separatorem dziesiętnym w postaci kropki (nie przecinka).
+
+    Zatwierdzić `OK`.
+
+:::{.callout-note}
+## Separator dziesiętny
+
+Oprogramowanie *Genie 2000* wymaga **kropki** (`.`) jako separatora dziesiętnego, niezależnie od ustawień regionalnych systemu operacyjnego. Wprowadzać np. `12.34`, nie `12,34`.
+:::
+
+6.  Na widmie powinny pojawić się symbole izotopów. Raport zapisuje się automatycznie na dysku.
+
+7.  Zamknąć plik z widmem. **Nie zapisywać zmian** w widmie.
+
+8.  Powtórzyć kroki 1–7 dla każdej kolejnej próbki.
+
+#### Zarządzanie plikami
+
+9.  Przejść do lokalizacji `C:\GENIE2K\CAMFILES\REPFILES` i odnaleźć wygenerowane pliki raportów.
+
+10. Utworzyć nowy katalog dla rdzenia osadów i przenieść do niego pliki raportów.
+
+11. Wykonać kopię zapasową danych z wykorzystaniem programu *DSynchronize* w celu synchronizacji dysku lokalnego z serwerem.
+
+## Rejestr zmian
+
+| Data | Autor | Zmiana |
+|------------|-------|---------------------------------------------------------------|
+| 2026-02-10 | MZ | Scalenie procedur azot/próbka i raportowanie; migracja do nowego frameworku; standaryzacja formatowania |
+| 2022-12-01 | MZ | Inicjalna wersja Quarto (dwie osobne procedury) |

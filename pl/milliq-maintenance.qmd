@@ -1,0 +1,105 @@
+---
+title: "Zestaw do wody MilliQ: konserwacja"
+subtitle: "Wymiana filtrów i rutynowe czynności serwisowe"
+
+author:
+  - name: "Maurycy Żarczyński"
+    role: "Osoba odpowiedzialna"
+contributors:
+  - "Maurycy Żarczyński (adaptacja Quarto, 2026)"
+
+version: "1.0"
+date: last-modified
+date-format: "YYYY-MM-DD"
+
+source-version: "en/milliq-maintenance.qmd@v1.0"
+
+related-protocols: ~
+---
+
+{{< include ../_includes/header-pl.qmd >}}
+
+# Zestaw do wody MilliQ: konserwacja
+
+Rutynowa konserwacja zestawu do oczyszczania wody Milli-Q, obejmująca planową wymianę filtrów, wymianę lampy UV oraz cotygodniowe czynności serwisowe. Przestrzeganie podanych interwałów zapewnia ciągłe dostarczanie wody ultraczystej do celów laboratoryjnych.
+
+## Materiały eksploatacyjne i urządzenia
+
+### Części zamienne
+
+-   Wkład filtra wstępnego pod zlewem (`JAPLPK001`) — wymiana co 12 miesięcy lub po zapchaniu.
+-   Filtr powietrzny (z tyłu urządzenia) — wymiana co 12–24 miesiące. Zapasowy w szufladzie.
+-   Wkład SmartPak (`SPR00SIA1`) — wymiana co 12 miesięcy lub po każdym przestoju, w którym urządzenie było wyłączone.
+-   Lampa UV — wymiana co 24 miesiące.
+
+### Narzędzia i materiały
+
+-   Niebieski klucz plastikowy (duże kółko) — wyłącznie do filtra pod zlewem.
+-   Zestaw do sanityzacji — przechowywany w szufladzie; wymagany w przypadku pojawienia się glonów w zbiorniku.
+
+## Procedura
+
+### Filtr 1: filtr wstępny pod zlewem
+
+Wymienić filtr wstępny (`JAPLPK001`) raz w roku lub gdy przepływ ustaje z powodu zatkania.
+
+1.  Zakręcić kran wody przy filtrze.
+
+2.  Otworzyć kran na blacie (obok podłączenia urządzenia do źródła wody), aby spuścić resztkowe ciśnienie.
+
+3.  Odkręcić obudowę filtra niebieskim kluczem plastikowym, przytrzymując za wieszak.
+
+4.  Wyjąć zużyty wkład i włożyć nowy.
+
+5.  Zakręcić obudowę **ręcznie** — nie używać klucza do dokręcania.
+
+:::{.callout-important}
+## Uszczelka O-ring
+Przed dokręceniem sprawdzić, czy uszczelka O-ring jest prawidłowo osadzona. Źle ułożona uszczelka spowoduje wyciek.
+:::
+
+6.  Odkręcić kran wody i sprawdzić szczelność.
+
+### Filtr 2: filtr powietrzny
+
+Wymienić filtr powietrzny (tylny panel) co 12–24 miesiące.
+
+-   Wyciągnąć stary filtr — jest montowany na wcisk.
+-   Wcisnąć nowy filtr na miejsce.
+
+### Filtr 3: wkład SmartPak
+
+Wymienić wkład SmartPak (`SPR00SIA1`) co 12 miesięcy (urządzenie wyświetli komunikat) lub po każdym przestoju, w którym urządzenie było wyłączone.
+
+1.  Otworzyć komorę wkładu i wysunąć stary SmartPak po szynach.
+
+2.  Wsunąć nowy SmartPak, aż zaskoczy.
+
+3.  Przeprowadzić pełny cykl pierwszej filtracji i zlać wodę przez wężyk do zlewu.
+
+4.  Po spuszczeniu wody z pierwszej filtracji nabrać około **2 L** wody ultraczystej i wylać do zlewu.
+
+:::{.callout-important}
+## Płukanie po wymianie
+Płukanie usuwa środki konserwujące i luźne cząstki z nowego wkładu. Nie używać wody wytworzonej przed zakończeniem płukania.
+:::
+
+### Lampa UV
+
+Wymienić lampę UV co 24 miesiące. Urządzenie wyświetli komunikat, gdy wymiana będzie konieczna. Postępować zgodnie z instrukcją producenta dotyczącą dostępu i instalacji lampy.
+
+### Cotygodniowe czynności serwisowe
+
+Następujące czynności wykonywać raz w tygodniu:
+
+-   **Spuścić wodę ze zbiornika.** Stojąca woda sprzyja rozwojowi mikroorganizmów. Jeśli w zbiorniku widoczne są glony, przed ponownym uruchomieniem zainstalować zestaw do sanityzacji (przechowywany w szufladzie) i wymienić wkład SmartPak.
+
+-   **Wytrzeć urządzenie** suchą lub lekko wilgotną ściereczką bezpyłową w celu usunięcia kurzu.
+
+-   **Uruchomić cykl recyrkulacji.** Wcisnąć jednocześnie `+` i `−`, aby przepłukać obieg wewnętrzny i utrzymać jakość wody między użyciami.
+
+## Rejestr zmian
+
+| Data | Autor | Zmiana |
+|------|-------|--------|
+| 2026-02-10 | MZ | Inicjalna wersja Quarto; na podstawie dokumentacji wewnętrznej |

@@ -1,0 +1,202 @@
+---
+title: "²¹⁰Pb Sample Preparation for Alpha Spectrometry"
+subtitle: "Microwave acid digestion and spontaneous deposition on silver discs"
+
+author:
+  - name: "Maurycy Żarczyński"
+    role: "Responsible person"
+contributors:
+  - "Wojciech Tylmann (original method)"
+  - "Karolina Molisak (original method)"
+  - "Joanna Piłczyńska (original method)"
+  - "Maurycy Żarczyński (Quarto adaptation, 2022)"
+
+version: "1.0"
+date: last-modified
+date-format: "YYYY-MM-DD"
+
+related-protocols:
+  - title: "Gamma Spectrometer: Sample Change and Liquid N₂"
+    href: "gamma-nitrogen-sample.qmd"
+  - title: "Gamma Spectrometer: Reporting"
+    href: "gamma-report.qmd"
+  - title: "Freeze Drying"
+    href: "freeze-drying.qmd"
+---
+
+{{< include ../_includes/header-en.qmd >}}
+
+# ²¹⁰Pb Sample Preparation for Alpha Spectrometry
+
+Preparation of freeze-dried lake sediment samples for ²¹⁰Pb activity determination by alpha spectrometry. The procedure involves three-stage microwave acid digestion (HNO~3~, HClO~4~, HF) with a ²⁰⁹Po yield tracer, followed by evaporation and spontaneous deposition of polonium isotopes onto silver discs from a hot acidic solution containing ascorbic acid and hydroxylamine as reducing agents.
+
+## Safety
+
+::: callout-warning
+## Corrosive and toxic reagents
+
+This protocol uses the following concentrated acids — **all steps must be performed under a running fume hood**:
+
+-   **HNO~3~ (65 %)** — strongly corrosive, releases toxic fumes.
+-   **HClO~4~ (70 %)** — strong oxidiser, corrosive. Reacts violently with organic matter.
+-   **HF (40 %)** — causes severe and potentially fatal burns; penetrates skin rapidly. Requires specialised PPE (double nitrile gloves, face shield).
+
+Wear a laboratory coat, nitrile gloves, and safety goggles at all times. Refer to the relevant Safety Data Sheets (SDS) stored in the laboratory.
+:::
+
+::: callout-warning
+## Microwave digestion
+
+CEM Teflon (PTFE) vessels are under elevated pressure during digestion. Open the vessels **only under the fume hood** and unscrew slowly to release pressure gradually.
+:::
+
+## Consumables and equipment
+
+### Chemical reagents
+
+Digestion:
+
+-   Nitric acid, HNO~3~ (65 %, concentrated).
+-   Perchloric acid, HClO~4~ (70 %, concentrated).
+-   Hydrofluoric acid, HF (40 %).
+-   Hydrochloric acid, HCl (6 mol/L).
+-   Hydrochloric acid, HCl (0.5 mol/L).
+
+Yield tracer:
+
+-   ²⁰⁹Po standard solution.
+
+Deposition:
+
+-   Ascorbic acid (C~6~H~8~O~6~).
+-   Hydroxylamine hydrochloride (NH~2~OH · HCl).
+
+Other:
+
+-   Redistilled water (MilliQ).
+-   Methanol or ethanol — for cleaning silver discs.
+
+### Equipment
+
+-   MARS-6 microwave digestion system (CEM) with Teflon (PTFE) vessels.
+-   Teflon (PTFE) evaporation beakers with lids.
+-   Heating plate (capable of **200 °C**).
+-   Magnetic stirrer with heating function.
+-   Deposition vessels with silver disc holders.
+-   Magnetic stir bars (PTFE-coated).
+-   Analytical balance (readability 0.1 mg).
+-   Laboratory fume hood.
+
+### Other materials
+
+-   Plastic weighing vessels.
+-   Silver discs, pre-cleaned.
+-   Aluminium foil — for heating plate protection.
+-   Adjustable pipette **100–1000 µL** with compatible tips.
+-   Graduated pipettes or dispensers for acid volumes.
+-   Laboratory marker for labelling silver discs.
+
+## Preparation
+
+### Sample preparation
+
+-   Freeze-dry wet sediment samples (see [Freeze Drying](freeze-drying.qmd) protocol).
+
+### Vessel preparation
+
+-   Clean all plastic weighing vessels and Teflon (PTFE) digestion vessels. Rinse and dry thoroughly before use.
+
+## Procedure
+
+### Stage 1: Microwave acid digestion
+
+#### Weighing and HNO~3~ digestion
+
+1.  Place a clean plastic weighing vessel on the analytical balance and tare.
+
+2.  Weigh approximately **0.2 g** of dry sediment into the vessel. Record the mass to **0.1 mg**.
+
+3.  Transfer the sediment to a CEM Teflon (PTFE) digestion vessel.
+
+4.  Add **3 mL** of concentrated HNO~3~ (65 %) to the digestion vessel, rinsing sediment from the walls.
+
+5.  Using an adjustable pipette, add **200 µL** of ²⁰⁹Po standard solution to the digestion vessel.
+
+::: callout-important
+## Yield tracer
+
+The ²⁰⁹Po spike is essential for determining chemical recovery. Pipette carefully — the precision of the spike volume directly affects the accuracy of the final ²¹⁰Pb activity calculation.
+:::
+
+6.  Cap the Teflon vessels and screw tightly. Mix gently.
+
+7.  Place the vessels in the MARS-6 microwave digestion system. Select `Classical Methods` and start programme `Pb-210 HNO3` (**100 °C**, **2 h**).
+
+#### HClO~4~ digestion
+
+8.  Remove the vessels from the microwave system. Open carefully under the fume hood — unscrew slowly.
+
+9.  Add **3 mL** of concentrated HClO~4~ (70 %).
+
+10. Cap the vessels, screw tightly, and mix gently. Return to the microwave system and start programme `Pb-210 HClO4` (**100 °C**, **2 h**).
+
+#### HF digestion
+
+11. Remove the vessels from the microwave system. Open carefully under the fume hood.
+
+12. Add **3 mL** of HF (40 %).
+
+::: callout-warning
+## Hydrofluoric acid
+
+HF causes deep, extremely painful burns that may not be immediately apparent. Wear double nitrile gloves and a face shield. Work strictly under the fume hood. In case of skin contact, rinse immediately and apply calcium gluconate gel.
+:::
+
+13. Cap the vessels, screw tightly, and mix gently. Return to the microwave system and start programme `Pb-210 HF` (**100 °C**, **4 h**).
+
+### Stage 2: Evaporation and deposition
+
+#### Transfer and evaporation
+
+14. Remove the Teflon vessels from the microwave system.
+
+15. Transfer the digested solution and any remaining sediment residue quantitatively to Teflon evaporation beakers using **5 mL** of HCl (6 mol/L) as a rinse. Ensure all material is transferred: mix the residue in the digestion vessel, pour into the evaporation beaker, rinse the vessel walls with HCl (6 mol/L), and add the rinse to the beaker.
+
+16. Place the evaporation beakers on the heating plate set to **200 °C** (protect the plate surface with aluminium foil). Heat **without a lid** until distinct white fumes appear.
+
+17. Cover the beakers with Teflon lids and continue heating for a minimum of **30 min** until the solution clarifies. Do not exceed **1 h** total heating time under the lid.
+
+18. Remove the lids. Add **3 mL** of HCl (6 mol/L) and evaporate to dryness.
+
+::: callout-important
+## Do not ignite
+
+Evaporate gently to a dry residue only. Do not allow the temperature to rise to the point of ignition — this would destroy the polonium isotopes.
+:::
+
+#### Dissolution and deposition
+
+19. Dissolve the dry residue in **27 mL** of HCl (0.5 mol/L).
+
+20. Add approximately **0.1 g** of ascorbic acid and **0.1 g** of hydroxylamine hydrochloride.
+
+21. Heat the solution to **90 °C**. In the meantime, label silver discs with sample identifiers and the deposition date. Mount the silver discs in the holders with the clean polished side facing up.
+
+22. Place PTFE-coated magnetic stir bars into the deposition vessels and close them. Position the vessels on the magnetic stirrer. Set heating to **10** (maximum) and rotation to **1** (minimum).
+
+::: callout-note
+## Deposition conditions
+
+Adjust the stirring speed manually to the lowest stable rotation. Too-vigorous stirring reduces deposition efficiency. The solution temperature should remain at approximately **90 °C** throughout.
+:::
+
+23. Allow the deposition to proceed for a minimum of **4 h**.
+
+24. Remove the silver discs from the deposition vessels. Rinse with redistilled water (MilliQ). Wipe with methanol or ethanol. Verify the labels and store securely until measurement.
+
+## Changelog
+
+| Date | Author | Change |
+|--------------------|--------------------------|--------------------------|
+| 2026-02-10 | MZ | Migrated to new framework; English translation; standardised units and formatting |
+| 2022-12-01 | MZ | Initial Quarto version |

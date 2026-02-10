@@ -1,0 +1,146 @@
+---
+# ──────────────────────────────────────────────────────────────────
+# Metadane procedury — uzupełnić dla każdej nowej procedury
+# ──────────────────────────────────────────────────────────────────
+title: "Przygotowanie preparatów rozmazowych"
+subtitle: "Preparaty rozmazowe z osadów z klejem utwardzanym UV"
+
+author:
+  - name: "Maurycy Żarczyński"
+    role: "Osoba odpowiedzialna"
+contributors:
+  - "Karolina Molisak (metoda oryginalna)"
+  - "Maurycy Żarczyński (adaptacja Quarto, 2022)"
+
+version: "1.0"
+date: last-modified
+date-format: "YYYY-MM-DD"
+
+source-version: "en/smear-slides.qmd@v1.0"
+
+related-protocols:
+  - title: "Sztabki do cienkich szlifów"
+    href: "thin-section-slabs.qmd"
+  - title: "Skanowanie cienkich szlifów"
+    href: "thin-section-scanning.qmd"
+---
+
+{{< include ../_includes/header-pl.qmd >}}
+
+# Przygotowanie preparatów rozmazowych
+
+Przygotowanie preparatów rozmazowych z osadów do obserwacji w mikroskopie w świetle przechodzącym i spolaryzowanym. Niewielka ilość osadu jest rozprowadzana na szkiełku podstawowym, suszona na płycie grzejnej i trwale montowana za pomocą kleju utwardzanego promieniowaniem UV. Metoda nadaje się do rdzeni osadów jeziornych oraz materiału z pułapek sedymentacyjnych.
+
+## Bezpieczeństwo
+
+:::{.callout-warning}
+## Promieniowanie UV i klej
+
+-   **Lampa UV** — nie patrzeć bezpośrednio w źródło promieniowania UV. Wiązanie zachodzi wewnątrz osłoniętej skrzyni z lampą UV.
+-   **Klej Drei Bond** (6020 / 6023) — unikać kontaktu ze skórą. Pracować w rękawiczkach nitrylowych. Po skończeniu pracy dokładnie umyć ręce. Karty charakterystyki (SDS) dostępne są w laboratorium.
+:::
+
+## Materiały eksploatacyjne i urządzenia
+
+### Odczynniki chemiczne
+
+-   Woda dejonizowana (lub woda redestylowana, MilliQ).
+-   Alkohol etylowy (techniczny) — do czyszczenia szkiełek oraz opcjonalnie jako medium dyspergujące.
+
+### Urządzenia
+
+-   Płyta grzejna (zakres **60–70 °C**).
+-   Skrzynia do utwardzania UV (osłonięta lampa UV).
+
+### Pozostałe materiały
+
+-   Szkiełka podstawowe (płaskie, 76 × 26 mm).
+-   Szkiełka nakrywkowe.
+-   Klej światłoutwardzalny: **Drei Bond 6020** (gęstszy) oraz **Drei Bond 6023** (rzadszy).
+-   Szpatułka ze stali nierdzewnej.
+-   Pęseta (końcówka cienka).
+-   Pipeta Pasteura lub jednorazowy zakraplacz.
+-   Etykiety na szkiełka lub pisak diamentowy.
+-   Etui kartonowe na preparaty lub pudełka do przechowywania szkiełek.
+
+## Przygotowanie
+
+### Plan poboru próbek
+
+-   Ustalić regularne interwały poboru próbek wzdłuż rdzenia, zwykle co **8–10 cm**, w zależności od długości rdzenia i celów badawczych.
+-   Zaplanować dodatkowe próbki z miejsc charakterystycznych (np. laminy jasne i ciemne, widoczne warstwy tefry, zmiany barwy).
+
+### Przygotowanie stanowiska pracy
+
+-   Umyć szkiełka podstawowe wodą dejonizowaną lub alkoholem, a następnie dokładnie wytrzeć czystą, bezpyłową ściereczką.
+
+-   Podpisać każde szkiełko zgodnie z poniższym schematem etykietowania.
+
+:::{.callout-note}
+## Schemat etykietowania
+
+**Rdzenie osadów:** `SSS-RR/N–S XX`
+
+| Kod   | Znaczenie                                    |
+|-------|----------------------------------------------|
+| `SSS` | Kod stanowiska                               |
+| `RR`  | Rok poboru rdzenia                           |
+| `N`   | Numer rdzenia                                |
+| `S`   | Numer sekcji                                 |
+| `XX`  | Odległość od stropu sekcji (cm)              |
+
+**Materiał z pułapki sedymentacyjnej:** `SSS RRRR-MM-DD TYP`
+
+| Kod    | Znaczenie                                    |
+|--------|----------------------------------------------|
+| `SSS`  | Kod stanowiska                               |
+| `RRRR` | Rok                                          |
+| `MM`   | Miesiąc                                      |
+| `DD`   | Dzień                                        |
+| `TYP`  | **H** (hypolimnion) lub **M** (metalimnion) |
+:::
+
+:::{.callout-tip}
+## Połączone laminy na jednym szkiełku
+
+Jeśli lamina jasna i ciemna umieszczane są na jednym szkiełku, należy odnotować w dokumentacji dodatkowe uwagi (np. tefra, barwa, wcześniejsze potraktowanie osadu HCl).
+:::
+
+## Procedura
+
+### Przygotowanie preparatu
+
+1.  Za pomocą szpatułki pobrać niewielką ilość osadu i umieścić na szkiełku podstawowym.
+
+:::{.callout-important}
+## Równomierne rozłożenie
+
+Materiał rozłożyć możliwie równomiernie i cienko. Zbyt grube miejsca będą nieprzezroczyste pod mikroskopem i uniemożliwią analizę.
+:::
+
+2.  Dodać za pomocą pipety Pasteura kroplę wody dejonizowanej (lub alkoholu). Rozprowadzić osad dokładnie przy pomocy szpatułki lub wykałaczki.
+
+3.  Umieścić szkiełko na płycie grzejnej rozgrzanej do **60–70 °C**. Pozostawić do momentu, aż woda całkowicie odparuje i osad będzie zupełnie suchy — około **2–5 min**.
+
+4.  Zdjąć szkiełko z płyty grzejnej. Na wysuszony osad dodać kroplę kleju **Drei Bond** i przy pomocy pęsety delikatnie nałożyć szkiełko nakrywkowe.
+
+:::{.callout-tip}
+## Wybór kleju
+
+Stosować **Drei Bond 6020** (gęstszy) dla osadów grubszych lub bogatych w minerały, a **Drei Bond 6023** (rzadszy) dla osadów drobnoziarncistych, organicznych. Rzadszy klej łatwiej rozprowadza się pod szkiełkiem nakrywkowym.
+:::
+
+5.  Umieścić preparat w etui kartonowym (lub na tekturze) i poddać działaniu **promieniowania UV** przez około **1–2 min** wewnątrz skrzyni do utwardzania UV.
+
+6.  Po utwardzeniu sprawdzić, czy szkiełko nakrywkowe jest trwale przyklejone. Delikatnie docisnąć brzegi — szkiełko nie powinno się przesuwać.
+
+### Przechowywanie
+
+-   Gotowe preparaty przechowywać w przeznaczonych do tego celu pudełkach, posortowane według rdzenia i głębokości.
+
+## Rejestr zmian
+
+| Data | Autor | Zmiana |
+|------------|-------|----------------------------------------------|
+| 2026-02-10 | MZ | Migracja do nowego frameworku; standaryzacja formatowania |
+| 2022-12-03 | MZ | Inicjalna wersja Quarto |

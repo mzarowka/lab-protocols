@@ -1,0 +1,269 @@
+---
+# ──────────────────────────────────────────────────────────────────
+# Metadane procedury — uzupełnić dla każdej nowej procedury
+# ──────────────────────────────────────────────────────────────────
+title: "Analiza TIC: całkowity węgiel nieorganiczny"
+subtitle: "Moduł SoliTIC, Elementar Analysensysteme"
+
+author:
+  - name: "Maurycy Żarczyński"
+    role: "Osoba odpowiedzialna"
+contributors:
+  - "Karolina Molisak (notatki metodyczne)"
+  - "Joanna Piłczyńska (notatki metodyczne)"
+  - "Maurycy Żarczyński (adaptacja Quarto, 2022)"
+
+version: "1.0"
+date: last-modified
+date-format: "YYYY-MM-DD"
+
+source-version: "en/cns-tic-inorganic-carbon-solitic.qmd@v1.0"
+
+related-protocols:
+  - title: "CNS: procedura pomiarowa"
+    href: "cns-procedure-extended.qmd"
+  - title: "CNS: przygotowanie próbek"
+    href: "cns-sample-preparation.qmd"
+  - title: "CNS: wzorce glebowe"
+    href: "cns-standard-samples.qmd"
+  - title: "TIC: kalcymetr Scheiblera"
+    href: "tic-inorganic-carbon-scheibler.qmd"
+---
+
+{{< include ../_includes/header-pl.qmd >}}
+
+# Analiza TIC: całkowity węgiel nieorganiczny
+
+Oznaczanie całkowitego węgla nieorganicznego (TIC, *total inorganic carbon*) w próbkach osadów metodą trawienia kwasem przy użyciu modułu SoliTIC sprzężonego z analizatorem Vario EL Cube (Elementar Analysensysteme). Kwas solny reaguje z węglanami w próbce, uwalniając CO~2~, który jest przenoszony przez hel do detektora przewodności cieplnej (TCD) analizatora Vario EL Cube. Szczegółowe informacje zawiera rozdział 8 — moduł TIC solids w instrukcji obsługi Vario EL Cube.
+
+::: callout-important
+## SoliTIC wymaga Vario EL Cube
+
+Moduł SoliTIC nie pracuje samodzielnie. Przed rozpoczęciem analizy TIC analizator Vario EL Cube musi być włączony, a jego oprogramowanie uruchomione. Piece spalań i redukcji **nie są** rozgrzewane do pomiarów TIC — wykorzystywany jest wyłącznie detektor TCD i przepływ helu.
+:::
+
+## Bezpieczeństwo
+
+::: callout-warning
+## Odczynnik żrący
+
+Procedura wymaga stosowania **HCl (5 %)**. Unikać kontaktu ze skórą i oczami. Stosować fartuch laboratoryjny, rękawice nitrylowe i okulary ochronne. Karta charakterystyki (SDS) kwasu solnego dostępna jest w laboratorium.
+:::
+
+## Materiały eksploatacyjne i urządzenia
+
+### Odczynniki chemiczne
+
+-   Kwas solny, HCl (5 %), rozcieńczony ze stężonego HCl (37 %).
+-   Woda dejonizowana.
+
+### Urządzenia
+
+-   Moduł SoliTIC (Elementar Analysensysteme).
+-   Analizator elementarny Vario EL Cube CNS (Elementar Analysensysteme).
+-   Dedykowany komputer z oprogramowaniem Vario EL Cube.
+
+### Gazy techniczne
+
+-   Hel (He), ciśnienie robocze **1,2 bar** (1200 mbar).
+
+### Części eksploatacyjne
+
+-   Osuszki (komplet wymienny).
+-   Miedź i wełna mosiężna do U-rurki.
+
+### Pozostałe materiały
+
+-   Szklane łódeczki do próbek.
+-   Lejek szklany (do wprowadzania próbek do reaktora).
+-   Materiały referencyjne (peaty, chalky, sandy — patrz [CNS: wzorce glebowe](cns-standard-samples.qmd)).
+-   Wewnętrzna próbka kontrolna (np. zhomogenizowany osad referencyjny KOS-13).
+-   Sprężone powietrze — do suszenia łódeczek.
+
+## Przygotowanie
+
+### Czynności kontrolne
+
+Przed uruchomieniem urządzenia wykonać następujące czynności:
+
+-   Uzupełnić zbiornik kwasu HCl (5 %), jeśli poziom jest niski.
+-   Wymienić osuszki, jeśli są wyczerpane.
+-   Wymienić miedź i wełnę mosiężną w U-rurce, jeśli to konieczne.
+-   Umyć reaktor, jeśli widoczne są pozostałości po poprzednich analizach.
+
+### Rozruch
+
+1.  Włączyć moduł SoliTIC pomarańczowym przyciskiem z prawej strony urządzenia.
+
+2.  Założyć owiewkę wyprowadzającą gorące powietrze z tyłu Vario EL Cube.
+
+3.  Włączyć Vario EL Cube zielonym przyciskiem z prawej strony urządzenia.
+
+4.  Uruchomić oprogramowanie Vario EL Cube.
+
+::: callout-tip
+## Skrót do oprogramowania
+
+Skrót znajduje się na pasku zadań.
+:::
+
+5.  Poczekać, aż detektor TCD (detektor przewodności cieplnej) osiągnie temperaturę roboczą.
+
+::: callout-note
+## Gotowość detektora TCD
+
+Pole TCD powinno przestać migać i wskazywać stabilną wartość około **60 °C**.
+:::
+
+::: callout-important
+## Gazy w trakcie rozgrzewania
+
+Podczas rozgrzewania urządzenia hel musi pozostać **zakręcony**. Odkręcić dopiero po osiągnięciu temperatury docelowej detektora TCD.
+:::
+
+6.  Odkręcić hel:
+
+    -   Otworzyć czarny zawór na butli gazowej.
+    -   Otworzyć skrajny biały zawór po lewej stronie reduktora.
+    -   Zamknąć zawór odpływowy na reaktorze SoliTIC i zablokować go.
+
+7.  Sprawdzić stabilność odczytów gazowych:
+
+    -   TCD flow: około **230 mL/min**.
+    -   Ciśnienie (Press): **1200 mbar**, stabilne.
+
+8.  Po ustabilizowaniu się TC detect wyzerować system: `System > Autozero`.
+
+## Procedura
+
+### Sekwencja analityczna
+
+W nowym pliku pomiarowym oprogramowania Vario EL Cube przygotować następującą sekwencję:
+
+1.  **Rozruch** — kilka analiz z samą wodą dejonizowaną, aż pole TIC area się ustabilizuje.
+2.  **Próbki ślepe** — **2** analizy z samą wodą dejonizowaną.
+3.  **Wzorce** — po **2** analizy każdego materiału referencyjnego (peaty, chalky, sandy).
+4.  **RunIn** — **2** analizy wewnętrznego osadu referencyjnego (np. KOS-13).
+5.  **Próbki** — seria analityczna.
+
+::: callout-note
+## Korekcja wyników
+
+Zmierzone wartości blank i wzorców służą do korekty wyników. Wzorce kompensują bieżące odchylenia aparatury — muszą być uruchamiane z każdą serią pomiarową.
+:::
+
+### Analiza próbki
+
+1.  Odważyć **10–15 mg** suchego osadu do czystej szklanej łódeczki.
+
+::: callout-note
+## Masa próbki
+
+Masa **10–15 mg** jest zoptymalizowana dla gytii jeziornej. W przypadku innych typów osadów wykonać najpierw oznaczenia testowe na próbkach reprezentatywnych w celu ustalenia odpowiedniej naważki.
+:::
+
+2.  W tabeli oprogramowania wpisać nazwę próbki i wybrać metodę. Przesłać masę z wagi na komputer (dioda `On/Off` musi się świecić).
+
+3.  Kliknąć `ON`. Rozpoczyna się tworzenie linii bazowej (*baseline*) — zawór reaktora pozostaje zamknięty.
+
+4.  Na ekranie pojawia się monit o wprowadzenie próbki.
+
+5.  Przy **zamkniętym** zaworze reaktora:
+
+    -   Odkręcić korek reaktora.
+    -   Wlać niewielką ilość wody dejonizowanej do reaktora.
+    -   Umieścić lejek szklany dłuższym końcem do dołu, uważając na rurkę wewnątrz reaktora.
+    -   Wsypać osad z łódeczki do lejka.
+    -   Spłukać resztki osadu z łódeczki i lejka wodą dejonizowaną do reaktora.
+    -   Zakręcić korek reaktora.
+
+6.  Kliknąć `Continue` (lub wcisnąć `Enter`).
+
+7.  Rozpoczyna się automatyczne dozowanie kwasu. Upewnić się, że pompa perystaltyczna podaje kwas do reaktora.
+
+::: callout-important
+## Potwierdzenie przepływu kwasu
+
+Jeśli kwas nie dociera do reaktora, analiza będzie nieprawidłowa. Sprawdzić dreny i pompę przed kontynuowaniem.
+:::
+
+8.  Na chromatogramie pojawia się pik CO~2~ w miarę postępu pomiaru.
+
+### Czyszczenie reaktora (po każdej próbce)
+
+Po zakończeniu pomiaru na ekranie pojawia się monit o usunięcie próbki i wyczyszczenie reaktora:
+
+1.  Otworzyć zawór odpływowy i spuścić ciecz z reaktora.
+2.  Zamknąć zawór odpływowy.
+3.  Odkręcić korek reaktora.
+4.  Spłukać zdecydowanie reaktor wodą dejonizowaną.
+5.  Pozostawić korek reaktora **otwarty** na chwilę, aby umożliwić odprowadzenie resztkowego gazu.
+
+::: callout-important
+## Etap wentylacji
+
+Pozostawienie reaktora otwartego na chwilę jest niezbędne do usunięcia resztkowego CO~2~. Pominięcie tego kroku spowoduje podwyższenie linii bazowej następnego pomiaru.
+:::
+
+6.  Zakręcić korek reaktora.
+7.  Poczekać, aż ciśnienie wzrośnie do około **1000 mbar**.
+8.  Otworzyć zawór odpływowy i spuścić wodę płuczącą z reaktora.
+9.  Wysuszyć łódeczkę sprężonym powietrzem.
+
+### Gotowość do kolejnej próbki
+
+Przed rozpoczęciem kolejnej analizy upewnić się, że urządzenie się ustabilizowało:
+
+-   TC detect: poniżej **500**.
+-   TCD flow i He flow: około **300 mL/min**.
+
+::: callout-important
+## Nie spieszyć się
+
+Rozpoczęcie analizy przed ustabilizowaniem linii bazowej detektora obniży jakość wyniku. Odczekać, aż wszystkie odczyty znajdą się w podanych zakresach.
+:::
+
+### Zakończenie dnia pracy
+
+1.  Aktywować tryb uśpienia: kliknąć `Sleep` (ikona księżyca) w oprogramowaniu.
+
+::: callout-important
+## Nie ustawiać temperatur pieca
+
+Aktywując tryb uśpienia dla analizy TIC, **nie** zaznaczać pól temperatur pieca. Ustawienie temperatur spalania lub redukcji spowoduje niepotrzebne rozgrzanie pieca Vario EL Cube.
+:::
+
+2.  Zakręcić hel:
+
+    -   Zamknąć biały zawór po lewej stronie reduktora.
+    -   Zamknąć czarny zawór na butli gazowej.
+
+3.  Zapisać plik pomiarowy.
+
+### Procedura następnego dnia
+
+1.  Otworzyć plik pomiarowy z poprzedniego dnia. Skopiować początkowe wiersze (do RunIn włącznie — tylko 4 pierwsze kolumny). Otworzyć nowy arkusz, wkleić skopiowane wartości i zapisać jako nowy plik. Uzupełnić nazwy próbek nowej serii.
+
+2.  Wybudzić urządzenie: kliknąć ikonę budzika w oprogramowaniu.
+
+3.  Uzupełnić zbiornik kwasu HCl (5 %).
+
+4.  Poczekać, aż detektor TCD osiągnie temperaturę roboczą (około **60 °C**, pole przestanie migać).
+
+5.  Odkręcić hel (czarny zawór na butli, następnie biały zawór po lewej stronie reduktora).
+
+6.  Poczekać na stabilizację:
+
+    -   TC detect: wartość spadająca, poniżej **1000**.
+    -   Ciśnienie (Press): **1200 mbar**, stabilne.
+
+7.  Wyzerować system: `System > Autozero`.
+
+8.  Rozpocząć sekwencję rozruchową z analiz samej wody dejonizowanej, przed przejściem do próbek ślepych i próbek właściwych.
+
+## Rejestr zmian
+
+| Data | Autor | Zmiana |
+|--------------------|--------------------------|--------------------------|
+| 2026-02-10 | MZ | Migracja do nowego frameworku; standaryzacja jednostek i formatowania; rozszerzenie z notatek roboczych |
+| 2022-12-01 | MZ | Inicjalna wersja Quarto |

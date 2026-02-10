@@ -1,0 +1,137 @@
+---
+# ──────────────────────────────────────────────────────────────────
+# Metadane procedury — uzupełnić dla każdej nowej procedury
+# ──────────────────────────────────────────────────────────────────
+title: "Fotografowanie rdzeni i tworzenie panoram"
+subtitle: "Dokumentacja fotograficzna rdzeni osadów z użyciem programu Hugin"
+
+author:
+  - name: "Maurycy Żarczyński"
+    role: "Osoba odpowiedzialna"
+contributors:
+  - "Maurycy Żarczyński (metoda oryginalna, 2022)"
+  - "Maurycy Żarczyński (adaptacja Quarto, 2022)"
+
+version: "1.0"
+date: last-modified
+date-format: "YYYY-MM-DD"
+
+source-version: "en/core-photographs-manual.qmd@v1.0"
+
+related-protocols:
+  - title: "Skanowanie hiperspektralne"
+    href: "hyperspectral-scanning.qmd"
+  - title: "Sztabki do cienkich szlifów"
+    href: "thin-section-slabs.qmd"
+---
+
+{{< include ../_includes/header-pl.qmd >}}
+
+# Fotografowanie rdzeni i tworzenie panoram
+
+Dokumentacja fotograficzna rozciętych rdzeni osadów w kontrolowanych warunkach oświetleniowych, a następnie łączenie zdjęć w panoramę w programie *Hugin* w celu uzyskania ciągłego obrazu wysokiej rozdzielczości każdej sekcji rdzenia.
+
+## Materiały eksploatacyjne i urządzenia
+
+### Urządzenia
+
+-   Aparat fotograficzny DSLR z trybem manualnym i kompatybilnym obiektywem.
+-   Statyw ze sztywnym ramieniem poziomym (konfiguracja stołu reprodukcyjnego).
+-   Dedykowane oświetlenie studyjne (stałe źródła światła zamontowane przy stanowisku fotograficznym).
+-   Uchwyt do rdzeni z regulowanymi zaciskami.
+-   Miara (linijka) ze skalą — osobna dla rdzeni wąskich i szerokich.
+-   Komputer połączony z aparatem (tryb zdalnego wyzwalania).
+
+### Oprogramowanie
+
+-   *Hugin* — program do łączenia panoram (instalator: `Public\Software\Hugin`).
+
+## Przygotowanie
+
+### Ustawienie aparatu
+
+-   Zamontować aparat na statywie w najwyższej pozycji.
+
+:::{.callout-important}
+## Stała pozycja aparatu
+Nie zmieniać pozycji aparatu w pionie pomiędzy kolejnymi zdjęciami ani pomiędzy rdzeniami. Nie zmieniać ustawień obiektywu, jeśli nie jest to absolutnie konieczne — każda zmiana unieważnia dopasowanie panoramy.
+:::
+
+-   Ustawić aparat w **trybie w pełni manualnym** z następującymi parametrami:
+
+    -   Czas naświetlania: **1/2\ s**.
+    -   Przesłona: **f/11**.
+    -   Autofokus (**AF**): **wyłączony**.
+
+:::{.callout-note}
+## Wybór miary
+Dla wąskich rdzeni (**Ø\ 63\ mm**) używać miary **dolnej**, dla szerokich rdzeni (**Ø\ 90\ mm**) — miary **górnej**.
+:::
+
+-   Włączyć oświetlenie studyjne i sprawdzić połączenie z komputerem.
+
+### Przygotowanie rdzenia
+
+-   Wyciągać rdzenie z chłodni **pojedynczo**.
+-   Rozpakować sekcję rdzenia i ostrożnie przenieść do uchwytu.
+
+## Procedura
+
+### Fotografowanie
+
+:::{.callout-important}
+## Kontrolowane oświetlenie
+Wszystkie zdjęcia wykonywać przy **zamkniętych drzwiach** pomieszczenia i **zgaszonym świetle sufitowym**. Jedynym źródłem światła powinno być dedykowane oświetlenie studyjne. Zmienność oświetlenia otoczenia między klatkami powoduje widoczne pasma na panoramie.
+:::
+
+-   Ułożyć rdzeń w uchwycie tak, aby kapsle i taśma uszczelniająca znajdowały się **poza** zaciskami. Ostrożnie docisnąć zaciski.
+
+-   Wyrównać miarę i przesunąć ją do stropu (góry stratygraficznej) rdzenia. Skala zaczyna się od **0,1\ mm** — ustawić odpowiednio.
+
+-   Patrząc w wizjer wycentrować środek celownika na wartości **0,0** rdzenia. W razie potrzeby dostosować ostrość.
+
+-   Wykonać zdjęcie i przesunąć rdzeń o **5\ cm**. Powtarzać aż do sfotografowania całej sekcji.
+
+:::{.callout-tip}
+## Nakładanie się klatek
+Krok **5\ cm** zapewnia wystarczające nakładanie się sąsiednich klatek do prawidłowego łączenia panoramy w programie *Hugin*.
+:::
+
+-   Zapakować sekcję rdzenia i natychmiast umieścić w chłodni.
+
+### Tworzenie panoram w programie Hugin
+
+-   Otworzyć *Hugin* i przełączyć na interfejs eksperta: `Interfejs > Eksperta`.
+
+-   Zakładka `Zdjęcia`:
+
+    -   PPM → `Dodaj pojedyncze zdjęcia` — załadować wszystkie fotografie jednej sekcji rdzenia.
+    -   Uruchomić `Dopasowywanie szczegółów > Align image stack` w celu automatycznego wykrycia i dopasowania punktów kontrolnych.
+
+-   Zakładka `Punkty kontrolne`:
+
+    -   Sprawdzić, czy nie ma punktów kontrolnych łączących niesąsiednie zdjęcia. Usunąć błędne dopasowania.
+
+-   Otworzyć `Szybki podgląd panoramy`:
+
+    -   Uruchomić `Asystent > Wyrównaj`.
+
+-   Ustawić rzut na `Walcowy równokątny (Merkator)`.
+
+-   Użyć `Przesuń/przeciągnij > Wyprostuj`, aby wyrównać panoramę.
+
+-   Dostosować obszar `Ucięcia`, usuwając czarne obramowania i pozostawiając jedynie obraz rdzenia.
+
+-   Uruchomić `Asystent > Utwórz zdjęcie panoramiczne`. Najpierw zapisać plik projektu, a następnie wyeksportować złączoną panoramę.
+
+:::{.callout-tip}
+## Nazewnictwo plików
+Nazwę eksportowanej panoramy tworzyć zgodnie z konwencją zakładu: identyfikator rdzenia, numer sekcji i data — na przykład `LLL-1A-1_panorama_2025-06-15.tif`.
+:::
+
+## Rejestr zmian
+
+| Data | Autor | Zmiana |
+|--------------------|--------------------------|--------------------------|
+| 2026-02-10 | MZ | Migracja do nowego frameworku; standaryzacja formatowania; rozszerzenie treści |
+| 2022-12-08 | MZ | Inicjalna wersja Quarto |

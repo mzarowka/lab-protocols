@@ -1,0 +1,162 @@
+---
+# ──────────────────────────────────────────────────────────────────
+# Protocol metadata — edit these fields for each new protocol
+# ──────────────────────────────────────────────────────────────────
+title: "Water Content and Wet Bulk Density of Sediments"
+subtitle: "Gravimetric method with volumetric sampling"
+
+author:
+  - name: "Maurycy Żarczyński"
+    role: "Responsible person"
+contributors:
+  - "Maurycy Żarczyński (Quarto adaptation, 2022)"
+
+version: "1.0"
+date: last-modified
+date-format: "YYYY-MM-DD"
+
+source-version: ~
+
+related-protocols:
+  - title: "Loss on Ignition"
+    href: "loss-on-ignition.qmd"
+  - title: "Freeze Drying"
+    href: "freeze-drying.qmd"
+---
+
+{{< include ../_includes/header-en.qmd >}}
+
+# Water Content and Wet Bulk Density of Sediments
+
+Determination of water content (weight percent) and wet bulk density of unconsolidated sediments. Wet bulk density is obtained by measuring the mass of a known volume of wet sediment. Water content is determined gravimetrically by drying the same sample at **105 °C** until constant mass. After drying, the sediment is homogenised in a mortar and stored for subsequent analyses (loss on ignition, CNS, etc.).
+
+## Consumables and equipment
+
+### Equipment
+
+-   Laboratory drying oven (capable of **105 °C**).
+-   Analytical balance (readability **0.1 mg**).
+-   Volumetric syringe (**5 mL**, cut tip) or equivalent volumetric sampler.
+
+::: callout-note
+## Syringe scale
+
+Most disposable syringes are graduated in mL. If the syringe scale reads cm³, the volumes are identical (1 mL = 1 cm³).
+:::
+
+### Other materials
+
+-   Porcelain evaporating dishes — one per sample.
+-   Porcelain or agate mortar and pestle.
+-   Stainless steel spatula.
+-   Labelled sample containers with airtight lids.
+-   Laboratory form or electronic datasheet.
+
+## Preparation
+
+-   Clean the porcelain evaporating dishes: wash with redistilled water (MilliQ), dry in the oven, and label each dish with a unique sample number using a porcelain marker or permanent label.
+
+-   Weigh each empty evaporating dish. Record the mass ($m_d$) in the laboratory form.
+
+## Procedure
+
+### Wet bulk density
+
+1.  Remove undecomposed organic remains (e.g., leaf fragments) and other coarse particles (e.g., mollusc shells) from the wet sediment surface.
+
+2.  Set the syringe plunger to **5 mL**. Fill the syringe barrel with wet sediment using the spatula, pressing gently to avoid air pockets.
+
+::: callout-important
+## Constant volume
+
+Ensure that the syringe is filled exactly to the set volume mark. Air gaps or overfilling will bias the density calculation.
+:::
+
+::: callout-note
+## Adjustable volume
+
+The standard volume is **5 mL**. If the available sediment is limited, a smaller volume may be used — record the actual volume and apply it in the calculation.
+:::
+
+3.  Transfer the sediment from the syringe into the labelled evaporating dish.
+
+4.  Weigh the evaporating dish with wet sediment. Record the mass ($m_d + m_w$) in the laboratory form.
+
+### Drying and water content
+
+5.  Programme the drying oven to **105 °C** (no time limit).
+
+6.  Place all evaporating dishes in the oven and dry for at least **24 h**.
+
+::: callout-tip
+## Constant mass check
+
+For high-precision work or very wet samples, weigh the dishes after **24 h**, return them to the oven for an additional **2 h**, and re-weigh. If the mass difference is less than **1 mg**, the sample has reached constant mass.
+:::
+
+7.  Remove the dishes from the oven and allow them to cool to room temperature.
+
+::: callout-important
+## Cooling
+
+Allow samples to cool in a desiccator or on the bench away from draughts. Warm dishes attract moisture and yield artificially high masses.
+:::
+
+8.  Weigh each evaporating dish with dried sediment. Record the mass ($m_d + m_s$) in the laboratory form.
+
+### Post-drying processing
+
+9.  Transfer the dried sediment to a porcelain or agate mortar and grind thoroughly to a homogeneous powder.
+
+10. Transfer the ground sediment to a labelled, airtight container, or proceed directly with further analytical protocols (e.g., [Loss on Ignition](loss-on-ignition.qmd), CNS analysis).
+
+## Calculations
+
+### Wet bulk density
+
+$$
+\rho_w = \frac{m_w}{V}
+$$
+
+where:
+
+-   $\rho_w$ — wet bulk density (g/mL)
+-   $m_w = (m_d + m_w) - m_d$ — mass of wet sediment (g)
+-   $V$ — volume of wet sediment (mL)
+
+::: callout-note
+## Density units
+
+The unit g/mL is numerically identical to g/cm³, which is conventional in sedimentology.
+:::
+
+### Water content
+
+$$
+W = \frac{m_w - m_s}{m_w} \times 100
+$$
+
+where:
+
+-   $W$ — water content (%)
+-   $m_w = (m_d + m_w) - m_d$ — mass of wet sediment (g)
+-   $m_s = (m_d + m_s) - m_d$ — mass of dry sediment (g)
+
+::: callout-note
+## Dry bulk density
+
+If dry bulk density is required, it can be derived from the same measurements:
+
+$$
+\rho_s = \frac{m_s}{V}
+$$
+
+where $\rho_s$ is the dry bulk density (g/mL) and $V$ is the original volume of wet sediment (mL).
+:::
+
+## Changelog
+
+| Date | Author | Change |
+|--------------------|--------------------------|--------------------------|
+| 2026-02-10 | MZ | Migrated to new framework; English translation; expanded from original draft |
+| 2022-12-01 | MZ | Initial Quarto version |

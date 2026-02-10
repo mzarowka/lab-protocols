@@ -1,0 +1,154 @@
+---
+# ──────────────────────────────────────────────────────────────────
+# Metadane procedury — uzupełnić dla każdej nowej procedury
+# ──────────────────────────────────────────────────────────────────
+title: "Liofilizacja"
+subtitle: "Liofilizator laboratoryjny"
+
+author:
+  - name: "Maurycy Żarczyński"
+    role: "Osoba odpowiedzialna"
+contributors:
+  - "Joanna Piłczyńska (metoda oryginalna)"
+  - "Maurycy Żarczyński (adaptacja Quarto, 2022)"
+
+version: "1.0"
+date: last-modified
+date-format: "YYYY-MM-DD"
+
+source-version: "en/freeze-drying.qmd@v1.0"
+
+related-protocols:
+  - title: "Ekstrakcja pigmentów"
+    href: "pigment-bulk-extraction.qmd"
+  - title: "Ekstrakcja krzemionki biogenicznej"
+    href: "biogenic-silica-bulk-extraction.qmd"
+---
+
+{{< include ../_includes/header-pl.qmd >}}
+
+# Liofilizacja
+
+Suszenie sublimacyjne zamrożonych próbek osadów za pomocą liofilizatora laboratoryjnego. Liofilizacja lepiej zachowuje właściwości fizyczne i chemiczne próbek niż suszenie w piecu i jest zalecanym etapem przygotowania do analiz wrażliwych na degradację termiczną (np. pigmenty osadowe, krzemionka biogeniczna).
+
+## Materiały eksploatacyjne i urządzenia
+
+### Urządzenia
+
+- Liofilizator laboratoryjny z pompą próżniową.
+- Zamrażalnik szafkowy (temperatura **−40 °C** lub niższa).
+- Instalacja sprężonego powietrza.
+
+### Pozostałe materiały
+
+- Pojemniki na próbki (kompatybilne ze stoliczkiem liofilizatora).
+- Stoliczek liofilizatora (płyta chłodząca).
+- Parafilm.
+- Zlewka do zbierania wody z rozmrażania.
+
+## Przygotowanie
+
+### Przygotowanie próbek
+
+- Dzień przed liofilizacją zlać wodę znad osadu w pojemnikach z próbkami.
+
+- Przykryć wierzch każdego pojemnika kawałkiem Parafilmu. Wykonać kilka małych otworów umożliwiających ucieczkę pary wodnej podczas sublimacji.
+
+- Umieścić próbki oraz stoliczek liofilizatora w zamrażalniku. Mrożenie trwa minimum **24 h**.
+
+::: callout-important
+## Wymagane pełne zamrożenie próbek
+
+Próbki muszą być całkowicie zamrożone przed załadowaniem do liofilizatora. Niedostatecznie zamrożony materiał rozmrozi się podczas odpompowywania, co obniży efektywność suszenia i może uszkodzić próbkę.
+:::
+
+### Przegląd urządzenia
+
+- Odkorkować czarny wężyk spustowy z tyłu liofilizatora i sprawdzić, czy nie ma resztkowej wody.
+
+- Sprawdzić szczyt komory liofilizatora pod kątem zalegającej wody lub lodu — w razie potrzeby wytrzeć do sucha.
+
+- Sprawdzić uszczelkę drzwi komory — musi być sucha i szczelnie przylegać do krawędzi.
+
+- Skontrolować olej pompy próżniowej przez wziernik — olej musi być przezroczysty. Wymienić, jeśli jest przebarwiony lub mętny.
+
+## Procedura
+
+### Załadunek i rozruch
+
+1. Ustawić zamrożone próbki na wychłodzonym stoliczku, a następnie umieścić stoliczek w komorze liofilizatora.
+
+2. Nałożyć pokrywę komory, trzymając za plastikową krawędź.
+
+3. Sprawdzić, czy **wszystkie** zawory na kolektorze liofilizatora są zamknięte.
+
+::: callout-tip
+## Zawory po poprzednich sesjach
+
+Po poprzedniej sesji suszenia jeden z zaworów mógł pozostać otwarty. Przed uruchomieniem pompy próżniowej sprawdzić każdy zawór.
+:::
+
+4. Włączyć liofilizator czarnym przyciskiem z boku urządzenia.
+
+5. W przypadku alarmu wcisnąć `Menu`, aby odczytać komunikat.
+
+::: callout-note
+## Alarm serwisowy pompy
+
+Alarm dotyczący interwału serwisowego pompy lub wymiany oleju można zazwyczaj potwierdzić i skasować przyciskiem `Select`.
+:::
+
+6. Liofilizator oferuje dwa tryby pracy, aktywowane odpowiednimi przyciskami: `AUTO` i `MAN`.
+
+7. Wybrać tryb `MAN` i poczekać, aż temperatura kondensatora spadnie do **−40 °C**.
+
+::: callout-important
+## Gotowość kondensatora
+
+Przed kontynuowaniem odczekać, aż zapalą się wszystkie diody wskaźnika temperatury. Kondensator musi być w pełni schłodzony, aby skutecznie wychwytywać parę wodną.
+:::
+
+8. Wcisnąć `VACUUM`, aby uruchomić pompę próżniową. Upewnić się, że żaden zawór nie wciąga powietrza — nasłuchiwać syczenia i monitorować wskaźnik próżni.
+
+9. Odczekać, aż zapalą się wszystkie diody wskaźnika próżni, potwierdzając osiągnięcie docelowej próżni.
+
+### Suszenie
+
+- Czas suszenia zależy od objętości próbek i zawartości wody. Typowe sesje trwają około **5–7 dni**.
+
+::: callout-note
+## Sprawdzanie postępu
+
+Próbki są w pełni suche, gdy nie następuje dalszy ubytek masy. W razie wątpliwości zważyć reprezentatywny pojemnik przed i po dodatkowych 24 h suszenia.
+:::
+
+### Wyłączenie i czyszczenie
+
+1. Wyłączyć pompę próżniową.
+
+2. **Powoli** otworzyć jeden z zaworów, aby wyrównać ciśnienie w komorze z ciśnieniem atmosferycznym.
+
+::: callout-warning
+## Stopniowe wyrównywanie ciśnienia
+
+Nie otwierać zaworu gwałtownie. Nagły napływ powietrza może przemieścić drobnoziarniste próbki i spowodować utratę materiału. Odkręcać zawór stopniowo przez kilka sekund.
+:::
+
+3. Zdjąć pokrywę komory.
+
+4. Usunąć stoliczek z próbkami.
+
+5. Pozwolić, aby lód zgromadzony na wężownicy kondensatora stopniał w temperaturze pokojowej — nie skrobać ani nie odbijać.
+
+6. Podstawić zlewkę pod wylot czarnego wężyka spustowego i usunąć korek. W razie potrzeby delikatnie przechylić liofilizator, aby spłynęła cała woda.
+
+7. Przy otwartym wężyku spustowym przedmuchać komorę sprężonym powietrzem w celu usunięcia resztkowej wilgoci.
+
+8. Założyć korek na wężyk spustowy. Liofilizator jest gotowy do następnej sesji.
+
+## Rejestr zmian
+
+| Data | Autor | Zmiana |
+|------|-------|--------|
+| 2026-02-10 | MZ | Migracja do nowego frameworku; rozwinięcie treści z oryginalnej procedury |
+| 2022-12-01 | MZ | Inicjalna wersja Quarto |

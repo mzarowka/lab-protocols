@@ -22,8 +22,6 @@ source-version: "en/protocol-name.qmd@v1.0"
 related-protocols:
   - title: "Strata na prażeniu"
     href: "loss-on-ignition.qmd"
-
-bibliography: ~
 ---
 
 {{< include ../_includes/header-pl.qmd >}}
@@ -31,113 +29,133 @@ bibliography: ~
 # Tytuł procedury
 
 <!-- ────────────────────────────────────────────── -->
+
 <!-- OPIS                                           -->
+
 <!-- Jedno lub dwa zdania: co mierzy/osiąga ta      -->
+
 <!-- procedura i jaką metodę wykorzystuje?          -->
+
 <!-- ────────────────────────────────────────────── -->
 
 Krótki opis metody, jej celu i zasady analitycznej.
 
 <!-- ────────────────────────────────────────────── -->
+
 <!-- BEZPIECZEŃSTWO                                 -->
+
 <!-- Uwzględnić jeśli procedura wymaga pracy z      -->
+
 <!-- niebezpiecznymi substancjami, wysoką           -->
+
 <!-- temperaturą itp. Usunąć jeśli nie dotyczy.     -->
+
 <!-- ────────────────────────────────────────────── -->
 
 ## Bezpieczeństwo
 
-:::{.callout-warning}
+::: callout-warning
 ## Substancje niebezpieczne
 
 Opis głównych zagrożeń. Na przykład:
 
-- Procedura wymaga użycia **HF (40 %)**. Pracować wyłącznie pod digestorium. Stosować odpowiednie środki ochrony indywidualnej.
-- Procedura wymaga pracy w temperaturach powyżej **500 °C**. Używać szczypiec, próbki studzić w eksykatorze.
+-   Procedura wymaga użycia **HF (40 %)**. Pracować wyłącznie pod digestorium. Stosować odpowiednie środki ochrony indywidualnej.
+-   Procedura wymaga pracy w temperaturach powyżej **500 °C**. Używać szczypiec, próbki studzić w eksykatorze.
 
 Karty charakterystyki (SDS) dostępne są w laboratorium.
 :::
 
 <!-- ────────────────────────────────────────────── -->
+
 <!-- MATERIAŁY EKSPLOATACYJNE I URZĄDZENIA          -->
+
 <!-- ────────────────────────────────────────────── -->
 
 ## Materiały eksploatacyjne i urządzenia
 
 ### Odczynniki chemiczne
 
-- Kwas solny, HCl (10 %), rozcieńczony ze stężonego HCl (37 %).
-- Woda redestylowana (MilliQ).
+-   Kwas solny, HCl (10 %), rozcieńczony ze stężonego HCl (37 %).
+-   Woda redestylowana (MilliQ).
 
 ### Urządzenia
 
-- Digestorium laboratoryjne.
-- Waga analityczna (dokładność odczytu 0,1 mg).
-- Piec laboratoryjny (maks. 1100 °C).
+-   Digestorium laboratoryjne.
+-   Waga analityczna (dokładność odczytu 0,1 mg).
+-   Piec laboratoryjny (maks. 1100 °C).
 
 ### Pozostałe materiały
 
-- Tygle porcelanowe.
-- Eksykator z aktywnym środkiem osuszającym.
+-   Tygle porcelanowe.
+-   Eksykator z aktywnym środkiem osuszającym.
 
 <!-- ────────────────────────────────────────────── -->
+
 <!-- PRZYGOTOWANIE                                  -->
+
 <!-- ────────────────────────────────────────────── -->
 
 ## Przygotowanie
 
 ### Przygotowanie próbek
 
-- Zliofilizować mokre próbki osadów (patrz procedura [Liofilizacja](freeze-drying.qmd)).
-- Rozetrzeć wysuszony osad w moździerzu agatowym.
-- Przesiać przez sito o średnicy oczek 100 µm.
+-   Zliofilizować mokre próbki osadów (patrz procedura [Liofilizacja](freeze-drying.qmd)).
+-   Rozetrzeć wysuszony osad w moździerzu agatowym.
+-   Przesiać przez sito o średnicy oczek 100 µm.
 
 ### Przygotowanie stanowiska pracy
 
-- Umyć wszystkie szkło laboratoryjne wodą redestylowaną (MilliQ).
-- Sprawdzić sprawność digestorium.
+-   Umyć wszystkie szkło laboratoryjne wodą redestylowaną (MilliQ).
+-   Sprawdzić sprawność digestorium.
 
 <!-- ────────────────────────────────────────────── -->
+
 <!-- PROCEDURA                                      -->
+
 <!-- ────────────────────────────────────────────── -->
 
 ## Procedura
 
-- Instrukcje krok po kroku.
+-   Instrukcje krok po kroku.
 
-- Każdy krok to osobny punkt, zapisany jako jasne zdanie w trybie rozkazującym.
+-   Każdy krok to osobny punkt, zapisany jako jasne zdanie w trybie rozkazującym.
 
-- Odważyć około **0,5 g** zhomogenizowanego osadu do tygla porcelanowego.
+-   Odważyć około **0,5 g** zhomogenizowanego osadu do tygla porcelanowego.
 
-:::{.callout-tip}
+::: callout-tip
 ## Wskazówka praktyczna
+
 Starać się zachować podobną masę próbek w całej serii. Ułatwia to porównywanie wyników i upraszcza obliczenia.
 :::
 
-- Zaprogramować piec na **550 °C** na **4 h**.
+-   Zaprogramować piec na **550 °C** na **4 h**.
 
-:::{.callout-important}
+::: callout-important
 ## Krok krytyczny
+
 Nie otwierać pieca w trakcie programu grzewczego. Przed ważeniem wystudzić próbki w eksykatorze do temperatury pokojowej.
 :::
 
-- Zapisać masę w formularzu laboratoryjnym.
+-   Zapisać masę w formularzu laboratoryjnym.
 
-:::{.callout-note}
+::: callout-note
 ## Kontekst
+
 Ubytek masy w 550 °C odpowiada spaleniu materii organicznej. Jest to powszechnie stosowany wskaźnik, ale ograniczenia metody omawia Heiri i in. (2001).
 :::
 
 ### Praca z urządzeniem
 
-- Kroki specyficzne dla urządzenia, jeśli dotyczy.
+-   Kroki specyficzne dla urządzenia, jeśli dotyczy.
 
 ### Wyłączenie
 
-- Kroki wyłączenia urządzenia lub porządkowania stanowiska, jeśli dotyczy.
+-   Kroki wyłączenia urządzenia lub porządkowania stanowiska, jeśli dotyczy.
 
 <!-- ────────────────────────────────────────────── -->
+
 <!-- OBLICZENIA                                     -->
+
 <!-- ────────────────────────────────────────────── -->
 
 ## Obliczenia
@@ -150,33 +168,38 @@ $$
 
 gdzie:
 
-- $\text{LOI}_{550}$ — strata na prażeniu w 550 °C (%)
-- $m_{105}$ — masa osadu wysuszonego w 105 °C (g)
-- $m_{550}$ — masa osadu po wyprażeniu w 550 °C (g)
+-   $\text{LOI}_{550}$ — strata na prażeniu w 550 °C (%)
+-   $m_{105}$ — masa osadu wysuszonego w 105 °C (g)
+-   $m_{550}$ — masa osadu po wyprażeniu w 550 °C (g)
 
 <!-- ────────────────────────────────────────────── -->
+
 <!-- ZAŁĄCZNIKI                                     -->
+
 <!-- ────────────────────────────────────────────── -->
 
 ## Załączniki
 
 ### Załącznik 1: Tytuł tabeli referencyjnej
 
-| Parametr  | Wartość | Jednostka |
-|-----------|--------:|-----------|
-| Przykład  |    4,21 | —         |
+| Parametr | Wartość | Jednostka |
+|----------|--------:|-----------|
+| Przykład |    4,21 | —         |
 
 ### Załącznik 2: Zdjęcia sprzętu
 
 <!-- Ścieżki względne z folderu images/ -->
+
 <!-- ![Podpis](../images/nazwa-pliku.png){width=50%} -->
 
 <!-- ────────────────────────────────────────────── -->
+
 <!-- REJESTR ZMIAN                                  -->
+
 <!-- ────────────────────────────────────────────── -->
 
 ## Rejestr zmian
 
-| Data | Autor | Zmiana |
-|------|-------|--------|
-| {{< meta date >}} | MZ | Inicjalna wersja Quarto |
+| Data              | Autor | Zmiana                  |
+|-------------------|-------|-------------------------|
+| {{< meta date >}} | MZ    | Inicjalna wersja Quarto |

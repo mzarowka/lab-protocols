@@ -1,0 +1,163 @@
+---
+# ──────────────────────────────────────────────────────────────────
+# Metadane procedury — uzupełnić dla każdej nowej procedury
+# ──────────────────────────────────────────────────────────────────
+title: "Uwodnienie i gęstość objętościowa osadu"
+subtitle: "Metoda grawimetryczna z próbkowaniem objętościowym"
+
+author:
+  - name: "Maurycy Żarczyński"
+    role: "Osoba odpowiedzialna"
+contributors:
+  - "Karolina Molisak (metoda oryginalna, 2022)"
+  - "Maurycy Żarczyński (adaptacja Quarto, 2022)"
+
+version: "1.0"
+date: last-modified
+date-format: "YYYY-MM-DD"
+
+source-version: "en/water-content-bulk-density.qmd@v1.0"
+
+related-protocols:
+  - title: "Strata na prażeniu"
+    href: "loss-on-ignition.qmd"
+  - title: "Liofilizacja"
+    href: "freeze-drying.qmd"
+---
+
+{{< include ../_includes/header-pl.qmd >}}
+
+# Uwodnienie i gęstość objętościowa osadu
+
+Oznaczanie uwodnienia (procent wagowy) oraz gęstości objętościowej mokrego osadu niezdiagenezowanego. Gęstość objętościową wyznacza się na podstawie masy znanej objętości mokrego osadu. Uwodnienie oznacza się grawimetrycznie przez suszenie tej samej próbki w temperaturze **105\ °C** do stałej masy. Po wysuszeniu osad jest homogenizowany w moździerzu i przechowywany do dalszych analiz (strata na prażeniu, CNS itp.).
+
+## Materiały eksploatacyjne i urządzenia
+
+### Urządzenia
+
+-   Suszarka laboratoryjna (temperatura robocza **105\ °C**).
+-   Waga analityczna (dokładność odczytu **0,1\ mg**).
+-   Strzykawka objętościowa (**5\ mL**, z obciętą końcówką) lub równoważny próbnik objętościowy.
+
+::: callout-note
+## Skala strzykawki
+
+Większość strzykawek jednorazowych jest wyskalowana w mL. Jeśli skala strzykawki jest podana w cm³, wartości są identyczne (1\ mL = 1\ cm³).
+:::
+
+### Pozostałe materiały
+
+-   Parownice porcelanowe — jedna na próbkę.
+-   Moździerz porcelanowy lub agatowy z tłuczkiem.
+-   Szpatułka stalowa.
+-   Opisane pojemniki na próbki ze szczelnymi pokrywkami.
+-   Formularz laboratoryjny lub arkusz elektroniczny.
+
+## Przygotowanie
+
+-   Przygotować parownice porcelanowe: umyć wodą redestylowaną (MilliQ), wysuszyć w suszarce i opisać unikalnym numerem próbki za pomocą markera porcelanowego lub trwałej etykiety.
+
+-   Zważyć każdą pustą parownicę. Zapisać masę ($m_d$) w formularzu laboratoryjnym.
+
+## Procedura
+
+### Gęstość objętościowa mokrego osadu
+
+1.  Usunąć z powierzchni mokrego osadu nierozłożone szczątki organiczne (np. fragmenty liści) oraz inne elementy grubsze (np. muszle małży).
+
+2.  Ustawić tłok strzykawki na **5\ mL**. Napełnić cylinder strzykawki mokrym osadem za pomocą szpatułki, lekko dociskając, aby uniknąć kieszeni powietrznych.
+
+::: callout-important
+## Stała objętość
+
+Upewnić się, że strzykawka jest napełniona dokładnie do ustawionej podziałki. Pęcherzyki powietrza lub przepełnienie wpłyną na wynik obliczeń gęstości.
+:::
+
+::: callout-note
+## Regulowana objętość
+
+Standardowa objętość wynosi **5\ mL**. Jeśli ilość dostępnego osadu jest ograniczona, można zastosować mniejszą objętość — odnotować faktyczną objętość i uwzględnić ją w obliczeniach.
+:::
+
+3.  Przenieść osad ze strzykawki do opisanej parownicy.
+
+4.  Zważyć parownicę z mokrym osadem. Zapisać masę ($m_d + m_w$) w formularzu laboratoryjnym.
+
+### Suszenie i uwodnienie
+
+5.  Zaprogramować suszarkę na **105\ °C** (bez limitu czasowego).
+
+6.  Umieścić wszystkie parownice w suszarce i suszyć przez co najmniej **24\ h**.
+
+::: callout-tip
+## Kontrola stałej masy
+
+W przypadku pomiarów o wysokiej precyzji lub bardzo mokrych próbek zważyć parownice po **24\ h**, włożyć ponownie do suszarki na dodatkowe **2\ h** i powtórzyć ważenie. Jeśli różnica mas jest mniejsza niż **1\ mg**, próbka osiągnęła stałą masę.
+:::
+
+7.  Wyjąć parownice z suszarki i ostudzić do temperatury pokojowej.
+
+::: callout-important
+## Studzenie
+
+Studzić próbki w eksykatorze lub na blacie z dala od przeciągów. Ciepłe parownice absorbują wilgoć z powietrza, co zawyża odczyt masy.
+:::
+
+8.  Zważyć każdą parownicę z suchym osadem. Zapisać masę ($m_d + m_s$) w formularzu laboratoryjnym.
+
+### Obróbka po suszeniu
+
+9.  Przenieść suchy osad do moździerza porcelanowego lub agatowego i dokładnie rozetrzeć do jednorodnego proszku.
+
+10. Przenieść roztarty osad do opisanego, szczelnego pojemnika lub kontynuować zgodnie z kolejnymi procedurami analitycznymi (np. [Strata na prażeniu](loss-on-ignition.qmd), analiza CNS).
+
+## Obliczenia
+
+### Gęstość objętościowa mokrego osadu
+
+$$
+\rho_w = \frac{m_w}{V}
+$$
+
+gdzie:
+
+-   $\rho_w$ — gęstość objętościowa mokrego osadu (g/mL)
+-   $m_w = (m_d + m_w) - m_d$ — masa mokrego osadu (g)
+-   $V$ — objętość mokrego osadu (mL)
+
+::: callout-note
+## Jednostki gęstości
+
+Jednostka g/mL jest liczbowo identyczna z g/cm³, powszechnie stosowaną w sedymentologii.
+:::
+
+### Uwodnienie
+
+$$
+W = \frac{m_w - m_s}{m_w} \times 100
+$$
+
+gdzie:
+
+-   $W$ — uwodnienie osadu (%)
+-   $m_w = (m_d + m_w) - m_d$ — masa mokrego osadu (g)
+-   $m_s = (m_d + m_s) - m_d$ — masa suchego osadu (g)
+
+::: callout-note
+## Gęstość objętościowa suchego osadu
+
+Jeżeli wymagana jest gęstość suchego osadu, można ją obliczyć z tych samych pomiarów:
+
+$$
+\rho_s = \frac{m_s}{V}
+$$
+
+gdzie $\rho_s$ to gęstość objętościowa suchego osadu (g/mL), a $V$ to wyjściowa objętość mokrego osadu (mL).
+:::
+
+## Rejestr zmian
+
+| Data | Autor | Zmiana |
+|------|-------|--------|
+| 2026-02-10 | MZ | Migracja do nowego frameworku; standaryzacja jednostek i formatowania |
+| 2022-12-01 | MZ | Inicjalna wersja Quarto |

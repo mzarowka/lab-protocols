@@ -1,0 +1,202 @@
+---
+# ──────────────────────────────────────────────────────────────────
+# Metadane procedury — uzupełnić dla każdej nowej procedury
+# ──────────────────────────────────────────────────────────────────
+title: "Sonda wieloparametrowa EXO2: konserwacja czujnika pH"
+subtitle: "Kalibracja i czyszczenie elektrody pH, YSI EXO2"
+
+author:
+  - name: "Maurycy Żarczyński"
+    role: "Osoba odpowiedzialna"
+contributors:
+  - "Karolina Molisak (metoda oryginalna, 2022)"
+  - "Maurycy Żarczyński (adaptacja Quarto, 2022)"
+
+version: "1.0"
+date: last-modified
+date-format: "YYYY-MM-DD"
+
+source-version: "en/exo-sonde-ph-maintenance.qmd@v1.0"
+
+related-protocols:
+  - title: "Batymetria"
+    href: "bathymetry.qmd"
+---
+
+{{< include ../_includes/header-pl.qmd >}}
+
+# Sonda wieloparametrowa EXO2: konserwacja czujnika pH
+
+Rutynowa konserwacja czujnika pH w sondzie wieloparametrowej YSI EXO2 (Xylem/YSI). Procedura obejmuje dwa działania: trójpunktową kalibrację elektrody pH z użyciem roztworów buforowych (pH\ 4, 7 i 10) oraz czyszczenie głębokie elektrody w przypadku pogorszenia jej parametrów. Kalibrację wykonywać przed każdym wdrożeniem sondy lub sesją pomiarową. Czyszczenie wykonywać wyłącznie, gdy elektroda wykazuje spowolnioną odpowiedź, dryf lub powtarzające się niskie wyniki SmartQC.
+
+## Bezpieczeństwo
+
+:::{.callout-warning}
+## Odczynniki chemiczne
+
+-   **Podchloryn sodu, NaClO** (wybielacz domowy) — substancja drażniąca, żrąca w stężeniu roboczym. Unikać kontaktu ze skórą i oczami. Pracować w dobrze wentylowanym pomieszczeniu.
+-   **Roztwory buforowe pH** (pH\ 4, 7, 10) — niskie zagrożenie; mogą powodować łagodne podrażnienie skóry przy długotrwałym kontakcie.
+
+Stosować rękawice nitrylowe i okulary ochronne podczas pracy z roztworami wybielacza. Karty charakterystyki (SDS) dostępne są w laboratorium.
+:::
+
+## Materiały eksploatacyjne i urządzenia
+
+### Odczynniki chemiczne
+
+-   Roztwór buforowy **pH\ 4** (certyfikowany, z możliwością śledzenia wzorca).
+-   Roztwór buforowy **pH\ 7** (certyfikowany, z możliwością śledzenia wzorca).
+-   Roztwór buforowy **pH\ 10** (certyfikowany, z możliwością śledzenia wzorca).
+-   Roztwór podchlorynu sodu (wybielacz domowy zawierający NaClO) — do czyszczenia elektrody.
+-   Płyn do naczyń (łagodny, bezfosforanowy) — do czyszczenia elektrody.
+-   Woda dejonizowana.
+
+:::{.callout-important}
+## Termin ważności buforów
+
+Sprawdzić datę ważności na każdej butelce z buforem przed użyciem. Przeterminowane bufory obniżają dokładność kalibracji. Przechowywać bufory w temperaturze pokojowej, z dala od bezpośredniego światła słonecznego.
+:::
+
+### Urządzenia
+
+-   Sonda wieloparametrowa YSI EXO2 z zainstalowanym czujnikiem pH.
+-   Czytnik EXO Handheld lub komputer z oprogramowaniem *KOR*.
+-   Kabel terenowy EXO lub połączenie Bluetooth.
+
+### Pozostałe materiały
+
+-   Zlewki szklane (**100–250\ mL**) — na roztwory buforowe i roztwory czyszczące.
+-   Tryskawka z wodą dejonizowaną.
+-   Chusteczki bezpyłowe (Kimwipes lub odpowiednik).
+-   Stoper.
+
+## Procedura
+
+### Kalibracja {#sec-kalibracja}
+
+#### Przygotowanie
+
+1.  Rozlać roztwory buforowe (pH\ **4**, **7**, **10**) do osobnych, czystych, opisanych zlewek.
+
+:::{.callout-tip}
+## Wartości skorygowane temperaturowo
+
+Rzeczywista wartość pH każdego buforu zmienia się z temperaturą. Odczytać wartość skorygowaną temperaturowo z etykiety na butelce z buforem i wprowadzić ją podczas kalibracji dla uzyskania maksymalnej dokładności.
+:::
+
+2.  Napełnić tryskawkę wodą dejonizowaną.
+
+3.  Podłączyć czytnik EXO Handheld (lub komputer z oprogramowaniem *KOR*) do sondy kablem terenowym lub przez Bluetooth.
+
+4.  Zdemontować osłonę czujników z sondy.
+
+5.  Dokładnie opłukać wszystkie czujniki wodą dejonizowaną z tryskawki.
+
+#### Kalibracja trójpunktowa
+
+6.  Przejść do menu kalibracji na czytniku:
+
+    `Calibrate > pH/ORP > pH`
+
+    Wybrać `Calibration value`.
+
+:::{.callout-tip}
+## Nawigacja
+
+Do poruszania się po menu czytnika EXO Handheld służą `strzałki` na panelu.
+:::
+
+7.  Wprowadzić pierwszy punkt kalibracyjny: **pH\ 4**. Wpisać wartość buforu skorygowaną temperaturowo.
+
+8.  Zanurzyć czujnik pH w roztworze buforowym pH\ **4**.
+
+9.  Nacisnąć `Enter`, aby rozpocząć pomiar.
+
+10. Poczekać na ustabilizowanie się odczytu — ikona na ekranie zmieni się z **żółtego trójkąta ostrzegawczego** na **zielony symbol zakończenia pomiaru**.
+
+:::{.callout-note}
+## Czas stabilizacji
+
+Stabilizacja trwa zazwyczaj **30–120\ s** w zależności od stanu czujnika i wyrównania temperatury. Nie akceptować odczytu, dopóki żółty trójkąt jest nadal wyświetlany.
+:::
+
+11. Zaakceptować punkt kalibracyjny: wybrać `Accept Calibration` i nacisnąć `Enter`.
+
+12. **Powtórzyć kroki 7–11** dla pH\ **7** i pH\ **10**, płucząc czujnik dokładnie wodą dejonizowaną między każdym buforem.
+
+:::{.callout-important}
+## Płukanie między buforami
+
+Niedostateczne płukanie powoduje przenoszenie resztek buforu do kolejnego roztworu i obniża dokładność kalibracji. Opłukać czujnik wodą dejonizowaną co najmniej trzy razy między buforami.
+:::
+
+#### Weryfikacja
+
+13. Po zaakceptowaniu trzech punktów kalibracyjnych czytnik wyświetli raport z kalibracji. Zapisać lub sfotografować raport do dziennika laboratoryjnego.
+
+:::{.callout-note}
+## Wynik SmartQC
+
+Raport z kalibracji zawiera wynik SmartQC (zielony, żółty lub czerwony). Wynik **zielony** oznacza, że wzmocnienie i przesunięcie mieszczą się w dopuszczalnych granicach. Wynik **żółty** sugeruje konieczność czyszczenia elektrody (patrz [Czyszczenie elektrody](#sec-czyszczenie)). Wynik **czerwony** oznacza możliwą konieczność wymiany modułu czujnika — skontaktować się z pomocą techniczną YSI.
+:::
+
+14. Zweryfikować kalibrację, mierząc ponownie pH każdego roztworu buforowego. Wyświetlana wartość pH powinna odpowiadać wartości oczekiwanej z dokładnością do **± 0,1** jednostki pH.
+
+15. Opłukać wszystkie czujniki wodą dejonizowaną. Osuszyć delikatnie chusteczką bezpyłową i zamontować osłonę czujników.
+
+### Czyszczenie elektrody {#sec-czyszczenie}
+
+Procedurę wykonywać, gdy elektroda pH wykazuje spowolnioną odpowiedź, dryf lub żółty wynik SmartQC po kalibracji.
+
+:::{.callout-warning}
+## Rodzaj wybielacza
+
+Stosować **wyłącznie** wybielacz na bazie podchlorynu sodu (NaClO). Nie używać wybielaczy tlenowych ani przeznaczonych do kolorowych tkanin — nie czyszczą one skutecznie elektrod pH i mogą uszkodzić czujnik.
+:::
+
+#### Kąpiel w wybielaczu
+
+1.  Przygotować roztwór wybielacza domowego (NaClO) i wody dejonizowanej w proporcji **1:1** w czystej zlewce.
+
+2.  Zdemontować osłonę czujników z sondy.
+
+3.  Zanurzyć czujnik pH w roztworze wybielacza na **30\ min**.
+
+4.  Po upływie **30\ min** wyjąć czujnik i opłukać dokładnie pod bieżącą wodą.
+
+#### Mycie detergentem
+
+5.  Przygotować rozcieńczony roztwór płynu do naczyń w wodzie dejonizowanej (kilka kropel na **200\ mL**).
+
+6.  Zanurzyć czujnik pH w roztworze detergentu na **30\ min**.
+
+7.  Po upływie **30\ min** wyjąć czujnik i opłukać dokładnie pod bieżącą wodą.
+
+#### Kondycjonowanie w buforze kwaśnym
+
+8.  Wlać roztwór buforowy pH\ **4** do czystej zlewki.
+
+9.  Zanurzyć czujnik pH w buforze pH\ **4** na minimum **3\ h** (preferowane jest moczenie przez noc).
+
+:::{.callout-note}
+## Dlaczego pH 4?
+
+Moczenie w kwaśnym buforze nawadnia i kondycjonuje szklaną membranę elektrody pH, przywracając jej właściwości pomiarowe. Krok ten jest kluczowy po ekspozycji na wybielacz i detergent.
+:::
+
+10. Po zakończeniu moczenia wyjąć czujnik i opłukać wodą dejonizowaną.
+
+11. Przeprowadzić pełną kalibrację trójpunktową zgodnie z opisem w punkcie [Kalibracja](#sec-kalibracja).
+
+:::{.callout-important}
+## Ocena po czyszczeniu
+
+Jeśli wynik SmartQC pozostaje żółty lub zmienia się na czerwony po czyszczeniu i ponownej kalibracji, moduł czujnika pH powinien zostać wymieniony. Skontaktować się z pomocą techniczną YSI lub zapoznać się z instrukcją obsługi EXO, sekcja 6.21 (Wymiana modułu czujnika).
+:::
+
+## Rejestr zmian
+
+| Data | Autor | Zmiana |
+|------|-------|--------|
+| 2026-02-10 | MZ | Migracja do nowego frameworku; standaryzacja jednostek i formatowania |
+| 2022-12-01 | MZ | Inicjalna wersja Quarto |

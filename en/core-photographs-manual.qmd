@@ -1,0 +1,142 @@
+---
+# ──────────────────────────────────────────────────────────────────
+# Protocol metadata — edit these fields for each new protocol
+# ──────────────────────────────────────────────────────────────────
+title: "Core Photography and Panorama Stitching"
+subtitle: "Sediment core imaging with Hugin panorama workflow"
+
+author:
+  - name: "Maurycy Żarczyński"
+    role: "Responsible person"
+contributors:
+  - "Maurycy Żarczyński (original method, 2022)"
+  - "Maurycy Żarczyński (Quarto adaptation, 2022)"
+
+version: "1.0"
+date: last-modified
+date-format: "YYYY-MM-DD"
+
+source-version: ~
+
+related-protocols:
+  - title: "Hyperspectral Scanning"
+    href: "hyperspectral-scanning.qmd"
+  - title: "Thin Section Slabs"
+    href: "thin-section-slabs.qmd"
+---
+
+{{< include ../_includes/header-en.qmd >}}
+
+# Core Photography and Panorama Stitching
+
+Photographic documentation of split sediment cores under controlled lighting conditions, followed by panorama stitching in *Hugin* to produce a continuous high-resolution composite image of each core section.
+
+## Consumables and equipment
+
+### Equipment
+
+-   DSLR camera with manual exposure control and a compatible lens.
+-   Sturdy tripod with horizontal arm (copy stand configuration).
+-   Dedicated studio lighting (constant light sources mounted at the camera station).
+-   Core holder with adjustable clamps.
+-   Graduated scale bar (ruler) — one for narrow cores, one for wide cores.
+-   Computer connected to the camera (tethered shooting).
+
+### Software
+
+-   *Hugin* — open-source panorama stitcher (installer: `Public\Software\Hugin`).
+
+## Preparation
+
+### Camera setup
+
+-   Mount the camera on the tripod at the maximum height position.
+
+::: callout-important
+## Fixed camera position
+
+Do not change the vertical position of the camera between photographs or between cores. Do not adjust the lens settings unless absolutely necessary — any change invalidates the panorama alignment.
+:::
+
+-   Set the camera to **full manual mode** with the following parameters:
+
+    -   Shutter speed: **1/2 s**.
+    -   Aperture: **f/11**.
+    -   Autofocus (**AF**): **off**.
+
+::: callout-note
+## Scale bar selection
+
+Use the **lower** scale bar for narrow cores (**Ø 63 mm**) and the **upper** scale bar for wide cores (**Ø 90 mm**).
+:::
+
+-   Switch on the studio lighting and verify the tethered connection to the computer.
+
+### Core preparation
+
+-   Retrieve cores from cold storage **one at a time**.
+-   Unwrap the core section and carefully transfer it to the core holder.
+
+## Procedure
+
+### Photography
+
+::: callout-important
+## Controlled lighting
+
+Take all photographs with the **room door closed** and **overhead lights off**. Only the dedicated studio lighting should be on. Ambient light variation between frames causes visible banding in the final panorama.
+:::
+
+-   Place the core section in the holder so that the end caps and sealing tape sit **outside** the clamps. Gently press the clamps to secure the core.
+
+-   Align the scale bar and slide it to the top (stratigraphic top) of the core. The scale begins at **0.1 mm** — position accordingly.
+
+-   Look through the viewfinder and centre the crosshair on **0.0** of the core. Adjust focus if necessary.
+
+-   Take a photograph and advance the core by **5 cm**. Repeat until the entire section is covered.
+
+::: callout-tip
+## Overlap
+
+The **5 cm** step ensures sufficient overlap between adjacent frames for reliable panorama stitching in *Hugin*.
+:::
+
+-   Wrap the core section and return it to cold storage immediately after shooting.
+
+### Panorama stitching in Hugin
+
+-   Open *Hugin* and switch to the expert interface: `Interface > Expert`.
+
+-   In the `Photos` tab:
+
+    -   Right-click → `Add individual images` — load all photographs for one core section.
+    -   Run `Feature Matching > Align image stack` to detect and match control points automatically.
+
+-   In the `Control Points` tab:
+
+    -   Verify that no control points link non-adjacent photographs. Delete any erroneous matches.
+
+-   Open `Fast Preview`:
+
+    -   Run `Assistant > Align`.
+
+-   Set the projection to `Cylindrical equirectangular (Mercator)`.
+
+-   Use `Move/Drag > Straighten` to level the panorama.
+
+-   Adjust the `Crop` area to remove black borders and retain only the core image.
+
+-   Run `Assistant > Create panorama`. Save the project file first, then export the stitched panorama image.
+
+::: callout-tip
+## File naming
+
+Name the exported panorama following the department convention: core identifier, section number, and date — for example, `LLL-1A-1_panorama_2025-06-15.tif`.
+:::
+
+## Changelog
+
+| Date | Author | Change |
+|--------------------|--------------------------|--------------------------|
+| 2026-02-10 | MZ | Migrated to new framework; English translation; expanded procedural detail |
+| 2022-12-08 | MZ | Initial Quarto version |

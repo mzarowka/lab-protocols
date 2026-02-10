@@ -1,0 +1,202 @@
+---
+# ──────────────────────────────────────────────────────────────────
+# Protocol metadata — edit these fields for each new protocol
+# ──────────────────────────────────────────────────────────────────
+title: "EXO2 Multiparameter Sonde: pH Sensor Maintenance"
+subtitle: "Calibration and cleaning of the pH electrode, YSI EXO2"
+
+author:
+  - name: "Maurycy Żarczyński"
+    role: "Responsible person"
+contributors:
+  - "Karolina Molisak (original method, 2022)"
+  - "Maurycy Żarczyński (Quarto adaptation, 2022)"
+
+version: "1.0"
+date: last-modified
+date-format: "YYYY-MM-DD"
+
+source-version: ~
+
+related-protocols:
+  - title: "Bathymetry"
+    href: "bathymetry.qmd"
+---
+
+{{< include ../_includes/header-en.qmd >}}
+
+# EXO2 Multiparameter Sonde: pH Sensor Maintenance
+
+Routine maintenance of the pH sensor in the YSI EXO2 multiparameter sonde (Xylem/YSI). This protocol covers two procedures: three-point calibration of the pH electrode using standard buffer solutions (pH 4, 7, and 10) and deep cleaning of the electrode when response has degraded. Perform calibration before each deployment or measurement session. Perform cleaning only when the electrode shows slow response, drift, or consistently poor SmartQC scores.
+
+## Safety
+
+::: callout-warning
+## Chemical reagents
+
+-   **Sodium hypochlorite, NaClO** (household bleach) — irritant, corrosive at working concentration. Avoid contact with skin and eyes. Work in a well-ventilated area.
+-   **pH buffer solutions** (pH 4, 7, 10) — low hazard; may cause mild skin irritation on prolonged contact.
+
+Wear nitrile gloves and safety goggles when handling bleach solutions. Refer to the relevant Safety Data Sheets (SDS) stored in the laboratory.
+:::
+
+## Consumables and equipment
+
+### Chemical reagents
+
+-   pH buffer solution, **pH 4** (certified, traceable).
+-   pH buffer solution, **pH 7** (certified, traceable).
+-   pH buffer solution, **pH 10** (certified, traceable).
+-   Sodium hypochlorite solution (household bleach containing NaClO) — for electrode cleaning.
+-   Liquid dish soap (mild, phosphate-free) — for electrode cleaning.
+-   Deionised water.
+
+::: callout-important
+## Buffer expiry
+
+Check the expiry date on every buffer bottle before use. Expired buffers compromise calibration accuracy. Store buffers at room temperature, away from direct sunlight.
+:::
+
+### Equipment
+
+-   YSI EXO2 multiparameter sonde with pH sensor installed.
+-   EXO Handheld display or PC with *KOR* software.
+-   EXO field cable or Bluetooth connection.
+
+### Other materials
+
+-   Glass beakers (**100–250 mL**) — for buffer solutions and cleaning solutions.
+-   Wash bottle with deionised water.
+-   Lint-free wipes (Kimwipes or equivalent).
+-   Timer.
+
+## Procedure
+
+### Calibration {#sec-calibration}
+
+#### Preparation
+
+1.  Pour each buffer solution (pH **4**, **7**, **10**) into a separate clean, labelled glass beaker.
+
+::: callout-tip
+## Temperature-corrected values
+
+The actual pH value of every buffer varies with temperature. Read the temperature-corrected value from the label on the buffer bottle and enter it during calibration for maximum accuracy.
+:::
+
+2.  Fill the wash bottle with deionised water.
+
+3.  Connect the EXO Handheld display (or PC running *KOR*) to the sonde via field cable or Bluetooth.
+
+4.  Remove the sensor guard from the sonde.
+
+5.  Rinse all sensors thoroughly with deionised water from the wash bottle.
+
+#### Three-point calibration
+
+6.  Navigate to the calibration menu on the handheld:
+
+    `Calibrate > pH/ORP > pH`
+
+    Select `Calibration value`.
+
+::: callout-tip
+## Navigation
+
+Use the arrow keys on the EXO Handheld to navigate menus.
+:::
+
+7.  Enter the first calibration point: **pH 4**. Type the temperature-corrected buffer value.
+
+8.  Immerse the pH sensor in the pH **4** buffer solution.
+
+9.  Press `Enter` to start the measurement.
+
+10. Wait for the reading to stabilise — the on-screen icon changes from a **yellow warning triangle** to a **green completion symbol**.
+
+::: callout-note
+## Stabilisation time
+
+Stabilisation typically takes **30–120 s** depending on sensor condition and temperature equilibration. Do not accept the reading while the yellow triangle is still displayed.
+:::
+
+11. Accept the calibration point: select `Accept Calibration` and press `Enter`.
+
+12. **Repeat steps 7–11** for pH **7** and pH **10**, rinsing the sensor thoroughly with deionised water between each buffer.
+
+::: callout-important
+## Rinse between buffers
+
+Insufficient rinsing carries buffer residue into the next solution and degrades calibration accuracy. Rinse the sensor with deionised water at least three times between buffers.
+:::
+
+#### Verification
+
+13. After accepting all three calibration points, the handheld displays the calibration report. Record or photograph the report for the laboratory logbook.
+
+::: callout-note
+## SmartQC score
+
+The calibration report includes a SmartQC score (green, yellow, or red). A **green** score indicates that gain and offset are within acceptable limits. A **yellow** score suggests the sensor may need cleaning (see [Electrode cleaning](#sec-cleaning)). A **red** score indicates the sensor module may need replacement — contact YSI technical support.
+:::
+
+14. Verify the calibration by re-measuring each buffer solution. The displayed pH should match the expected value within **± 0.1** pH units.
+
+15. Rinse all sensors with deionised water. Dry carefully with a lint-free wipe and reinstall the sensor guard.
+
+### Electrode cleaning {#sec-cleaning}
+
+Perform this procedure when the pH electrode shows slow response, drift, or a yellow SmartQC score after calibration.
+
+::: callout-warning
+## Bleach type
+
+Use **only** bleach based on sodium hypochlorite (NaClO). Do not use oxygen-based or colour-safe bleach products — these do not clean pH electrodes effectively and may damage the sensor.
+:::
+
+#### Bleach soak
+
+1.  Prepare a **1:1** solution of household bleach (NaClO) and deionised water in a clean beaker.
+
+2.  Remove the sensor guard from the sonde.
+
+3.  Immerse the pH sensor in the bleach solution for **30 min**.
+
+4.  After **30 min**, remove the sensor and rinse thoroughly under running tap water.
+
+#### Detergent wash
+
+5.  Prepare a dilute solution of liquid dish soap in deionised water (a few drops per **200 mL**).
+
+6.  Immerse the pH sensor in the soap solution for **30 min**.
+
+7.  After **30 min**, remove the sensor and rinse thoroughly under running tap water.
+
+#### Acid buffer conditioning
+
+8.  Pour pH **4** buffer solution into a clean beaker.
+
+9.  Immerse the pH sensor in the pH **4** buffer for a minimum of **3 h** (overnight is preferred).
+
+::: callout-note
+## Why pH 4?
+
+Soaking in an acidic buffer rehydrates and conditions the glass membrane of the pH electrode, restoring response characteristics. This step is critical after exposure to bleach and detergent.
+:::
+
+10. After soaking, remove the sensor and rinse with deionised water.
+
+11. Perform a full three-point calibration as described in [Calibration](#sec-calibration).
+
+::: callout-important
+## Post-cleaning assessment
+
+If the SmartQC score remains yellow or turns red after cleaning and recalibration, the pH sensor module should be replaced. Contact YSI technical support or refer to the EXO User Manual, Section 6.21 (Sensor Module Replacement).
+:::
+
+## Changelog
+
+| Date | Author | Change |
+|--------------------|--------------------------|--------------------------|
+| 2026-02-10 | MZ | Migrated to new framework; English translation; expanded from original procedures |
+| 2022-12-01 | MZ | Initial Quarto version |

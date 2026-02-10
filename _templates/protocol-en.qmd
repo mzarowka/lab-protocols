@@ -25,9 +25,6 @@ source-version: ~
 related-protocols:
   - title: "Loss on Ignition"
     href: "loss-on-ignition.qmd"
-
-# Optional: literature reference for the method
-bibliography: ~
 ---
 
 {{< include ../_includes/header-en.qmd >}}
@@ -35,123 +32,153 @@ bibliography: ~
 # Protocol Title
 
 <!-- ────────────────────────────────────────────── -->
+
 <!-- DESCRIPTION                                    -->
+
 <!-- One or two sentences: what does this protocol  -->
+
 <!-- measure/achieve and what method does it use?   -->
+
 <!-- Include a literature citation if applicable.   -->
+
 <!-- ────────────────────────────────────────────── -->
 
 Brief description of the method, its purpose, and analytical principle.
 
 <!-- ────────────────────────────────────────────── -->
+
 <!-- SAFETY                                         -->
+
 <!-- Include this section if the protocol involves  -->
+
 <!-- hazardous chemicals, high temperatures, high   -->
+
 <!-- pressure, or other risks. Delete if not needed.-->
+
 <!-- ────────────────────────────────────────────── -->
 
 ## Safety
 
-:::{.callout-warning}
+::: callout-warning
 ## Hazardous materials
 
 Describe the main hazards here. For example:
 
-- This protocol uses **HF (40 %)**. Work under a fume hood at all times. Wear appropriate PPE.
-- Temperatures above **500 °C** are involved. Use tongs and allow samples to cool in a desiccator.
+-   This protocol uses **HF (40 %)**. Work under a fume hood at all times. Wear appropriate PPE.
+-   Temperatures above **500 °C** are involved. Use tongs and allow samples to cool in a desiccator.
 
 Refer to the relevant Safety Data Sheets (SDS) stored in the laboratory.
 :::
 
 <!-- ────────────────────────────────────────────── -->
+
 <!-- CONSUMABLES AND EQUIPMENT                      -->
+
 <!-- List everything needed before starting.        -->
+
 <!-- Use the three sub-sections below.              -->
+
 <!-- Delete any sub-section that is not applicable. -->
+
 <!-- ────────────────────────────────────────────── -->
 
 ## Consumables and equipment
 
 ### Chemical reagents
 
-- Hydrochloric acid, HCl (10 %), diluted from concentrated HCl (37 %).
-- Redistilled water (MilliQ).
+-   Hydrochloric acid, HCl (10 %), diluted from concentrated HCl (37 %).
+-   Redistilled water (MilliQ).
 
 ### Equipment
 
-- Laboratory fume hood.
-- Analytical balance (readability 0.1 mg).
-- Laboratory furnace (max. 1100 °C).
+-   Laboratory fume hood.
+-   Analytical balance (readability 0.1 mg).
+-   Laboratory furnace (max. 1100 °C).
 
 ### Other materials
 
-- Porcelain crucibles.
-- Desiccator with active desiccant.
+-   Porcelain crucibles.
+-   Desiccator with active desiccant.
 
 <!-- ────────────────────────────────────────────── -->
+
 <!-- PREPARATION                                    -->
+
 <!-- Sample prep, workspace setup, instrument       -->
+
 <!-- warmup — everything before the main procedure. -->
+
 <!-- ────────────────────────────────────────────── -->
 
 ## Preparation
 
 ### Sample preparation
 
-- Freeze-dry wet sediment samples (see [Freeze Drying](freeze-drying.qmd) protocol).
-- Grind dried sediment in an agate mortar.
-- Sieve through a 100 µm mesh.
+-   Freeze-dry wet sediment samples (see [Freeze Drying](freeze-drying.qmd) protocol).
+-   Grind dried sediment in an agate mortar.
+-   Sieve through a 100 µm mesh.
 
 ### Workspace preparation
 
-- Clean all glassware with redistilled water (MilliQ).
-- Verify that the fume hood is operational.
+-   Clean all glassware with redistilled water (MilliQ).
+-   Verify that the fume hood is operational.
 
 <!-- ────────────────────────────────────────────── -->
+
 <!-- PROCEDURE                                      -->
+
 <!-- The main analytical steps. Use H3 sub-sections -->
+
 <!-- to break long procedures into logical stages.  -->
+
 <!-- ────────────────────────────────────────────── -->
 
 ## Procedure
 
-- Step-by-step instructions go here.
+-   Step-by-step instructions go here.
 
-- Each step is a bullet point, written as a clear, imperative sentence.
+-   Each step is a bullet point, written as a clear, imperative sentence.
 
-- Weigh approximately **0.5 g** of homogenised sediment into a porcelain crucible.
+-   Weigh approximately **0.5 g** of homogenised sediment into a porcelain crucible.
 
-:::{.callout-tip}
+::: callout-tip
 ## Practical advice
+
 Try to maintain similar sample masses across the batch. This improves comparability and simplifies calculations.
 :::
 
-- Programme the furnace to **550 °C** for **4 h**.
+-   Programme the furnace to **550 °C** for **4 h**.
 
-:::{.callout-important}
+::: callout-important
 ## Critical step
+
 Do not open the furnace during the heating programme. Allow samples to cool in a desiccator to room temperature before weighing.
 :::
 
-- Record the mass in the laboratory form.
+-   Record the mass in the laboratory form.
 
-:::{.callout-note}
+::: callout-note
 ## Background
+
 The mass loss at 550 °C corresponds to the combustion of organic matter. This is a widely used proxy, but see Heiri et al. (2001) for a discussion of its limitations.
 :::
 
 ### Instrument operation
 
-- Instrument-specific steps, if applicable.
+-   Instrument-specific steps, if applicable.
 
 ### Shutdown
 
-- Instrument shutdown or cleanup steps, if applicable.
+-   Instrument shutdown or cleanup steps, if applicable.
 
 <!-- ────────────────────────────────────────────── -->
+
 <!-- CALCULATIONS                                   -->
+
 <!-- Formulae, lookup tables, worked examples.      -->
+
 <!-- Delete if not applicable.                      -->
+
 <!-- ────────────────────────────────────────────── -->
 
 ## Calculations
@@ -164,14 +191,18 @@ $$
 
 where:
 
-- $\text{LOI}_{550}$ — loss on ignition at 550 °C (%)
-- $m_{105}$ — mass of sediment dried at 105 °C (g)
-- $m_{550}$ — mass of sediment after ignition at 550 °C (g)
+-   $\text{LOI}_{550}$ — loss on ignition at 550 °C (%)
+-   $m_{105}$ — mass of sediment dried at 105 °C (g)
+-   $m_{550}$ — mass of sediment after ignition at 550 °C (g)
 
 <!-- ────────────────────────────────────────────── -->
+
 <!-- APPENDICES                                     -->
+
 <!-- Reference tables, photographs, supplementary   -->
+
 <!-- material. Delete if not applicable.            -->
+
 <!-- ────────────────────────────────────────────── -->
 
 ## Appendices
@@ -185,16 +216,21 @@ where:
 ### Appendix 2: Equipment photographs
 
 <!-- Use relative paths from the images/ folder -->
+
 <!-- ![Caption](../images/filename.png){width=50%} -->
 
 <!-- ────────────────────────────────────────────── -->
+
 <!-- CHANGELOG                                      -->
+
 <!-- Keep entries brief. Detailed history is in Git.-->
+
 <!-- Format: YYYY-MM-DD, Initials — change summary  -->
+
 <!-- ────────────────────────────────────────────── -->
 
 ## Changelog
 
-| Date | Author | Change |
-|------|--------|--------|
-| {{< meta date >}} | MZ | Initial Quarto version |
+| Date              | Author | Change                 |
+|-------------------|--------|------------------------|
+| {{< meta date >}} | MZ     | Initial Quarto version |

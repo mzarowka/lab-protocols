@@ -1,0 +1,145 @@
+---
+# ──────────────────────────────────────────────────────────────────
+# Metadane procedury — uzupełnić dla każdej nowej procedury
+# ──────────────────────────────────────────────────────────────────
+title: "Skanowanie cienkich szlifów"
+subtitle: "Skaner płaski Epson z foliami polaryzacyjnymi w układzie skrzyżowanym"
+
+author:
+  - name: "Maurycy Żarczyński"
+    role: "Osoba odpowiedzialna"
+contributors:
+  - "Maurycy Żarczyński (wersja inicjalna, 2022)"
+
+version: "1.0"
+date: last-modified
+date-format: "YYYY-MM-DD"
+
+source-version: "en/thin-section-scanning.qmd@v1.0"
+
+related-protocols:
+  - title: "Sztabki do cienkich szlifów"
+    href: "thin-section-slabs.qmd"
+---
+
+{{< include ../_includes/header-pl.qmd >}}
+
+# Skanowanie cienkich szlifów
+
+Skanowanie cienkich szlifów petrograficznych w świetle przechodzącym ze skrzyżowanymi polaryatorami przy użyciu skanera płaskiego Epson z przystawką do transparentów. Dwie folie polaryzacyjne ustawione prostopadle odtwarzają konfigurację optyczną mikroskopu petrograficznego, umożliwiając uzyskanie obrazów odpowiednich do analizy mikrofacjalnej i dokumentacji rdzeni.
+
+## Materiały eksploatacyjne i urządzenia
+
+### Urządzenia
+
+-   Skaner płaski Epson z przystawką do transparentów.
+-   Komputer z czytnikiem kart SD lub portem USB.
+-   Oprogramowanie *EPSON Scan*.
+
+::: callout-tip
+## Lokalizacja sterowników
+
+Instalator sterowników skanera dostępny jest na serwerze: `Public\Software\Epson`.
+:::
+
+### Pozostałe materiały
+
+-   Dwie arkusze liniowej folii polaryzacyjnej — o rozmiarze wystarczającym do pokrycia szyby skanera.
+-   Uchwyt do filmów i klisz (dostarczany ze skanerem).
+-   Przygotowane sztabki cienkich szlifów (patrz procedura [Sztabki do cienkich szlifów](thin-section-slabs.qmd)).
+
+## Przygotowanie
+
+-   Sprawdzić, czy wszystkie szlify przeznaczone do skanowania są czyste, suche i opisane.
+-   Utworzyć folder docelowy dla skanów na dysku lokalnym.
+-   Podłączyć skaner do komputera i włączyć urządzenie.
+
+## Procedura
+
+### Konfiguracja oprogramowania
+
+-   Uruchomić *EPSON Scan*.
+
+-   Ustawić następujące parametry:
+
+    -   Tryb: `Profesjonalny`.
+    -   Typ dokumentu: `Film`.
+    -   Typ filmu: `Film pozytywowy`.
+    -   Rozdzielczość: **2400 DPI**.
+    -   Maska wyostrzająca: **włączona**.
+
+### Przygotowanie skanera
+
+-   Ściągnąć białą osłonę odbijającą z pokrywy skanera.
+-   Założyć uchwyt do filmów i klisz na pokrywę.
+
+### Skanowanie
+
+-   Ułożyć **pierwszą** folię polaryzacyjną na szybie skanera.
+
+-   Położyć szlif na pierwszej folii (można użyć uchwytu, aby utrzymać szlif płasko).
+
+::: callout-important
+## Orientacja
+
+**Strop** (górna powierzchnia stratygraficzna) musi zawsze być zwrócony w stronę przycisków na obudowie skanera. Zachować tę orientację konsekwentnie we wszystkich skanach w serii.
+:::
+
+-   Ułożyć **drugą** folię polaryzacyjną na szlifie, **prostopadle** do pierwszej folii.
+
+::: callout-note
+## Światło spolaryzowane skrzyżowane
+
+Dwie folie ustawione pod kątem 90° pełnią rolę polaryzatora i analizatora. Konfiguracja ta ujawnia dwójłomność minerałów i szczegóły mikrostrukturalne w taki sam sposób jak skrzyżowane nikole w mikroskopie petrograficznym.
+:::
+
+-   Wyświetlić podgląd skanu i w razie potrzeby skorygować obszar kadrowania.
+
+-   Zapisać surowy obraz w formacie `.bmp`.
+
+### Nazewnictwo plików
+
+Nazwać każdy plik zgodnie z oznaczeniem szlifu. Dodać numer porządkowy z wiodącymi zerami, tak aby pliki sortowały się poprawnie w systemie operacyjnym i oprogramowaniu do obróbki obrazów. Liczbę wiodących zer dobrać na podstawie całkowitej liczby szlifów w serii:
+
+| Liczba szlifów | Przykład numeracji                    |
+|---------------:|:--------------------------------------|
+| 1–9            | `1`, `2`, …, `9`                     |
+| 10–99          | `01`, `02`, …, `10`, …, `99`         |
+| 100–999        | `001`, `002`, …, `010`, …, `100`     |
+
+::: callout-tip
+## Przykład nazewnictwa
+
+Jezioro ABC, 42 szlify: `ABC-01.bmp`, `ABC-02.bmp`, …, `ABC-42.bmp`.
+:::
+
+### Przechowywanie plików
+
+Skopiować wszystkie pliki skanów na serwer:
+
+`ECRLab\Data\lake_thin-sections\CCC\JJJ\RRRR\`
+
+| Kod    | Znaczenie                       |
+|--------|---------------------------------|
+| `CCC`  | Kod kraju                       |
+| `JJJ`  | Kod jeziora (dowolna długość)   |
+| `RRRR` | Rok skanowania                  |
+
+::: callout-important
+## Kody jezior
+
+Kod jeziora musi być identyczny z kodami stosowanymi przy etykietowaniu rdzeni osadów. Przed utworzeniem nowego kodu sprawdzić istniejące wpisy.
+:::
+
+### Wyłączenie
+
+-   Zdjąć folie polaryzacyjne i szlif ze skanera.
+-   Założyć z powrotem białą osłonę odbijającą na pokrywę skanera.
+-   Wyłączyć skaner.
+
+## Rejestr zmian
+
+| Data | Autor | Zmiana |
+|------------|-------|-----------------------------------------------|
+| 2026-02-10 | MZ | Migracja do nowego frameworku; standaryzacja formatowania; rozszerzenie opisu, nazewnictwa plików i przechowywania |
+| 2022-12-01 | MZ | Inicjalna wersja Quarto |

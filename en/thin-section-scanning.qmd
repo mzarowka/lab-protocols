@@ -1,0 +1,145 @@
+---
+# ──────────────────────────────────────────────────────────────────
+# Protocol metadata — edit these fields for each new protocol
+# ──────────────────────────────────────────────────────────────────
+title: "Thin Section Scanning"
+subtitle: "Epson flatbed scanner with crossed polarising films"
+
+author:
+  - name: "Maurycy Żarczyński"
+    role: "Responsible person"
+contributors:
+  - "Maurycy Żarczyński (initial version, 2022)"
+
+version: "1.0"
+date: last-modified
+date-format: "YYYY-MM-DD"
+
+source-version: ~
+
+related-protocols:
+  - title: "Thin Section Slabs"
+    href: "thin-section-slabs.qmd"
+---
+
+{{< include ../_includes/header-en.qmd >}}
+
+# Thin Section Scanning
+
+High-resolution scanning of petrographic thin sections in transmitted cross-polarised light using an Epson flatbed scanner with a transparency unit. Two polarising films placed at right angles reproduce the optical configuration of a petrographic microscope, producing images suitable for micro-facies analysis and documentation.
+
+## Consumables and equipment
+
+### Equipment
+
+-   Epson flatbed scanner with transparency unit.
+-   Computer with SD card reader or USB connection.
+-   *EPSON Scan* software.
+
+::: callout-tip
+## Driver location
+
+The scanner driver installer is available on the department server: `Public\Software\Epson`.
+:::
+
+### Other materials
+
+-   Two sheets of linear polarising film — large enough to cover the scanner glass.
+-   Film and slide holder (supplied with the scanner).
+-   Prepared thin section slabs (see [Thin Section Slabs](thin-section-slabs.qmd) protocol).
+
+## Preparation
+
+-   Verify that all thin sections to be scanned are clean, dry, and labelled.
+-   Create a destination folder for the scan output on the local disk.
+-   Connect the scanner to the computer and switch it on.
+
+## Procedure
+
+### Software setup
+
+-   Launch *EPSON Scan*.
+
+-   Set the following parameters:
+
+    -   Mode: `Professional`.
+    -   Document type: `Film`.
+    -   Film type: `Positive Film`.
+    -   Resolution: **2400 DPI**.
+    -   Unsharp mask: **on**.
+
+### Scanner preparation
+
+-   Remove the white reflective backing from the scanner lid.
+-   Attach the film and slide holder to the lid.
+
+### Scanning
+
+-   Place the **first** polarising film on the scanner glass.
+
+-   Place the thin section on top of the first film (a holder may be used to keep it flat).
+
+::: callout-important
+## Orientation
+
+The **top** of the section (stratigraphic top) must always face the button panel on the scanner housing. Maintain this orientation consistently across all scans in a series.
+:::
+
+-   Place the **second** polarising film on top of the thin section, **perpendicular** to the first film.
+
+::: callout-note
+## Cross-polarised light
+
+The two films, oriented at 90° to each other, act as polariser and analyser. This configuration reveals mineral birefringence and micro-structural detail in the same way as crossed nicols on a petrographic microscope.
+:::
+
+-   Preview the scan and adjust the crop area if necessary.
+
+-   Save the raw image in `.bmp` format.
+
+### File naming
+
+Name each file to match the thin section label. Add a zero-padded sequential number so that files sort correctly in the operating system and in image processing software. Choose the number of leading zeros based on the total number of sections in the series:
+
+| Total sections | Numbering example                |
+|---------------:|:---------------------------------|
+|            1–9 | `1`, `2`, …, `9`                 |
+|          10–99 | `01`, `02`, …, `10`, …, `99`     |
+|        100–999 | `001`, `002`, …, `010`, …, `100` |
+
+::: callout-tip
+## Naming example
+
+Lake ABC, 42 thin sections: `ABC-01.bmp`, `ABC-02.bmp`, …, `ABC-42.bmp`.
+:::
+
+### File storage
+
+Copy all scan files to the department server:
+
+`ECRLab\Data\lake_thin-sections\CCC\LLL\YYYY\`
+
+| Code   | Meaning                     |
+|--------|-----------------------------|
+| `CCC`  | Country code                |
+| `LLL`  | Lake code (variable length) |
+| `YYYY` | Year of scanning            |
+
+::: callout-important
+## Lake codes
+
+The lake code must be identical to the codes used for sediment core labelling. Verify against existing records before creating a new code.
+:::
+
+### Shutdown
+
+-   Remove the polarising films and the thin section from the scanner.
+-   Reattach the white reflective backing to the scanner lid.
+-   Switch off the scanner.
+
+## Changelog
+
+| Date | Author | Change |
+|--------------|--------------|---------------------------------------------|
+| 2026-02-10 | MZ | Migrated to new framework; English translation; expanded description, file naming, and storage |
+| 2022-12-01 | MZ | Initial Quarto version |

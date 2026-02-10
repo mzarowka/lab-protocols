@@ -1,0 +1,154 @@
+---
+# ──────────────────────────────────────────────────────────────────
+# Protocol metadata — edit these fields for each new protocol
+# ──────────────────────────────────────────────────────────────────
+title: "Freeze Drying"
+subtitle: "Laboratory lyophiliser"
+
+author:
+  - name: "Maurycy Żarczyński"
+    role: "Responsible person"
+contributors:
+  - "Joanna Piłczyńska (original method)"
+  - "Maurycy Żarczyński (Quarto adaptation, 2022)"
+
+version: "1.0"
+date: last-modified
+date-format: "YYYY-MM-DD"
+
+source-version: ~
+
+related-protocols:
+  - title: "Pigment Extraction"
+    href: "pigment-bulk-extraction.qmd"
+  - title: "Biogenic Silica Extraction"
+    href: "biogenic-silica-bulk-extraction.qmd"
+---
+
+{{< include ../_includes/header-en.qmd >}}
+
+# Freeze Drying
+
+Sublimation drying of frozen sediment samples using a laboratory lyophiliser. Freeze drying preserves the physical and chemical properties of samples better than oven drying, and is the recommended preparation step for analyses sensitive to thermal degradation (e.g., sedimentary pigments, biogenic silica).
+
+## Consumables and equipment
+
+### Equipment
+
+-   Laboratory lyophiliser with vacuum pump.
+-   Standing freezer (capable of **−40 °C** or lower).
+-   Compressed air supply.
+
+### Other materials
+
+-   Sample containers (compatible with the lyophiliser shelf).
+-   Lyophiliser shelf (cooling plate).
+-   Parafilm.
+-   Beaker for collecting meltwater.
+
+## Preparation
+
+### Sample preparation
+
+-   Decant standing water from above the sediment the day before freeze drying.
+
+-   Cover the top of each sample container with a piece of Parafilm. Pierce several small holes to allow water vapour to escape during sublimation.
+
+-   Place samples and the lyophiliser shelf in the standing freezer. Freeze for a minimum of **24 h**.
+
+::: callout-important
+## Fully frozen samples required
+
+Samples must be completely frozen before loading into the lyophiliser. Insufficiently frozen material will thaw during the initial pump-down, compromising drying efficiency and potentially damaging the sample.
+:::
+
+### Instrument inspection
+
+-   Remove the plug from the black drain hose at the rear of the lyophiliser and check for residual water.
+
+-   Inspect the top of the lyophiliser chamber for standing water or ice — wipe dry if necessary.
+
+-   Check the chamber door seal (gasket) — it must be dry and adhere tightly to the rim.
+
+-   Inspect the vacuum pump oil through the sight glass — the oil must be clear. Replace if discoloured or milky.
+
+## Procedure
+
+### Loading and startup
+
+1.  Place frozen samples on the pre-cooled shelf, then position the shelf inside the lyophiliser chamber.
+
+2.  Fit the chamber lid, holding it by the plastic rim.
+
+3.  Verify that **all** valves on the lyophiliser manifold are closed.
+
+::: callout-tip
+## Valves after previous sessions
+
+One valve may have been left open after the previous drying session. Check every valve before starting the vacuum pump.
+:::
+
+4.  Switch on the lyophiliser using the black power button on the side of the instrument.
+
+5.  If an alarm sounds, press `Menu` to read the message.
+
+::: callout-note
+## Pump service alarm
+
+An alarm related to the pump service interval or oil change can normally be acknowledged and cleared by pressing `Select`.
+:::
+
+6.  The lyophiliser offers two operating modes, activated by the corresponding buttons: `AUTO` and `MAN`.
+
+7.  Select `MAN` mode and wait for the condenser temperature to reach **−40 °C**.
+
+::: callout-important
+## Condenser readiness
+
+Wait until all temperature indicator LEDs are lit before proceeding. The condenser must be fully cooled to trap water vapour efficiently.
+:::
+
+8.  Press `VACUUM` to start the vacuum pump. Verify that no valve is drawing air — listen for hissing and monitor the vacuum gauge.
+
+9.  Wait until all vacuum indicator LEDs are lit, confirming that the target vacuum has been reached.
+
+### Drying
+
+-   Drying time depends on sample volume and water content. Typical runs last approximately **5–7 days**.
+
+::: callout-note
+## Checking progress
+
+Samples are fully dry when no further mass loss occurs. If in doubt, weigh a representative container before and after an additional 24 h of drying.
+:::
+
+### Shutdown and cleanup
+
+1.  Switch off the vacuum pump.
+
+2.  **Slowly** open one valve to equalise the chamber pressure with the atmosphere.
+
+::: callout-warning
+## Gradual pressure release
+
+Do not open the valve abruptly. A sudden rush of air can displace fine-grained samples and cause material loss. Crack the valve open gradually over several seconds.
+:::
+
+3.  Remove the chamber lid.
+
+4.  Remove the shelf with samples.
+
+5.  Allow any ice accumulated on the condenser coils to melt at room temperature — do not scrape or chip.
+
+6.  Place a beaker under the outlet of the black drain hose and remove the plug. Tilt the lyophiliser gently if needed to drain all meltwater.
+
+7.  With the drain hose open, blow compressed air through the chamber to remove residual moisture.
+
+8.  Replace the drain hose plug. The lyophiliser is now ready for the next session.
+
+## Changelog
+
+| Date | Author | Change |
+|--------------------|--------------------------|--------------------------|
+| 2026-02-10 | MZ | Migrated to new framework; English translation; expanded from original procedure |
+| 2022-12-01 | MZ | Initial Quarto version |

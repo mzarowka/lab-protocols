@@ -1,0 +1,269 @@
+---
+# ──────────────────────────────────────────────────────────────────
+# Protocol metadata — edit these fields for each new protocol
+# ──────────────────────────────────────────────────────────────────
+title: "TIC Analysis: Total Inorganic Carbon"
+subtitle: "SoliTIC solids module, Elementar Analysensysteme"
+
+author:
+  - name: "Maurycy Żarczyński"
+    role: "Responsible person"
+contributors:
+  - "Karolina Molisak (original method notes)"
+  - "Joanna Piłczyńska (original method notes)"
+  - "Maurycy Żarczyński (Quarto adaptation, 2022)"
+
+version: "1.0"
+date: last-modified
+date-format: "YYYY-MM-DD"
+
+source-version: ~
+
+related-protocols:
+  - title: "CNS: Measurement Procedure"
+    href: "cns-procedure-extended.qmd"
+  - title: "CNS: Sample Preparation"
+    href: "cns-sample-preparation.qmd"
+  - title: "CNS: Soil Standard Samples"
+    href: "cns-standard-samples.qmd"
+  - title: "TIC: Scheibler Calcimeter"
+    href: "tic-inorganic-carbon-scheibler.qmd"
+---
+
+{{< include ../_includes/header-en.qmd >}}
+
+# TIC Analysis: Total Inorganic Carbon
+
+Determination of total inorganic carbon (TIC) in sediment samples by acid digestion using the SoliTIC solids module coupled to the Vario EL Cube analyser (Elementar Analysensysteme). Hydrochloric acid reacts with carbonates in the sample, releasing CO~2~ which is carried by helium to the thermal conductivity detector (TCD) of the Vario EL Cube. For additional details, refer to Chapter 8 — TIC solids module in the Vario EL Cube manual.
+
+::: callout-important
+## SoliTIC requires the Vario EL Cube
+
+The SoliTIC module does not operate independently. The Vario EL Cube must be powered on and its software running before starting TIC analysis. However, the combustion and reduction furnaces are **not** heated for TIC measurements — only the TCD and helium flow are used.
+:::
+
+## Safety
+
+::: callout-warning
+## Corrosive reagent
+
+This procedure uses **HCl (5 %)**. Avoid skin and eye contact. Wear laboratory coat, nitrile gloves, and safety goggles. Refer to the hydrochloric acid Safety Data Sheet (SDS) stored in the laboratory.
+:::
+
+## Consumables and equipment
+
+### Chemical reagents
+
+-   Hydrochloric acid, HCl (5 %), diluted from concentrated HCl (37 %).
+-   Deionised water.
+
+### Equipment
+
+-   SoliTIC solids module (Elementar Analysensysteme).
+-   Vario EL Cube CNS analyser (Elementar Analysensysteme).
+-   Dedicated PC with Vario EL Cube software.
+
+### Gases
+
+-   Helium (He), working pressure **1.2 bar** (1200 mbar).
+
+### Consumable parts
+
+-   Desiccants (replacement set).
+-   Copper and brass wool for the U-tube.
+
+### Other materials
+
+-   Glass sample boats.
+-   Glass funnel (for introducing samples into the reactor).
+-   Standard reference materials (peaty, chalky, sandy — see [CNS: Soil Standard Samples](cns-standard-samples.qmd)).
+-   Internal run-in sample (e.g., KOS-13 homogenised reference sediment).
+-   Compressed air — for drying sample boats.
+
+## Preparation
+
+### Maintenance checks
+
+Before starting the analyser, verify the following:
+
+-   Replenish the acid reservoir with HCl (5 %) if the level is low.
+-   Replace desiccants if exhausted.
+-   Replace copper and brass wool in the U-tube if necessary.
+-   Clean the reactor if residue from previous analyses is visible.
+
+### Startup
+
+1.  Switch on the SoliTIC module using the orange button on the right side of the unit.
+
+2.  Attach the hot-air deflector cowl to the rear of the Vario EL Cube.
+
+3.  Switch on the Vario EL Cube using the green button on the right side of the instrument.
+
+4.  Launch the Vario EL Cube software.
+
+::: callout-tip
+## Software shortcut
+
+The shortcut is located on the taskbar.
+:::
+
+5.  Wait for the TCD (thermal conductivity detector) to reach operating temperature.
+
+::: callout-note
+## TCD readiness
+
+The TCD field should stop flashing and display a stable value of approximately **60 °C**.
+:::
+
+::: callout-important
+## Gases during warm-up
+
+Keep helium valves **closed** while the instrument is warming up. Open them only after the TCD has reached its target temperature.
+:::
+
+6.  Open the helium supply:
+
+    -   Open the black valve on the gas cylinder.
+    -   Open the white valve on the left side of the regulator.
+    -   Close the drain valve on the SoliTIC reactor and lock it.
+
+7.  Verify stable gas readings:
+
+    -   TCD flow: approximately **230 mL/min**.
+    -   Pressure (Press): **1200 mbar**, stable.
+
+8.  Once TC detect has stabilised, zero the system: `System > Autozero`.
+
+## Procedure
+
+### Analytical sequence
+
+Prepare a new sample file in the Vario EL Cube software with the following sequence:
+
+1.  **Warm-up** — several analyses with deionised water only, until the TIC area stabilises.
+2.  **Blanks** — **2** analyses with deionised water only.
+3.  **Standards** — **2** analyses each of the reference materials (peaty, chalky, sandy).
+4.  **Run-in** — **2** analyses of the internal reference sediment (e.g., KOS-13).
+5.  **Samples** — the analytical batch.
+
+::: callout-note
+## Batch corrections
+
+The measured blank and standard values are used to correct sample results. Standards compensate for day-to-day instrument drift — always run them with every batch.
+:::
+
+### Sample analysis
+
+1.  Weigh **10–15 mg** of dry sediment into a clean glass sample boat.
+
+::: callout-note
+## Sample mass
+
+The mass of **10–15 mg** is optimised for lake gyttja. For other sediment types, perform test measurements on representative samples first to determine the appropriate mass.
+:::
+
+2.  In the software table, enter the sample name and select the method. Transfer the mass from the balance to the computer (the `On/Off` indicator LED must be lit).
+
+3.  Click `ON`. Baseline formation begins — the reactor valve remains closed.
+
+4.  A prompt to introduce the sample appears on the screen.
+
+5.  With the reactor valve **closed**:
+
+    -   Unscrew the reactor cap.
+    -   Pour a small amount of deionised water into the reactor.
+    -   Insert the glass funnel (longer end down), taking care not to damage the internal tubing.
+    -   Pour the sediment from the sample boat into the funnel.
+    -   Rinse remaining sediment from the boat and funnel into the reactor with deionised water.
+    -   Screw the reactor cap back on.
+
+6.  Click `Continue` (or press `Enter`).
+
+7.  Acid dosing begins automatically. Verify that the peristaltic pump is delivering acid to the reactor.
+
+::: callout-important
+## Confirm acid flow
+
+If no acid is reaching the reactor, the analysis will fail. Check the tubing and pump before proceeding.
+:::
+
+8.  The CO~2~ peak appears on the chromatogram as the measurement proceeds.
+
+### Reactor cleaning (after each sample)
+
+After the measurement is complete, a prompt for sample removal and reactor cleaning appears:
+
+1.  Open the drain valve and drain the liquid from the reactor.
+2.  Close the drain valve.
+3.  Unscrew the reactor cap.
+4.  Rinse the reactor thoroughly with deionised water.
+5.  Leave the reactor cap **open** for a moment to allow residual gas to escape.
+
+::: callout-important
+## Venting step
+
+Leaving the reactor open briefly is essential for purging residual CO~2~. Skipping this step will elevate the baseline of the next measurement.
+:::
+
+6.  Screw the reactor cap back on.
+7.  Wait until the pressure rises to approximately **1000 mbar**.
+8.  Open the drain valve and drain the rinse water from the reactor.
+9.  Dry the sample boat with compressed air.
+
+### Readiness for the next sample
+
+Before starting the next analysis, confirm that the instrument has stabilised:
+
+-   TC detect: below **500**.
+-   TCD flow and He flow: approximately **300 mL/min**.
+
+::: callout-important
+## Do not rush
+
+Starting a new analysis before the detector baseline has stabilised will compromise the result. Wait until all readings are within the specified ranges.
+:::
+
+### End-of-day procedure
+
+1.  Activate sleep mode: click `Sleep` (moon icon) in the software.
+
+::: callout-important
+## Do not set furnace temperatures
+
+When activating sleep mode for TIC analysis, do **not** tick the furnace temperature checkboxes. Setting combustion or reduction temperatures will cause the Vario EL Cube to heat its furnaces unnecessarily.
+:::
+
+2.  Close the helium supply:
+
+    -   Close the white valve on the left side of the regulator.
+    -   Close the black valve on the gas cylinder.
+
+3.  Save the measurement file.
+
+### Next-day procedure
+
+1.  Open the previous day's measurement file. Copy the initial rows (up to and including the RunIn entries — first 4 columns only). Open a new worksheet, paste, and save as a new file. Add sample names for the new batch.
+
+2.  Wake the instrument: click the alarm-clock icon in the software.
+
+3.  Replenish the acid reservoir with HCl (5 %).
+
+4.  Wait for the TCD to reach operating temperature (approximately **60 °C**, field stops flashing).
+
+5.  Open the helium supply (black valve on the cylinder, then white valve on the regulator).
+
+6.  Wait for stabilisation:
+
+    -   TC detect: value falling and below **1000**.
+    -   Pressure (Press): **1200 mbar**, stable.
+
+7.  Zero the system: `System > Autozero`.
+
+8.  Begin the warm-up sequence with deionised water analyses before proceeding with blanks and samples.
+
+## Changelog
+
+| Date | Author | Change |
+|--------------------|--------------------------|--------------------------|
+| 2026-02-10 | MZ | Migrated to new framework; English translation; expanded and standardised from draft notes |
+| 2022-12-01 | MZ | Initial Quarto version |

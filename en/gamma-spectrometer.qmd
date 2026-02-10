@@ -1,0 +1,193 @@
+---
+# ──────────────────────────────────────────────────────────────────
+# Protocol metadata — edit these fields for each new protocol
+# ──────────────────────────────────────────────────────────────────
+title: "Gamma Spectrometer: Operation and Reporting"
+subtitle: "Liquid nitrogen refilling, sample changing, and spectrum analysis"
+
+author:
+  - name: "Maurycy Żarczyński"
+    role: "Responsible person"
+contributors:
+  - "Wojciech Tylmann (original method)"
+  - "Karolina Molisak (original method)"
+  - "Maurycy Żarczyński (Quarto adaptation, 2022)"
+
+version: "1.0"
+date: last-modified
+date-format: "YYYY-MM-DD"
+
+source-version: ~
+
+related-protocols:
+  - title: "^210^Pb Alpha Spectrometry"
+    href: "pb210-alpha.qmd"
+---
+
+{{< include ../_includes/header-en.qmd >}}
+
+# Gamma Spectrometer: Operation and Reporting
+
+Routine operating procedures for the high-purity germanium (HPGe) gamma spectrometer, covering liquid nitrogen refilling of the detector dewar, sample changing, and spectrum reporting using *Genie 2000* software (Mirion Technologies / Canberra). The detector requires periodic liquid nitrogen refilling to maintain cryogenic cooling for HPGe crystal operation.
+
+## Safety
+
+::: callout-warning
+## Cryogenic hazard — liquid nitrogen
+
+-   **Liquid nitrogen (N~2~, −196 °C)** causes severe cryogenic burns on skin contact. Wear cryogenic gloves and safety goggles when handling the dewar and transfer equipment.
+-   The dewar is heavy. Use proper lifting technique.
+-   The dewar tap has **sharp metal edges** — handle with care during installation and removal.
+-   Ensure adequate ventilation. Liquid nitrogen displaces oxygen in poorly ventilated spaces.
+:::
+
+## Consumables and equipment
+
+### Equipment
+
+-   HPGe gamma spectrometer with detector shield.
+-   Dedicated PC with *Genie 2000* software (Mirion Technologies / Canberra).
+-   Liquid nitrogen dewar with transfer tap, side valve, and securing cable.
+
+### Other materials
+
+-   Cryogenic gloves.
+-   Safety goggles.
+-   Sediment samples in sealed measurement containers.
+
+## Procedure
+
+### Liquid nitrogen refilling
+
+The detector dewar must be refilled periodically. The procedure spans two days because the dewar requires several hours to build up sufficient transfer pressure after the tap is installed.
+
+#### Day 1: pressurisation and partial transfer
+
+1.  Install the tap on the dewar. Tighten the side valve and secure the tap with the steel cable.
+
+2.  Wait several hours for the pressure inside the dewar to increase.
+
+3.  Turn on the computer and open the detector in *Genie 2000*.
+
+4.  The software will prompt: *"Measurement in progress, do you want to open anyway?"* — click `Yes`.
+
+5.  The software will prompt: *"Do you want to stop the measurement?"* — click `No`.
+
+6.  Stop the measurement manually: click `Stop` in the upper-left corner.
+
+7.  Open the upper valve (black).
+
+8.  Transfer a portion of the nitrogen into the detector dewar.
+
+9.  Close the upper valve (black).
+
+10. Wait **15–20 min** for the detector to restabilise, then resume the sample measurement.
+
+::: callout-important
+## Detector stabilisation
+
+After each nitrogen transfer the detector temperature is disturbed. Always wait **15–20 min** before resuming acquisition to allow the HPGe crystal to return to operating temperature.
+:::
+
+#### Day 2: full transfer and dewar storage
+
+1.  Turn on the computer and open the detector in *Genie 2000*.
+
+2.  Stop the measurement as described above (steps 4–6).
+
+3.  Open the upper valve (black).
+
+4.  Transfer nitrogen until liquid visibly leaks from the drain hose — this confirms the detector dewar is full.
+
+5.  Close the upper valve (black).
+
+6.  Wait **15–20 min**, then resume the sample measurement.
+
+7.  After approximately **1 h**, once the dewar temperature has risen, remove the tap:
+
+    -   Open the side valve to equalise pressure.
+    -   Detach the tap carefully — the metal edges are sharp.
+
+8.  Close the dewar and return it to the cold room.
+
+9.  If nitrogen remains in the dewar, transfer the residue before the next delivery.
+
+::: callout-important
+## Record keeping
+
+Record the nitrogen collection date and dewar mass in the tracking spreadsheet (`.xlsx`) on the department server. Note the transfer date in the laboratory calendar (Room 109).
+:::
+
+### Sample changing
+
+1.  Turn on the computer and open the detector in *Genie 2000*.
+
+2.  After the measurement is complete, save the spectrum: `File > Save as` — select the sample from the list.
+
+3.  Clear the current spectrum: click `Clear`.
+
+4.  Replace the sample in the detector.
+
+5.  Start a new measurement: click `Start`.
+
+6.  Save the new spectrum: `File > Save as`.
+
+7.  Close *Genie 2000*.
+
+8.  Back up all data using *DSynchronize*.
+
+9.  Shut down the computer.
+
+### Spectrum reporting
+
+#### Calibration
+
+1.  Open the spectrum file for the sample to be reported.
+
+2.  Load the energy calibration: `Calibrate > Load`.
+
+    -   Tick **Energy**, untick **Efficiency**.
+    -   Select the file with the `*.energy` extension and double-click to load.
+
+3.  Load the efficiency calibration: `Calibrate > Load`.
+
+    -   Tick **Efficiency**.
+    -   Select the file with the `*.efficiency` extension and double-click to load.
+
+#### Analysis and report generation
+
+4.  Run the analysis sequence: `Analyze > Execute Sequence > ECR_lab…`.
+
+5.  Fill in the required fields in the dialogue window:
+
+    -   **Sample name and ID** — use the format: three-letter lake code (no Polish diacritics), core collection year, core number, and sample number padded with leading zeros. Example: `JJJ_18-2_01`.
+    -   **Sample mass** — enter the value using a decimal point (not comma).
+
+    Confirm with `OK`.
+
+::: callout-note
+## Decimal separator
+
+*Genie 2000* requires a **decimal point** (`.`) regardless of the operating system locale. Enter e.g. `12.34`, not `12,34`.
+:::
+
+6.  Isotope symbols should now appear on the spectrum. The report is saved automatically to disk.
+
+7.  Close the spectrum file. **Do not save changes** to the spectrum.
+
+8.  Repeat steps 1–7 for each remaining sample.
+
+#### File management
+
+9.  Navigate to `C:\GENIE2K\CAMFILES\REPFILES` and locate the generated report files.
+
+10. Create a new folder for the sediment core and move the report files into it.
+
+11. Back up all data using *DSynchronize* to synchronise the local drive with the department server.
+
+## Changelog
+
+| Date | Author | Change |
+|-------------|-------------|-----------------------------------------------|
+| 2026-02-10 | MZ | Merged nitrogen/sample and reporting protocols; migrated to new framework; English translation |
+| 2022-12-01 | MZ | Initial Quarto version (two separate protocols) |
