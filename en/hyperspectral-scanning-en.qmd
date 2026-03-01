@@ -1,0 +1,535 @@
+---
+# ──────────────────────────────────────────────────────────────────
+# Protocol metadata — edit these fields for each new protocol
+# ──────────────────────────────────────────────────────────────────
+title: "Hyperspectral Scanning"
+subtitle: "Specim Single Core Scanner, Lumo Scanner software"
+
+author:
+  - name: "Maurycy Żarczyński"
+    role: "Responsible person"
+contributors:
+  - "Maurycy Żarczyński (original method, 2022)"
+  - "Kevin Jacq, Ruth Martinez-Lamas, Antonin Van Exem, Maxime Debret (M2C laboratory protocol, 2020)"
+
+version: "2.0"
+date: last-modified
+date-format: "YYYY-MM-DD"
+
+source-version: ~
+
+related-protocols:
+  - title: "Freeze Drying"
+    href: "freeze-drying.qmd"
+---
+
+{{< include ../_includes/header-en.qmd >}}
+
+# Hyperspectral Scanning
+
+Push-broom hyperspectral imaging of split sediment cores using the Specim Single Core Scanner with VNIR (sCMOS PFD) and SWIR cameras controlled by *Lumo Scanner* software. This protocol covers physical setup, dual-exposure calibration, raw data acquisition, and data output structure. Reflectance calculation is performed in post-processing using *HSItools* in R, not in *Lumo Scanner*, because the dual-exposure workflow requires integration-time-scaled dark current correction that *Lumo Scanner* does not perform.
+
+## Safety
+
+::: callout-warning
+## Equipment hazards
+
+-   Do not look directly into the illumination line — the halogen lamps produce intense directed light.
+-   Do not move the scanner rail manually while the motor is engaged. Wait for the rail to complete its movement (`Homing` message) before touching the tray or core.
+-   Before starting, verify that all **four emergency stop buttons** along the scanner rail are unlocked. Press and turn each button to confirm it is disengaged.
+-   Handle the BaSO~4~ white reference slab by the edges only. Do not touch the reflecting surface.
+-   Do not touch the camera lens surface. Handle the lens cap carefully.
+-   The SWIR camera power unit generates heat. Ensure adequate ventilation around the unit during operation.
+:::
+
+## Consumables and equipment
+
+### Equipment
+
+-   Specim Single Core Scanner with motorised rail.
+-   VNIR camera (Specim sCMOS PFD) — on a dedicated PC with *Lumo Scanner* software.
+-   SWIR camera — on a separate dedicated PC with *Lumo Scanner* software.
+-   Illumination unit with VNIR/SWIR position switch.
+-   BaSO~4~ white reference slab (Specim-supplied).
+-   Focus grid.
+-   Scanner ruler (measuring tape along rail).
+-   UPS (under the desk).
+
+::: callout-note
+## White reference material
+
+The calibration pack shipped with the instrument was built for the supplied BaSO~4~ reference slab. If the reference is ever replaced with a different material (e.g., Spectralon), the calibration pack must be re-matched.
+:::
+
+### Lenses
+
+VNIR:
+
+-   **18.5 mm** — wide cores (Φ **90 mm**); also narrow cores (Φ **63 mm**).
+-   **50.0 mm** — narrow cores (Φ **63 mm**) only; requires aluminium rail insert.
+
+SWIR:
+
+-   \[Lens 1 — TBD\]
+-   \[Lens 2 — TBD\]
+
+### Calibration packs
+
+-   VNIR, 18.5 mm lens: \[path TBD\]
+-   VNIR, 50.0 mm lens: \[path TBD\]
+-   SWIR, lens 1: \[path TBD\]
+-   SWIR, lens 2: \[path TBD\]
+
+::: callout-important
+## Calibration pack must match the lens
+
+Selecting the wrong calibration pack produces plausible but incorrect data. After every lens change, verify the calibration pack selection in *Lumo Scanner*.
+:::
+
+### Software
+
+-   *Lumo Scanner* (installed on both VNIR and SWIR PCs).
+-   HSI Calibration Tool (Shiny app) — for pixel geometry verification and scan logging.
+-   Remote desktop client for monitoring scans from outside the room.
+
+### Other materials
+
+-   Paper labels for core identification (see [Appendix 2: Labels](#sec-labels)).
+-   Spirit level.
+-   Spacers and shims (cardboard, polystyrene) for levelling thinner core sections.
+-   Lens tissue or lint-free wipes for BaSO~4~ slab dusting.
+-   Fine sandpaper (\~2000 grit) for white reference surface maintenance.
+-   Steel pins for ground control points (VNIR–SWIR co-registration).
+-   Laboratory notebook (kept at the scanning station).
+
+## Preparation
+
+### Camera swap restriction
+
+::: callout-important
+## Authorised personnel only
+
+Camera installation and removal may only be performed by the Hyperspectral Imaging Laboratory keeper. No other personnel are authorised to swap cameras on the scanner. The scanner holds one camera at a time. Whichever camera is currently mounted is the starting camera for the next scanning campaign — do not swap cameras solely to begin with a particular detector.
+:::
+
+### Core preparation
+
+-   Scan fresh cores as soon as possible after opening to minimise pigment photodegradation.
+-   Clean and level the core surface. Remove the uppermost oxidised or disturbed layer with a spatula, taking care not to create scraping lines — this is critical for finely laminated sediments. For stored cores, remove signs of oxidation, secondary crystallisation, biofilms, and any material that is not part of the sediment (mould, small pieces of plastic).
+
+::: callout-tip
+## Cleaning difficult surfaces
+
+In areas with shells or coarse sand, clean gently with minimal pressure. If needed, smooth the surface lightly with a gloved finger (latex, slightly moistened). For very wet clayey sediments, use the spatula only with light pressure — avoid the gloved-finger technique.
+:::
+
+-   After cleaning, leave cores in a dark room with D-tubes open. Check the surface periodically. The surface is ready when it appears uniformly matte — no gloss, no visible moisture — but before cracks appear.
+
+::: callout-note
+## Drying criterion
+
+No universal drying time exists. Fine-grained mineral sediments crack sooner than organic gyttja. For unfamiliar material, check every **30 min**. The decision criterion is surface appearance, not elapsed time.
+:::
+
+-   If one side of the core subsides after levelling, use a shim to restore a horizontal surface.
+
+### Ground control pins
+
+When both VNIR and SWIR scans are planned for the same cores, push steel pins into the sediment surface before the first scan. The pins serve as ground control points (GCPs) for co-registering the SWIR image onto the higher-resolution VNIR image in post-processing.
+
+-   Place pins in an alternating left–right pattern along the full length of the core section, spaced approximately every **10 cm**.
+-   Place at least one pin near the top and one near the bottom of the section.
+-   Use a minimum of **10** pins per core section. For sections shorter than **50 cm**, increase the density to maintain at least 10.
+-   Keep pins inboard of the SWIR field of view, which is narrower than the VNIR field of view. Judge the expected SWIR frame edges on a per-core basis and avoid placing pins at the outermost margins.
+
+::: callout-note
+## Pin artefacts
+
+Pins remain in the core between VNIR and SWIR scanning sessions. If stored in the cold room between sessions, moisture may accumulate around the pins, and prolonged contact may cause localised rust staining. Both the pin positions and any surrounding artefacts are masked during post-processing. Pin coordinates are digitised from the scans in GIS software and used directly as GCP inputs for image registration in R.
+:::
+
+### Workspace preparation
+
+-   Turn on the UPS (under the desk).
+-   Turn on the computer (switches bottom to top). For SWIR: turn on the SWIR PC and power unit first.
+
+::: callout-important
+## SWIR detector stabilisation
+
+The SWIR detector requires a cool-down stabilisation period before *Lumo Scanner* can establish a connection. Do not attempt to connect immediately after power-on.
+:::
+
+-   Turn on the illumination unit (switch on the front of the instrument). Set the lamp position to **VNIR** or **SWIR** to match the mounted camera.
+
+::: callout-note
+## Illuminator warm-up
+
+Halogen lamps shift colour temperature during warm-up. Allow the illumination unit to run for at least **5 min** before beginning the first scan of a session. Do not scan immediately after switching on.
+:::
+
+-   Remove the lens cap carefully. Verify that the correct lens is mounted (see [Appendix 1: Lenses](#sec-lenses)).
+-   Verify that all **four** emergency stop buttons along the rail are unlocked (pressed and turned to disengage).
+
+### Core and reference placement
+
+-   Place the core on the scanner rail with the **top** (shallowest depth) closest to the calibration table. Core depth increases towards the far end of the rail — the scanner ruler reading increases with increasing sediment depth.
+
+-   Adjust the calibration table to be level with the core surface. Use a spirit level if necessary.
+
+-   Align the ruler parallel to the core. **Parallel alignment is the priority.** A small height difference between ruler and sediment surface is preferable to angular misalignment, which causes geometric distortion during data processing. Mark the correct top and bottom depth positions on the ruler.
+
+::: callout-important
+## Scan direction
+
+Always scan from top (shallow) to bottom (deep). Never alternate scan direction between cores. This ensures any systematic effects (lamp warm-up, surface drying, detector drift) are consistent across all scans.
+:::
+
+-   Place the BaSO~4~ white reference slab on the calibration table (smoothest surface facing the camera), handling by the edges only. Dust the surface gently with lens tissue.
+
+-   Place a paper label with the core identifier on the white plastic block of the calibration table (see [Appendix 2: Labels](#sec-labels)).
+
+### Multi-core batch setup
+
+When scanning a series of cores in a single session:
+
+-   Set up the camera position and calibration table for the tallest or thickest core section in the batch.
+-   Shim shorter or thinner sections with spacers (cardboard, polystyrene) to bring them level with the calibration table surface.
+-   Do not adjust camera position, focus, or exposure between cores within the same session.
+-   Gently wipe the scanner tray and calibration table area between cores to remove sediment residue. Perform a full cleanup (wipe, vacuum if necessary) after the session.
+
+## Procedure
+
+### Lumo Scanner — Setup tab
+
+-   In `Camera`, select the appropriate camera and click `Connect`.
+-   In `Calibration pack`, select the pack matching the mounted lens.
+
+::: callout-important
+## Lens change requires restart
+
+Changing the lens requires restarting *Lumo Scanner* and reconnecting the camera to load the correct calibration pack.
+:::
+
+-   Set `Capture folder` to the target data directory.
+-   Set `Dataset prefix` to the campaign code (e.g., **LAZ-26**).
+-   Set RGB preview bands (VNIR): Red **653.61 nm** (Band 207), Green **552.41 nm** (Band 127), Blue **452.70 nm** (Band 46). SWIR preview bands: \[TBD\].
+-   In `Motor 1`, click `Connect`.
+
+### Lumo Scanner — Adjust tab
+
+#### Binning
+
+-   `Spectral binning`: **2** (VNIR default). SWIR default: \[TBD\].
+
+::: callout-note
+## Spectral binning
+
+A binning of **2** balances spectral resolution, signal-to-noise ratio, and data volume. A value of **1** maximises spectral resolution but increases data volume and scan time. Higher values (e.g., 4, 8) are acceptable for photographic documentation only.
+:::
+
+-   `Spatial binning`: **1**. Do not change.
+
+#### Camera position and focus
+
+-   Adjust the camera position (up or down) and the calibration table so the live preview frames the entire core width plus ruler. Use the `Motor` panel buttons to scroll the core through the field of view and confirm full coverage.
+
+::: callout-note
+## Focus vs. coverage trade-off
+
+For some combinations of lens, camera position, and core width, achieving optimal focus may require a camera position where the specimen does not fit entirely within the frame. In such cases, prioritise sharp focus and correct FOV over capturing the full lateral extent — a laterally clipped but sharp image is more useful than a complete but soft one.
+:::
+
+-   Move the scanner to the focus grid position via `Sensor 1` position → `Go`.
+
+-   In the `Spectral Camera` panel, set a preliminary exposure time so the focus grid pattern produces a visible signal. The spectral profile at the crosshair position is displayed in the `Wavelength` panel (lower left) — use this to confirm the signal is present, but do not optimise exposure yet.
+
+-   Rotate the lens focus ring to achieve sharp black-and-white bars in the `Waterfall` panel (upper right) and flat-topped, sharp-edged peaks in the `Pixels` panel (lower right). Click `Run` in the `Focusing` panel — aim for an orange or green colour bar.
+
+::: callout-tip
+## Focusing technique
+
+Bracket the focus by rotating past the optimum in both directions, then settle on the sharpest position. The `Waterfall` plot can be zoomed by right-clicking and unchecking `fit to window`.
+:::
+
+::: callout-warning
+## Lens handling
+
+Do not unscrew the lens when the focus ring is loosened. Loosen the focus ring only during focus adjustment, and retighten immediately after.
+:::
+
+#### Pixel geometry verification
+
+Before calibrating exposure, verify that the scan will produce square pixels.
+
+1.  Run a short test scan at any exposure that produces a visible image. The only purpose of this scan is geometric — spectral quality does not matter yet.
+
+::: callout-important
+## Record scanner positions
+
+Before running the test scan, record the `Target start` and `Target stop` values (from the `Sensor 1 positions` panel) in the laboratory notebook. Use round numbers. These motor positions are **not** saved in any file produced by *Lumo Scanner*.
+:::
+
+2.  Open the test scan in the HSI Calibration Tool (Shiny app, Tab 2). Enter the physical scan length (calculated from the recorded start and stop positions) and the raster dimensions from the `.hdr` file. The app calculates the ideal FOV for square pixels.
+
+3.  In *Lumo Scanner*, `Scanning speed calculation` panel, select `Field of view` and enter the app-calculated FOV value in **mm**. *Lumo Scanner* computes the corresponding scan speed and frame rate.
+
+4.  Run a second short test scan with the new speed settings. Check the aspect ratio in the app (Tab 1). Accept if the ratio falls within **0.95–1.05**. If outside this range, adjust the FOV or scan speed value and repeat.
+
+::: callout-tip
+## Convergence
+
+This typically converges in **1–2** iterations. Once determined for a given camera position and lens combination, the FOV value is stable for the entire session.
+:::
+
+#### Exposure calibration
+
+With pixel geometry confirmed, calibrate exposure using the dual-exposure approach.
+
+**White reference exposure (ET~white~):**
+
+-   In the `Detector` panel (upper left), position the white vertical crosshair line on the centre of the BaSO~4~ slab.
+-   Read the peak DN value in the `Wavelength` panel (lower left).
+-   Adjust frame rate and exposure time in the `Spectral Camera` panel (`Apply` after each change) until the peak DN of the white reference reaches **80–85 %** of the detector maximum.
+-   Record this exposure time as **ET~white~**.
+
+**Target exposure (ET~target~):**
+
+-   Move the crosshair to the visually brightest region of the core (lightest-coloured sediment).
+-   Increase exposure time until the peak DN from that region reaches **80–85 %** of the detector maximum.
+-   Record this exposure time as **ET~target~**.
+
+::: callout-note
+## Dual-exposure rationale
+
+ET~target~ will typically be several times higher than ET~white~. This is intentional — it maximises signal from dark sediments. The white reference will be scanned separately at ET~white~ at the end of the session. The exposure time ratio is applied during reflectance calculation in post-processing to compensate for the difference.
+:::
+
+::: callout-important
+## Exposure recalibration
+
+Every change in camera position (optical distance) requires recalibrating both ET~white~ and ET~target~.
+:::
+
+#### Scan length
+
+-   In the `Sensor 1 positions` panel, set `Target start` to **180 mm** (to include the paper label in the scan). Set `Target stop` to the core section length (mm) plus **300 mm**.
+
+#### Dark and white correction — skip
+
+-   **Do not** run dark subtraction or white reference correction in *Lumo Scanner*. Capture all data raw.
+
+::: callout-note
+## Why skip Lumo corrections?
+
+Reflectance is calculated in post-processing using R/*HSItools* with the integration-time-scaled formula. *Lumo Scanner*'s built-in white correction does not account for the exposure time difference between target and white reference scans and would produce incorrect reflectance values. *Lumo Scanner* saves raw dark and white reference files with every scan regardless of whether its corrections are applied.
+:::
+
+#### Illuminator position
+
+-   The default illuminator position is correct for standard core diameters. Lower the illuminator only when the camera is lowered for unusually thin specimens.
+-   After acquiring the white reference, check the spatial DN profile across columns at a representative wavelength. If edge DN drops below approximately **70 %** of centre DN, reposition the illuminator and re-acquire.
+
+### Lumo Scanner — Capture tab
+
+#### Pre-scan checks
+
+-   Verify free disk space — the value displayed under `Free disk space` at the bottom of the window must show at least **10 min**.
+-   Check `Traffic lights`. All indicators should be green except `Trigger mode` (red, displaying `internal`). `Sensor temp` may show orange — this is acceptable for immediate scanning, but do not leave the instrument powered on and idle for extended periods.
+
+#### Metadata and naming
+
+-   `Dataset name`: core section scan identifier.
+
+::: callout-important
+## Naming convention
+
+Use the campaign prefix set in the Setup tab combined with a zero-padded scan identifier in `Dataset name`. Numbers must always be padded to equal length for correct sorting across all operating systems.
+
+Convention: **CC-SS**, where **CC** is the core number and **SS** is the section or scan number (zero-padded). If a core section must be scanned in two passes, increment the scan number.
+
+Example for a **200 cm** core from Lake Łazduny, 2026 campaign, first core:
+
+-   Campaign prefix: **LAZ-26**
+-   First section, single pass: Dataset name **01-01** → full name **LAZ-26_01-01**
+-   First section, second pass: Dataset name **01-02** → full name **LAZ-26_01-02**
+-   Second core, first section: Dataset name **02-01** → full name **LAZ-26_02-01**
+:::
+
+-   `Operator`: full first and last name of the person performing the scan.
+
+#### Recording
+
+-   Record the scan details in the **laboratory notebook**: date, operator (full name), campaign prefix, core/scan ID, camera (VNIR or SWIR), lens, ET~target~, ET~white~, FOV (from the Shiny app), spectral binning, `Target start` and `Target stop` positions, and any notes on core condition or issues.
+
+-   Record the same parameters in the HSI Calibration Tool scan log (Tab 3).
+
+-   Turn off the monitor. Turn off room lights. Close the door and post a sign indicating that scanning is in progress.
+
+-   Connect to the scanning computer remotely from another workstation.
+
+-   Click `Record` in *Lumo Scanner*.
+
+-   Wait for the scan to complete and the rail to return to the home position (`Homing` message).
+
+-   Repeat for the next core in the batch. Do not change camera position, focus, or exposure within the session.
+
+### White reference scan
+
+After all cores in the session are scanned:
+
+-   Set exposure time to **ET~white~** in the `Spectral Camera` panel and click `Apply`.
+-   Position the scanner over the BaSO~4~ slab.
+-   Click `Record`. This produces the white reference (WHITEREF) dataset for the entire session.
+
+::: callout-important
+## One white reference per session
+
+Scan the white reference once, at the end of the session. If any physical or software parameter changes mid-campaign (camera position, lens, FOV, ET~target~, binning), close the current session with a white reference scan first, then begin a new session with new parameters and a new white reference at the end.
+:::
+
+### Saturation screening
+
+After scanning, screen the raw data for saturated pixels.
+
+-   Open the raw DN cube in R. For every spatial pixel position (*x*, *y*) within the core mask (excluding tape, background, and pin locations), check whether any spectral band equals the detector ceiling DN value. A pixel position is flagged as saturated if **any single band** reaches the maximum.
+
+-   Calculate the ratio of flagged pixel positions to total core-area pixel positions. If this ratio exceeds **0.1 %**, reduce ET~target~ and re-scan the affected core.
+
+-   Flagged positions within the **0.1 %** threshold (isolated bright spots from mineral grains, shell fragments, or specular reflections) are automatically masked during reflectance calculation. The mask is a 2D spatial raster applied identically across all bands.
+
+::: callout-note
+## Surface drying during a scan
+
+A scan of a long core section may take **15–20 min**. The core surface dries progressively during this time: the top (scanned first) is slightly wetter than the bottom (scanned last). For SWIR data, where water has strong absorption features, this gradient is systematic and consistent across all cores scanned in the same direction. Downstream analysts should be aware that reflectance values may carry a weak along-track drying signature.
+:::
+
+### Session definition
+
+A session is a continuous set of scans sharing identical physical and software parameters: camera position, lens, FOV, ET~target~, and spectral binning. Changing any of these closes the current session (scan white reference at ET~white~ → end) and opens a new one.
+
+### Failure and recovery
+
+If a scan fails mid-way — software crash, rail stall, or disk space exhaustion — the partial scan is not usable. Delete the incomplete dataset and re-scan the core from the beginning. Do not attempt to resume from a specific rail position.
+
+### Dual-camera campaigns
+
+When both VNIR and SWIR scans are required for the same set of cores:
+
+-   Scan all cores with the currently mounted camera first (one full campaign).
+-   Return the cores to cold storage after the first campaign.
+-   Swap the camera (authorised personnel only), set the illuminator position to match, and scan the same cores in a second campaign.
+-   The SWIR image is registered onto the VNIR image in post-processing using the steel pin GCPs.
+
+::: callout-note
+## Surface state between sessions
+
+Cores returned to cold storage and re-dried for the second camera session will not have an identical surface state. VNIR and SWIR cubes of the same core section are therefore acquired under slightly different surface conditions. This is inherent to the single-camera scanner design and should be noted in any quantitative inter-detector comparison.
+:::
+
+## Post-acquisition
+
+### Data output structure
+
+Each scan produces the following files in the capture folder:
+
+| File | Contents |
+|:--------------------------|:--------------------------------------------|
+| `PREFIX_NN_timestamp.raw` | Raw DN data cube (target) |
+| `PREFIX_NN_timestamp.hdr` | ENVI header — integration time, bands, spatial and spectral dimensions |
+| `PREFIX_NN_timestamp.log` | Frame timing — check for dropped frames |
+| `DARKREF_PREFIX_NN_timestamp.raw/.hdr/.log` | Dark reference (shutter closed, acquired at ET~target~) |
+| `WHITEREF_PREFIX_NN_timestamp.raw/.hdr/.log` | White reference (acquired at ET~white~) |
+| `manifest.xml` | Session manifest |
+| `properties.xml` | Acquisition properties |
+| `PREFIX_NN_timestamp.png` | RGB preview image |
+
+The `metadata/` subfolder contains `.xml` and `.xsl` files with additional scan metadata.
+
+::: callout-important
+## Essential files
+
+All three `.raw`/`.hdr` triplets (target, DARKREF, WHITEREF) are required for reflectance calculation. Do not delete any of them.
+:::
+
+### Quality control
+
+-   Open the `.log` file of each scan. Check for dropped frames. Any dropped frames invalidate the affected scan lines — flag the scan and consider re-scanning.
+-   Verify that the `.hdr` files record the expected integration times: ET~target~ for the core scan, ET~white~ for the white reference.
+-   Run the saturation screening described above.
+-   Record all parameters in the HSI Calibration Tool scan log (Tab 3).
+
+### Data transfer
+
+-   Copy the complete scan folder — all files and subfolders — to the department server. Large datasets may be transferred overnight.
+
+### Reflectance calculation
+
+Reflectance is calculated in R using *HSItools*:
+
+$$
+R(\lambda) = \frac{\text{DN}_{\text{target}}(\lambda) - \text{DN}_{\text{dark, target}}(\lambda)}{\text{DN}_{\text{white}}(\lambda) - \text{DN}_{\text{dark, white}}(\lambda)} \times \frac{\text{ET}_{\text{white}}}{\text{ET}_{\text{target}}}
+$$
+
+where:
+
+-   $\text{DN}_{\text{target}}(\lambda)$ — raw digital number of the core scan at wavelength $\lambda$
+-   $\text{DN}_{\text{dark, target}}(\lambda)$ — dark reference acquired at ET~target~
+-   $\text{DN}_{\text{white}}(\lambda)$ — white reference scan of the BaSO~4~ slab
+-   $\text{DN}_{\text{dark, white}}(\lambda)$ — dark reference acquired at ET~white~
+-   $\text{ET}_{\text{white}} / \text{ET}_{\text{target}}$ — scalar ratio compensating for the deliberate exposure difference
+
+Both ET values are recorded in the `.hdr` files and in the scan log.
+
+## Shutdown
+
+-   Wait for the rail to reach the home position (`Homing` message).
+-   Turn off the camera and illumination unit (front switches).
+-   In the *Lumo Scanner* Setup tab, click `Disconnect` for `Camera` and `Motor 1`.
+-   Close *Lumo Scanner*.
+-   Transfer data to the department server.
+-   Shut down Windows (`Windows` → `Shut down`).
+-   After the system has shut down, turn off power switches (top to bottom).
+-   Turn off the UPS.
+-   Store the BaSO~4~ slab in its padded bag and box, handling by edges only.
+-   Replace the lens cap carefully.
+-   Perform a full cleanup of the workspace: wipe tray, calibration table, and surrounding surfaces. Vacuum if necessary.
+
+## Appendices
+
+### Appendix 1: Lenses {#sec-lenses}
+
+<!-- ![18.5 mm lens](../images/specim-lens-18.5mm.png){fig-alt="Specim 18.5 mm lens" width=25%} -->
+
+<!-- ![50.0 mm lens](../images/specim-lens-50.0mm.png){fig-alt="Specim 50.0 mm lens" width=25%} -->
+
+SWIR lens photographs: \[TBD\].
+
+### Appendix 2: Labels {#sec-labels}
+
+<!-- ![Label template (source: Butz 2016)](../images/hsi-labels.jpg){fig-alt="Disposable label template for hyperspectral scanning" fig-align="center" width=60%} -->
+
+### Appendix 3: White reference maintenance {#sec-white-reference}
+
+The BaSO~4~ slab degrades over time through surface yellowing and contamination. Inspect the reference surface before each scanning campaign. If the surface shows visible discolouration, uneven reflectance, or surface damage, gently sand with very fine sandpaper (\~**2000** grit) to expose a fresh layer. Store the slab in its padded box inside a protective bag between sessions. Handle by the edges only at all times.
+
+### Appendix 4: Illuminator inspection {#sec-illuminator}
+
+Periodically inspect the illumination unit to verify that all halogen lamps are functioning. Hold a smartphone camera or a small mirror under the unit to check that every lamp is lit. A failed lamp produces uneven illumination across the field of view. If a lamp has failed, do not scan until it is replaced. There is no defined replacement schedule — replace lamps when they fail or when the RGB preview image shows noticeably uneven brightness.
+
+### Appendix 5: SWIR-specific notes {#sec-swir}
+
+-   The SWIR camera operates on a separate, dedicated PC — not the same computer as the VNIR camera.
+-   The SWIR detector is cryo-cooled and requires a stabilisation period after power-on before *Lumo Scanner* can connect to it.
+-   Set the illuminator position switch to **SWIR** before scanning.
+-   Default spectral binning, ET ranges, and preview band assignments: \[TBD — to be completed once operational experience is established\].
+
+## Changelog
+
+| Date | Author | Change |
+|--------------------|--------------------------|--------------------------|
+| 2026-XX-XX | MZ | Complete rewrite: added SWIR workflow, dual-exposure calibration, raw-capture workflow, ground control pins, pixel geometry verification, saturation screening, session model, post-processing reference |
+| 2022-12-14 | MZ | Added lens photographs and label template |
+| 2022-12-09 | MZ | Added labels and information |
+| 2022-11-30 | MZ | First Quarto version |
+| 2022-11-17 | MZ | First corrections |
+| 2022-11-16 | MZ | Initial version |
